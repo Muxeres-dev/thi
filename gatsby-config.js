@@ -1,3 +1,10 @@
+require("ts-node").register({
+  compilerOptions: {
+    module: "commonjs",
+    target: "es2017",
+  },
+})
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -7,6 +14,8 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,

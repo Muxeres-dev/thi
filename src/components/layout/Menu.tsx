@@ -1,0 +1,101 @@
+import React, { useContext } from "react"
+import { Link } from "gatsby"
+
+import { AppContext } from "../../context/AppContext"
+import HamburgerMenu from "./HamburgerMenu"
+
+const Option = ({
+  text,
+  onClick,
+  link,
+}: {
+  text: string
+  onClick: React.Dispatch<React.SetStateAction<boolean>>
+  link?: string
+}) =>
+  link ? (
+    <li className="">
+      <Link
+        to={link}
+        onClick={() => onClick(false)}
+        className="cursor-pointer text-3xl font-light text-white hover:font-medium"
+      >
+        {text}
+      </Link>
+    </li>
+  ) : (
+    <li className="">
+      {text}
+    </li>
+  )
+
+const Menu = () => {
+  const { menuOpen, setMenuOpen } = useContext(AppContext)
+  return (
+    <>
+      <HamburgerMenu />
+      <nav
+        className={`w-screen h-screen absolute sm:fixed top-0 left-0 z-30 transition duration-500 ease-in-out bg-blue1 ${
+          menuOpen ? "visible opacity-1" : "invisible opacity-0"
+        }`}
+      >
+        <div className="flex justify-center text-center overflow-auto h-full">
+          <ul className="flex flex-col gap-4 mt-16">
+            <Option
+              text="Inicio"
+              onClick={() => setMenuOpen(false)}
+              link="/#inicio"
+            />
+            <Option
+              text="¿Viví violencia sexual?"
+              link="/articulos"
+              onClick={() => setMenuOpen(false)}
+            />
+            <Option
+              text="Sistema de Salud"
+              onClick={() => setMenuOpen(false)}
+              link="/#autorxs"
+            />
+            <Option
+              text="Sistema de Justicia"
+              link="/recursos"
+              onClick={() => setMenuOpen(false)}
+            />
+            <Option
+              text="Autocuidado"
+              link="/reflexiones"
+              onClick={() => setMenuOpen(false)}
+            />
+            <Option
+              text="Acompañamiento"
+              link="/reflexiones"
+              onClick={() => setMenuOpen(false)}
+            />
+            <Option
+              text="Historias"
+              link="/reflexiones"
+              onClick={() => setMenuOpen(false)}
+            />
+            <Option
+              text="Nosotras"
+              link="/reflexiones"
+              onClick={() => setMenuOpen(false)}
+            />
+            <Option
+              text="Directorio"
+              link="/reflexiones"
+              onClick={() => setMenuOpen(false)}
+            />
+            <Option
+              text="Contacto"
+              onClick={() => setMenuOpen(false)}
+              link="/#contacto"
+            />
+          </ul>
+        </div>
+      </nav>
+    </>
+  )
+}
+
+export default Menu

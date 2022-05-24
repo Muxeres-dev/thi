@@ -1,7 +1,12 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/browser-apis/
- */
+import React from "react"
+import { AnimatePresence } from "framer-motion"
 
-// You can delete this file if you're not using it
+import { AppProvider } from "./src/context/AppContext"
+
+import "./src/styles/global.scss"
+
+export const wrapRootElement = ({ element }) => (
+  <AppProvider>
+    <AnimatePresence exitBeforeEnter>{element}</AnimatePresence>
+  </AppProvider>
+)
