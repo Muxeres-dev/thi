@@ -35,12 +35,12 @@ const Menu = () => {
     <>
       <HamburgerMenu />
       <nav
-        className={`w-screen h-screen absolute sm:fixed top-0 left-0 z-30 transition duration-500 ease-in-out bg-blue1 ${
+        className={`w-screen h-screen fixed top-0 left-0 z-30 transition duration-500 ease-in-out bg-blue1 ${
           menuOpen ? "visible opacity-1" : "invisible opacity-0"
         }`}
       >
         <div className="flex justify-center text-center overflow-auto h-full">
-          <ul className="flex flex-col gap-4 mt-16">
+          <ul className="flex flex-col gap-4 mt-20">
             <Option
               text="Inicio"
               onClick={() => setMenuOpen(false)}
