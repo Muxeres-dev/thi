@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./src/**/*.tsx"],
+  content: ["./src/**/*.tsx", "./node_modules/tw-elements/dist/js/**/*.js"],
   theme: {
     container: {
       center: true,
@@ -17,8 +17,9 @@ module.exports = {
         blue1: "#1F3D9F",
         gray1: "#666666",
         purple1: "#5552E9",
+        marron: "#730A00",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tw-elements/dist/plugin")],
 }

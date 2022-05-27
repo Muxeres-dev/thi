@@ -48,7 +48,7 @@ const Menu = () => {
             />
             <Option
               text="¿Viví violencia sexual?"
-              link="/articulos"
+              link="/vivi_violencia_sexual"
               onClick={() => setMenuOpen(false)}
             />
             <Option

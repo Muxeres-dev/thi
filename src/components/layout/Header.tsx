@@ -9,10 +9,10 @@ interface IProps {}
 
 const Header = (props: IProps) => {
   return (
-    <header>
-      <div className="sm:p-4 absolute top-0 left-0 w-screen z-10">
+    <header className="w-screen absolute top-2 left-0">
+      <div className="container z-10">
         <Link className="inline-flex" to="/">
-          <img src={logo} alt="Tu historia importa" className="w-full" />
+          <img src={logo} alt="Tu historia importa" className="w-full -ml-4" />
         </Link>
       </div>
       <Menu />

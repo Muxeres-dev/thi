@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet"
 import { motion } from "framer-motion"
 
 import Header from "./Header"
+import Salida from "./Salida"
 
 interface IProps {
   title: string
@@ -74,6 +75,7 @@ const Layout = (props: IProps) => {
         <meta name="twitter:image" content={image ? image : defaultImg} />
       </Helmet>
       <Header />
+      <Salida />
       <motion.main
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -85,7 +87,7 @@ const Layout = (props: IProps) => {
           duration: 0.5,
         }}
       >
-        <main className="overflow-hidden">{props.children}</main>
+        <div className="overflow-hidden">{props.children}</div>
       </motion.main>
     </>
   )
