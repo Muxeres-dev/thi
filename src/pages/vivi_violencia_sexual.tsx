@@ -1,50 +1,34 @@
-import React, { useRef, useContext, useEffect, useMemo } from "react"
+import React, { useRef, useContext, useEffect } from "react"
+
+import { AppContext } from "../context/AppContext"
 import Footer from "../components/layout/Footer"
 import Layout from "../components/layout/Layout"
 import Section from "../components/shared/Section"
+import TextHeader from "../components/shared/TextHeader"
 import TextIlustration from "../components/shared/TextIlustration"
-import { AppContext } from "../context/AppContext"
+import TitleText from "../components/shared/TitleText"
 
-import Ilus1 from "../images/viviViolenciaIlus.svg"
+import useMenuColor from "../hooks/useMenuColor"
+
+import Ilus1 from "../images/ilus2.png"
 
 const ViviViolencia = () => {
   const { setMenuColor } = useContext(AppContext)
   const refSection1 = useRef(null)
   const refSection2 = useRef(null)
 
-  const offset1 = useMemo(() => {
-    return refSection1 ? refSection1.current?.offsetTop : 100000
-  }, [refSection1])
-  const offset2 = useMemo(() => {
-    return refSection1 ? refSection2.current?.offsetTop : 100000
-  }, [refSection2])
-
-  const handleNavigation = e => {
-    const window = e.currentTarget
-    const scrollY = window.scrollY
-    if (
-      scrollY > offset2 ||
-      (scrollY > offset1 &&
-        scrollY < offset1 + refSection1.current?.clientHeight)
-    )
-      setMenuColor("white")
-    else setMenuColor("beige1")
-  }
+  const menuColor = useMenuColor([refSection1, refSection2])
 
   useEffect(() => {
-    window.addEventListener("scroll", e => handleNavigation(e))
-
-    return () => {
-      window.removeEventListener("scroll", e => handleNavigation(e))
-    }
-  }, [])
+    setMenuColor(menuColor)
+  }, [menuColor])
 
   return (
     <Layout title="¿Viví violencia sexual?">
       <Section>
         <TextIlustration ilus={Ilus1} title="¿Viví violencia sexual?">
           <div className="text-lg mt-4 sm:mt-12">
-            <p className="font-medium mb-4">¿Qué es violencia sexual?</p>
+            <p className="font-semibold mb-4">¿Qué es violencia sexual?</p>
             <p className="mb-4">
               Para poder sanar, primero debemos entender qué fue lo que nos
               ocurrió, y para eso tenemos que comprender lo que es la violencia
@@ -72,15 +56,13 @@ const ViviViolencia = () => {
         <div className="bg-beige1 text-white font-light text-lg py-24">
           <div className="container">
             <div className="sm:w-3/4">
-              <p className="text-2xl sm:text-4xl mb-4">
-                Tipos de violencia sexual
-              </p>
+              <TextHeader>Tipos de violencia sexual</TextHeader>
               <p className="mb-4">
                 Para que podamos entender qué fue lo que nos pasó, tenemos que
                 identificar primero los diferentes tipos de violencia sexual que
                 existen y como se llaman:
               </p>
-              <p className="font-semibold">Abuso sexual</p>
+              <TitleText>Abuso sexual</TitleText>
               <p className="mb-4">
                 Se nos obliga a participar en un acto sexual que no involucra
                 introducir el pene en la vagina, boca o ano. Este acto puede
@@ -88,7 +70,7 @@ const ViviViolencia = () => {
                 contenido sexual, el ser tocadas en contra de nuestra voluntad o
                 ser presionadas a tocar a la otra persona.
               </p>
-              <p className="font-semibold">Violación</p>
+              <TitleText>Violación</TitleText>
               <p className="mb-4">
                 Ocurre cuando hubo penetración, es decir, se introdujo en
                 nuestra vagina boca o ano, un pene o cualquier otra parte del
@@ -97,7 +79,7 @@ const ViviViolencia = () => {
                 pedimos a la persona que se detenga y la persona no deja de
                 hacerlo se considera como violación.
               </p>
-              <p className="font-semibold">Hostigamiento sexual</p>
+              <TitleText>Hostigamiento sexual</TitleText>
               <p className="mb-4">
                 Este tipo de violencia se presenta en una relación jerárquica.
                 Esto quiere decir que quien nos solicita el favor sexual es
@@ -106,7 +88,7 @@ const ViviViolencia = () => {
                 una autoridad. Estos actos ponen en riesgo nuestro bienestar
                 emocional y afectan nuestra dignidad física y emocional.
               </p>
-              <p className="font-semibold">Acoso sexual</p>
+              <TitleText>Acoso sexual</TitleText>
               <p className="mb-4">
                 Ocurre cuando una persona de nuestro mismo nivel jerárquico,
                 como lo puede ser un amigo(a), primo(a), vecino(a), compañero(a)
@@ -115,20 +97,20 @@ const ViviViolencia = () => {
                 propone y/o exige tener contacto sexual contra de nuestra
                 voluntad.
               </p>
-              <p className="font-semibold">Estupro</p>
+              <TitleText>Estupro</TitleText>
               <p className="mb-4">
                 Se da en el caso de que tengamos entre 13 y 17 años de edad y
                 alguien nos engaña o manipula para tener relaciones sexuales con
                 nosotras.
               </p>
-              <p className="font-semibold">Violencia familiar</p>
+              <TitleText>Violencia familiar</TitleText>
               <p className="mb-4">
                 Ocurre cuando somos violentadas por un integrante de nuestra
                 familia (consanguínea o adoptiva) o por nuestra pareja o
                 expareja, de manera sexual o en contra de nuestros derechos
                 reproductivos.
               </p>
-              <p className="font-semibold">Tortura sexual</p>
+              <TitleText>Tortura sexual</TitleText>
               <p className="mb-4">
                 Ocurre cuando quieren obligarnos a decir o hacer algo en contra
                 de nuestra voluntad, para lo cual se llevan a cabo conductas
@@ -136,9 +118,7 @@ const ViviViolencia = () => {
                 intimidadas o castigadas con la intención de disminuir nuestra
                 capacidad física o psicológica.
               </p>
-              <p className="font-semibold">
-                Contra la intimidad sexual (“Ley Olimpia”)
-              </p>
+              <TitleText>Contra la intimidad sexual (“Ley Olimpia”)</TitleText>
               <p className="mb-4">
                 Se refiere a cuando alguien nos graba, fotografía, elabora o
                 comparte por cualquier medio imágenes, audios o videos con
@@ -422,11 +402,17 @@ const ViviViolencia = () => {
                       otra persona nos haya dicho. Siempre hay personas que al
                       escucharnos nos creerán y quienes pondrán en duda lo que
                       decimos. Por eso es importante que decidamos cómo decirlo
-                      y a quién. Si deseas tener más información sobre esto,
-                      puedes consultar la guía{" "}
-                      <a href="#" className="text-marron underline font-medium">
-                        Contarle a alguien por lo que estás pasando”.
-                      </a>
+                      y a quién.
+                      <p className="font-semibold">
+                        Si deseas tener más información sobre esto, puedes
+                        consultar la guía{" "}
+                        <a
+                          href="#"
+                          className="text-marron underline font-semibold"
+                        >
+                          Contarle a alguien por lo que estás pasando”.
+                        </a>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -452,9 +438,9 @@ const ViviViolencia = () => {
                 por voluntad propia en llevar a cabo el acto sexual y tienen la
                 capacidad de tomar esa decisión.
               </p>
-              <p className="mb-4 text-marron font-semibold">
+              <TitleText className="mb-4 text-marron">
                 Elementos del consentimiento:
-              </p>
+              </TitleText>
               <p className="mb-4">
                 <span className="font-semibold">Libre:</span> Consentir es una
                 decisión que debemos tomar sin presión y estando conscientes,
@@ -496,10 +482,10 @@ const ViviViolencia = () => {
                 es mejor preguntar y verificar si se dio el consentimiento para
                 todos los actos sexuales y no solo para algunos.
               </p>
-              <p className="mb-4 text-marron font-semibold">
+              <TitleText className="mb-4 text-marron">
                 ¿Cómo sé que tengo el consentimiento de la(s) otra(s)
                 persona(s)?
-              </p>
+              </TitleText>
               <p className="mb-4">
                 Para saber si tenemos el consentimiento de la otra(s)
                 persona(s), es muy importante considerar su libertad y capacidad
@@ -537,9 +523,9 @@ const ViviViolencia = () => {
                   evento.
                 </li>
               </ul>
-              <p className="mb-4 text-marron font-semibold">
+              <TitleText className="mb-4 text-marron">
                 Consecuencias de la violencia sexual
-              </p>
+              </TitleText>
               <p className="mb-4">
                 Cada vivencia y cada persona somos únicas y por lo mismo, no
                 debemos de compararnos con nadie más. Al hablar de consecuencias
@@ -606,9 +592,9 @@ const ViviViolencia = () => {
                 como intento para distraer nuestra mente con el fin de evitar
                 pensar en el suceso traumático.
               </p>
-              <p className="mb-4 text-marron font-semibold">
+              <TitleText className="mb-4 text-marron">
                 ¿Es normal que sienta culpa después de vivir violencia sexual?
-              </p>
+              </TitleText>
               <p className="mb-4">
                 Al vivir una experiencia traumática es común sentirnos
                 traicionadas hasta por nosotras mismas. Podemos dudar de lo que
@@ -649,9 +635,9 @@ const ViviViolencia = () => {
                 no hicimos nada mal, la única persona culpable culpable es la
                 persona agresora, no nosotras.
               </p>
-              <p className="mb-4 text-marron font-semibold">
+              <TitleText className="mb-4 text-marron">
                 ¿Cuándo necesitamos atención psicoterapéutica?
-              </p>
+              </TitleText>
               <p className="mb-4">
                 Hay ocasiones en las que se nos dificulta poder expresar y
                 verbalizar lo que sentimos. La psicología es la ciencia que se
@@ -686,11 +672,11 @@ const ViviViolencia = () => {
                 puedan hacer sentir juzgadas o revictimizadas, así como tampoco
                 pueden obligarnos a hablar de cosas que no deseamos.
               </p>
-              <p className="mb-4 text-marron font-semibold">
+              <TitleText className="mb-4 text-marron">
                 Se recomienda que busquemos atención psicoterapéutica cuando
                 tengamos dificultad para desempeñar nuestras actividades del día
                 a día y cuando nos sentimos emocionalmente abrumadas.
-              </p>
+              </TitleText>
               <p className="mb-4 font-semibold">
                 Recordemos que la salud no es solo la ausencia de enfermedad,
                 sino que es la ausencia de funcionamiento y capacidad para

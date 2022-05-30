@@ -2,7 +2,6 @@ import React, { useContext } from "react"
 import { Link } from "gatsby"
 
 import { AppContext } from "../../context/AppContext"
-import HamburgerMenu from "./HamburgerMenu"
 
 const Option = ({
   text,
@@ -24,16 +23,13 @@ const Option = ({
       </Link>
     </li>
   ) : (
-    <li className="">
-      {text}
-    </li>
+    <li className="">{text}</li>
   )
 
 const Menu = () => {
   const { menuOpen, setMenuOpen } = useContext(AppContext)
   return (
     <>
-      <HamburgerMenu />
       <nav
         className={`w-screen h-screen fixed top-0 left-0 z-30 transition duration-500 ease-in-out bg-blue1 ${
           menuOpen ? "visible opacity-1" : "invisible opacity-0"
@@ -54,11 +50,11 @@ const Menu = () => {
             <Option
               text="Sistema de Salud"
               onClick={() => setMenuOpen(false)}
-              link="/#autorxs"
+              link="/sistema_de_salud"
             />
             <Option
               text="Sistema de Justicia"
-              link="/recursos"
+              link="/sistema_de_justicia"
               onClick={() => setMenuOpen(false)}
             />
             <Option
@@ -89,7 +85,7 @@ const Menu = () => {
             <Option
               text="Contacto"
               onClick={() => setMenuOpen(false)}
-              link="/#contacto"
+              link="/contacto"
             />
           </ul>
         </div>

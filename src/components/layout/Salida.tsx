@@ -26,7 +26,7 @@ const Icon = () => (
 const Salida = () => {
   return (
     <div
-      className="fixed right-1 sm:right-4 bottom-1 sm:bottom-4 bg-purple1 cursor-pointer rounded-full w-16 h-16 font-medium text-white text-xs flex flex-col justify-center items-center gap-1"
+      className="fixed right-1 sm:right-4 bottom-1 sm:bottom-4 bg-purple1 cursor-pointer rounded-full w-16 h-16 font-medium text-white text-xs flex flex-col justify-center items-center gap-1 z-10"
       onClick={() => (window.location.href = "http://www.google.com")}
     >
       <Icon />

@@ -1,37 +1,26 @@
 import React, { useState, useEffect, useContext, useRef } from "react"
+import { navigate } from "gatsby"
 import { scroller } from "react-scroll"
 
+import { AppContext } from "../context/AppContext"
 import Footer from "../components/layout/Footer"
 import Layout from "../components/layout/Layout"
+import Button from "../components/shared/Button"
+import Close from "../components/shared/Close"
 import Section from "../components/shared/Section"
 import TextIlustration from "../components/shared/TextIlustration"
-import { AppContext } from "../context/AppContext"
+import useMenuColor from "../hooks/useMenuColor"
 
-import Ilus1 from "../images/ilus1.svg"
-
-const InfoOption = ({ setOption, active, children }) => (
-  <div
-    className={`sm:w-72 border-2 border-beige1 rounded-xl py-2 px-8 sm:px-4 text-base font-bold cursor-pointer text-center ${
-      active ? "text-white bg-beige1" : "text-beige1 "
-    }`}
-    onClick={() => setOption()}
-  >
-    {children}
-  </div>
-)
+import Ilus1 from "../images/ilus1.png"
 
 const InfoDetail = ({ title, children, closeAction }) => (
   <div className="md:w-2/3 relative pb-12">
-    <div
-      className="cursor-pointer absolute right-0 md:-right-16 top-6"
-      onClick={() => closeAction()}
-    >
-      <div className="relative">
-        <div className="border border-beige1 w-8 sm:w-12 absolute right-0 top-0 rotate-45"></div>
-        <div className="border border-beige1 w-8 sm:w-12 absolute right-0 top-0 -rotate-45"></div>
-      </div>
-    </div>
-    <p className="text-2xl md:text-4xl font-medium text-beige1 pr-12">
+    <Close
+      action={() => closeAction()}
+      color="beige1"
+      className="absolute right-0 md:-right-16 top-6"
+    />
+    <p className="text-2xl md:text-4xl font-medium text-beige1 pr-12 mb-8">
       {title}
     </p>
     {children}
@@ -40,11 +29,7 @@ const InfoDetail = ({ title, children, closeAction }) => (
 
 const NeedOption = ({ title, resume, action }) => (
   <div className="sm:w-72 text-white">
-    <div
-      className={`border-2 border-white rounded-xl py-2 px-8 sm:px-4 text-base font-bold cursor-pointer text-center`}
-    >
-      {title}
-    </div>
+    <Button className="!w-auto" text={title} variant="option-white" action={action} />
     <div className="mt-8">
       <p>{resume}</p>
     </div>
@@ -55,25 +40,11 @@ const IndexPage = () => {
   const { setMenuColor } = useContext(AppContext)
   const [option, setOption] = useState<number | null>(null)
   const refSection = useRef(null)
-
-  const handleNavigation = e => {
-    const window = e.currentTarget
-    if (
-      refSection &&
-      refSection.current &&
-      window.scrollY > refSection.current.offsetTop - 45
-    )
-      setMenuColor("white")
-    else setMenuColor("beige1")
-  }
+  const menuColor = useMenuColor([refSection])
 
   useEffect(() => {
-    window.addEventListener("scroll", e => handleNavigation(e))
-
-    return () => {
-      window.removeEventListener("scroll", e => handleNavigation(e))
-    }
-  }, [])
+    setMenuColor(menuColor)
+  }, [menuColor])
 
   const selectInfo = opt => {
     setOption(opt)
@@ -96,16 +67,25 @@ const IndexPage = () => {
             tomando en cuenta su proceso de sanación y recuperación.
           </p>
         </TextIlustration>
-        <div className="flex flex-col sm:flex-row w-full justify-between gap-4 mt-8">
-          <InfoOption active={option === 0} setOption={() => selectInfo(0)}>
-            ¿La agresión sexual acaba de ocurrir?
-          </InfoOption>
-          <InfoOption active={option === 1} setOption={() => selectInfo(1)}>
-            ¿La agresión sexual ocurrió recientemente?
-          </InfoOption>
-          <InfoOption active={option === 2} setOption={() => selectInfo(2)}>
-            ¿La agresión sexual ocurrió hace tiempo?
-          </InfoOption>
+        <div className="flex flex-col sm:flex-row w-full justify-between gap-4 mt-16">
+          <Button
+            variant="option"
+            text="¿La agresión sexual acaba de ocurrir?"
+            action={() => selectInfo(0)}
+            active={option === 0}
+          />
+          <Button
+            variant="option"
+            text="¿La agresión sexual ocurrió recientemente?"
+            action={() => selectInfo(1)}
+            active={option === 1}
+          />
+          <Button
+            variant="option"
+            text="¿La agresión sexual ocurrió hace tiempo?"
+            action={() => selectInfo(2)}
+            active={option === 2}
+          />
         </div>
         <div className="ref-info mt-16">
           {option === 0 && (
@@ -113,7 +93,7 @@ const IndexPage = () => {
               title="Si la agresión sexual acaba de ocurrir:"
               closeAction={() => setOption(null)}
             >
-              <ul className="mt-4 list-disc text-sm pl-4">
+              <ul className="mt-4 list-disc text-base pl-4">
                 <li className="mb-4">Puedes pedir auxilio al 911</li>
                 <li className="mb-4">
                   De ser posible procura no bañarte o limpiarte, ya que todo
@@ -145,7 +125,7 @@ const IndexPage = () => {
               title="Si la agresión sexual ocurrió recientemente:"
               closeAction={() => setOption(null)}
             >
-              <ul className="mt-4 list-disc text-sm pl-4">
+              <ul className="mt-4 list-disc text-base pl-4">
                 <li className="mb-4">
                   Trata de ponerte a salvo y recibir atención médica (en caso de
                   ser necesario) antes de tomar acciones legales contra la
@@ -158,10 +138,8 @@ const IndexPage = () => {
                   </span>
                 </li>
                 <li className="mb-4">
-                  Aunque no estés segura de denunciar, conserva todas las
-                  <span className="font-semibold">
-                    pruebas o evidencias
-                  </span>{" "}
+                  Aunque no estés segura de denunciar, conserva todas las{" "}
+                  <span className="font-semibold">pruebas o evidencias</span>{" "}
                   relacionadas con la agresión (no borres mensajes, fotos o
                   videos ni te deshagas de objetos con los que te agredieron o
                   de la ropa que quedó maltratada o sucia por la agresión, sobre
@@ -207,7 +185,7 @@ const IndexPage = () => {
               title="Si la agresión sexual ocurrió hace tiempo:"
               closeAction={() => setOption(null)}
             >
-              <ul className="mt-4 list-disc text-sm pl-4">
+              <ul className="mt-4 list-disc text-base pl-4">
                 <li className="mb-4">
                   Si tienes interés de denunciar verifica si en tu estado
                   todavía es posible hacerlo por el tiempo que ha pasado, ya que
@@ -240,17 +218,17 @@ const IndexPage = () => {
                 <NeedOption
                   title="Sistema de Salud"
                   resume="Aquí puedes encontrar información útil sobre los servicios que puede brindarte el sistema de salud en caso de haber vivido una situación de abuso sexual o violación."
-                  action=""
+                  action={() => navigate("/sistema_de_salud")}
                 />
                 <NeedOption
                   title="Sistema de Justicia"
                   resume="Aquí puedes encontrar información útil sobre qué es una denuncia, cómo hacer una denuncia y qué pasa después de hacer una denuncia."
-                  action=""
+                  action={() => navigate("/sistema_de_justicia")}
                 />
                 <NeedOption
                   title="Autocuidado"
                   resume="Aquí puedes encontrar información útil sobre cómo cuidar tu cuerpo y cómo cuidarte emocionalmente después de una situación de violencia sexual."
-                  action=""
+                  action={() => navigate("/autocuidado")}
                 />
               </div>
             </div>
