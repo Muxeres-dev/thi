@@ -69,7 +69,7 @@ const SistemaSalud = () => {
               />
             </div>
             {sistema.si && (
-              <div className="flex flex-col sm:flex-row gap-4 md:gap-12 mt-8">
+              <div className="flex flex-col sm:flex-row gap-4 md:gap-12 mt-8 mb-8">
                 <Button
                   variant="option"
                   text="Menos de 5 días"

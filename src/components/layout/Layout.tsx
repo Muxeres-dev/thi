@@ -17,7 +17,7 @@ interface IProps {
 const Layout = (props: IProps) => {
   const { title, ogtitle, description, image, url } = props
   const defaultDescr =
-    "Brindamos información útil y pertinente para todas aquellas personas que han vivido violencia sexual, tomando en cuenta su proceso de sanación y recuperación."
+    "Brindamos información útil y pertinente para todas aquellas personas que han vivido violencia sexual, tomando en cuenta su proceso de sanación y recuperación."
   const defaultTitle = "Tu historia importa"
   const defaultImg = ""
   return (

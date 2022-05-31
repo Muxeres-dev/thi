@@ -184,7 +184,9 @@ const ViviViolencia = () => {
                       aria-expanded="true"
                       aria-controls="collapse1"
                     >
-                      1. “Si no decimos no quiero o detente, no es violación."
+                      <span className="pr-4">
+                        1. “Si no decimos no quiero o detente, no es violación."
+                      </span>
                     </button>
                   </h2>
                   <div
@@ -217,7 +219,9 @@ const ViviViolencia = () => {
                       aria-expanded="true"
                       aria-controls="collapse2"
                     >
-                      2. "Nuestra pareja o ex no puede agredirnos."
+                      <span className="pr-4">
+                        2. "Nuestra pareja o ex no puede agredirnos."
+                      </span>
                     </button>
                   </h2>
                   <div
@@ -244,7 +248,9 @@ const ViviViolencia = () => {
                       aria-expanded="true"
                       aria-controls="collapse3"
                     >
-                      3. "Debemos haber hecho algo para pedirlo."
+                      <span className="pr-4">
+                        3. "Debemos haber hecho algo para pedirlo."
+                      </span>
                     </button>
                   </h2>
                   <div
@@ -271,8 +277,10 @@ const ViviViolencia = () => {
                       aria-expanded="true"
                       aria-controls="collapse4"
                     >
-                      4. “Los agresores sexuales siempre usan la fuerza física
-                      para obligar a su víctima.”
+                      <span className="pr-4">
+                        4. “Los agresores sexuales siempre usan la fuerza física
+                        para obligar a su víctima.”
+                      </span>
                     </button>
                   </h2>
                   <div
@@ -300,8 +308,10 @@ const ViviViolencia = () => {
                       aria-expanded="true"
                       aria-controls="collapse5"
                     >
-                      5. “Solo podemos ser violentadas sexualmente por
-                      extraños.”
+                      <span className="pr-4">
+                        5. “Solo podemos ser violentadas sexualmente por
+                        extraños.”
+                      </span>
                     </button>
                   </h2>
                   <div
@@ -330,8 +340,10 @@ const ViviViolencia = () => {
                       aria-expanded="true"
                       aria-controls="collapse6"
                     >
-                      6. “Haber sufrido de violencia sexual nos hace propensa a
-                      ser gay o bisexual.”
+                      <span className="pr-4">
+                        6. “Haber sufrido de violencia sexual nos hace propensa
+                        a ser gay o bisexual.”
+                      </span>
                     </button>
                   </h2>
                   <div
@@ -358,8 +370,10 @@ const ViviViolencia = () => {
                       aria-expanded="true"
                       aria-controls="collapse7"
                     >
-                      7. "Sentirnos excitadas debe significar que lo disfrutamos
-                      / aceptamos."
+                      <span className="pr-4">
+                        7. "Sentirnos excitadas debe significar que lo
+                        disfrutamos / aceptamos."
+                      </span>
                     </button>
                   </h2>
                   <div
@@ -388,7 +402,7 @@ const ViviViolencia = () => {
                       aria-expanded="true"
                       aria-controls="collapse8"
                     >
-                      8. “Nadie me va a creer”
+                      <span className="pr-4">8. “Nadie me va a creer”</span>
                     </button>
                   </h2>
                   <div

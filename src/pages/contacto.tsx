@@ -86,7 +86,7 @@ const Contacto = ({ id }) => {
   return (
     <Layout title="Contacto">
       <Section footer>
-        <p className="text-beige1 text-xl sm:text-4xl mb-4 mt-12 md:mt-0">
+        <p className="text-beige1 text-3xl sm:text-4xl mb-4 mt-12 md:mt-0">
           Contacto
         </p>
         <p className="text-lg text-gray1 sm:text-2xl ">

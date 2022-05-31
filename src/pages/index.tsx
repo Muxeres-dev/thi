@@ -61,13 +61,13 @@ const IndexPage = () => {
         <TextIlustration ilus={Ilus1}>
           <p className="text-2xl md:text-4xl font-extralight">
             <span className="font-medium text-beige1">
-              Brindamos información útil y pertinente
+              Brindamos información útil y pertinente
             </span>{" "}
             para todas aquellas personas que han vivido violencia sexual,
-            tomando en cuenta su proceso de sanación y recuperación.
+            tomando en cuenta su proceso de sanación y recuperación.
           </p>
         </TextIlustration>
-        <div className="flex flex-col sm:flex-row w-full justify-between gap-4 mt-16">
+        <div className="flex flex-col sm:flex-row w-full justify-between gap-4 pt-4 pb-8">
           <Button
             variant="option"
             text="¿La agresión sexual acaba de ocurrir?"
@@ -87,7 +87,7 @@ const IndexPage = () => {
             active={option === 2}
           />
         </div>
-        <div className="ref-info mt-16">
+        <div className="ref-info mt-4">
           {option === 0 && (
             <InfoDetail
               title="Si la agresión sexual acaba de ocurrir:"
