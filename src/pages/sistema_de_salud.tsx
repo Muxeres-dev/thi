@@ -3,7 +3,6 @@ import { navigate } from "gatsby"
 import { scroller } from "react-scroll"
 
 import { AppContext } from "../context/AppContext"
-import Footer from "../components/layout/Footer"
 import Layout from "../components/layout/Layout"
 import Button from "../components/shared/Button"
 import Close from "../components/shared/Close"
@@ -286,7 +285,6 @@ const SistemaSalud = () => {
           </div>
         )}
       </section>
-      <Footer />
     </Layout>
   )
 }

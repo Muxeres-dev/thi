@@ -1,9 +1,10 @@
-import React from "react"
+import React, { useEffect, useState, useRef } from "react"
 import { Helmet } from "react-helmet"
 import { motion } from "framer-motion"
 
 import Header from "./Header"
 import Salida from "./Salida"
+import Footer from "./Footer"
 
 interface IProps {
   title: string
@@ -20,8 +21,33 @@ const Layout = (props: IProps) => {
     "Brindamos información útil y pertinente para todas aquellas personas que han vivido violencia sexual, tomando en cuenta su proceso de sanación y recuperación."
   const defaultTitle = "Tu historia importa"
   const defaultImg = ""
+  const refFooter = useRef(null)
+  const [fixFooter, setFixFooter] = useState(false)
+
+  const handleNavigation = e => {
+    if (
+      refFooter.current &&
+      document.body.scrollHeight -
+        e.currentTarget.scrollY -
+        window.innerHeight <
+        refFooter.current.clientHeight
+    ) {
+      setFixFooter(true)
+    } else {
+      setFixFooter(false)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", e => handleNavigation(e))
+
+    return () => {
+      window.removeEventListener("scroll", e => handleNavigation(e))
+    }
+  }, [])
+
   return (
-    <>
+    <div className="relative">
       <Helmet>
         <meta charSet="utf-8" />
         <title>THI - {title}</title>
@@ -75,7 +101,7 @@ const Layout = (props: IProps) => {
         <meta name="twitter:image" content={image ? image : defaultImg} />
       </Helmet>
       <Header />
-      <Salida />
+      <Salida fix={fixFooter} />
       <motion.main
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -89,7 +115,10 @@ const Layout = (props: IProps) => {
       >
         <div className="overflow-hidden">{props.children}</div>
       </motion.main>
-    </>
+      <div ref={refFooter}>
+        <Footer />
+      </div>
+    </div>
   )
 }
 

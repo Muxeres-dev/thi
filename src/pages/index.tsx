@@ -3,7 +3,6 @@ import { navigate } from "gatsby"
 import { scroller } from "react-scroll"
 
 import { AppContext } from "../context/AppContext"
-import Footer from "../components/layout/Footer"
 import Layout from "../components/layout/Layout"
 import Button from "../components/shared/Button"
 import Close from "../components/shared/Close"
@@ -18,7 +17,7 @@ const InfoDetail = ({ title, children, closeAction }) => (
     <Close
       action={() => closeAction()}
       color="beige1"
-      className="absolute right-0 md:-right-16 top-6"
+      className="absolute right-0 md:-right-16 top-0"
     />
     <p className="text-2xl md:text-4xl font-medium text-beige1 pr-12 mb-8">
       {title}
@@ -67,7 +66,7 @@ const IndexPage = () => {
             tomando en cuenta su proceso de sanación y recuperación.
           </p>
         </TextIlustration>
-        <div className="flex flex-col sm:flex-row w-full justify-between gap-4 pt-4 pb-8">
+        <div className="flex flex-col sm:flex-row w-full justify-between gap-4 pt-4">
           <Button
             variant="option"
             text="¿La agresión sexual acaba de ocurrir?"
@@ -87,7 +86,7 @@ const IndexPage = () => {
             active={option === 2}
           />
         </div>
-        <div className="ref-info mt-4">
+        <div className="ref-info pt-12">
           {option === 0 && (
             <InfoDetail
               title="Si la agresión sexual acaba de ocurrir:"
@@ -233,7 +232,6 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
-          <Footer />
         </div>
       </section>
     </Layout>

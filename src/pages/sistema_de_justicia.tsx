@@ -29,7 +29,6 @@ import useMenuColor from "../hooks/useMenuColor"
 
 import "react-responsive-carousel/lib/styles/carousel.min.css" // requires a loader
 import TitleText from "../components/shared/TitleText"
-import Footer from "../components/layout/Footer"
 
 const ProgressBar = ({ index }) => (
   <div className="relative">
@@ -128,14 +127,14 @@ const SistemaJusticia = () => {
         </TextIlustration>
       </Section>
       <section ref={refSection1}>
-        <div className="bg-beige1 text-white pt-24 pb-48 sm:py-24 min-h-screen flex">
+        <div className="bg-beige1 text-white pt-24 pb-48 sm:py-12 min-h-screen flex">
           <div className="container">
             <TextHeader className="mb-12 !text-4xl">
               Tips para tomar en cuenta si decides denunciar:
             </TextHeader>
-            <div className="hidden sm:grid w-full grid-cols-3 sm:gap-8 md:gap-20 lg:gap-24">
+            <div className="hidden sm:grid w-full grid-cols-3 sm:gap-12 md:gap-x-20 lg:gap-x-24">
               {tips.map((tip, i) => (
-                <div key={`tipDesk${i}`} className="mb-8">
+                <div key={`tipDesk${i}`} className="">
                   <div className="bg-white flex justify-center items-center rounded-full w-32 m-auto mb-4">
                     <img src={tip.img} alt="Tip" className="" />
                   </div>
@@ -169,7 +168,7 @@ const SistemaJusticia = () => {
         </div>
       </section>
       <section>
-        <div className="min-h-screen bg-white text-gray1 font-light text-base py-24">
+        <div className="min-h-screen bg-white text-gray1 font-light text-base py-12">
           <div className="container">
             <div className="sm:w-3/4 relative">
               <TextHeader className="text-beige1 mb-8">
@@ -250,7 +249,7 @@ const SistemaJusticia = () => {
         </div>
       </section>
       <section ref={refSection2}>
-        <div className="bg-beige1 py-8 sm:py-24">
+        <div className="bg-beige1 py-8 sm:py-12">
           <div className="container text-white">
             <div className="flex flex-col sm:flex-row items-center sm:gap-4">
               <img src={PregFreq} className="sm:order-2" />
@@ -262,14 +261,14 @@ const SistemaJusticia = () => {
         </div>
       </section>
       <section>
-        <div className="min-h-screen bg-white text-gray1 font-light text-base py-24">
-          <div className="container">
+        <div className="min-h-screen bg-white text-gray1 font-light text-base pt-6 pb-12">
+          <div className="sm:container">
             <div className="sm:w-3/4 relative">
               <div className="accordion" id="accordionJusticia">
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading1">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse1"
@@ -286,7 +285,7 @@ const SistemaJusticia = () => {
                     className="accordion-collapse collapse"
                     aria-labelledby="heading1"
                   >
-                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-12">
+                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-16">
                       <p className="mb-4">
                         El nombre de los delitos sexuales puede variar
                         dependiendo de los Códigos Penales de cada Estado de la
@@ -506,7 +505,7 @@ const SistemaJusticia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading2">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse2"
@@ -524,7 +523,7 @@ const SistemaJusticia = () => {
                     className="accordion-collapse collapse"
                     aria-labelledby="heading2"
                   >
-                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-12">
+                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-16">
                       <p className="mb-4">Puede brindarte:</p>
 
                       <ul className="list-disc pl-6 mb-4">
@@ -591,7 +590,7 @@ const SistemaJusticia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading3">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse3"
@@ -609,7 +608,7 @@ const SistemaJusticia = () => {
                     className="accordion-collapse collapse"
                     aria-labelledby="heading3"
                   >
-                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-12">
+                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-16">
                       <p className="mb-4">
                         Si la persona agresora te conoce (porque es tu familiar,
                         pareja, jefe, vecino, compañero de trabajo o escuela,
@@ -676,7 +675,7 @@ const SistemaJusticia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading4">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse4"
@@ -691,7 +690,7 @@ const SistemaJusticia = () => {
                     className="accordion-collapse collapse"
                     aria-labelledby="heading4"
                   >
-                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-12">
+                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-16">
                       <p className="">
                         Denunciar es comunicarle a las autoridades un suceso que
                         afecta nuestros derechos o bienestar y que probablemente
@@ -710,7 +709,7 @@ const SistemaJusticia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading5">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse5"
@@ -725,7 +724,7 @@ const SistemaJusticia = () => {
                     className="accordion-collapse collapse"
                     aria-labelledby="heading5"
                   >
-                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-12">
+                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-16">
                       <p className="mb-4">
                         Hay delitos sexuales que{" "}
                         <span className="font-semibold">cualquier persona</span>{" "}
@@ -764,7 +763,7 @@ const SistemaJusticia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading6">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse6"
@@ -781,7 +780,7 @@ const SistemaJusticia = () => {
                     className="accordion-collapse collapse"
                     aria-labelledby="heading6"
                   >
-                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-12">
+                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-16">
                       <p className="mb-4">
                         Puedes denunciar un delito sexual en cuanto tengas la
                         fuerza física y emocional para hacerlo.{" "}
@@ -816,7 +815,7 @@ const SistemaJusticia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading7">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse7"
@@ -831,7 +830,7 @@ const SistemaJusticia = () => {
                     className="accordion-collapse collapse"
                     aria-labelledby="heading7"
                   >
-                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-12">
+                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-16">
                       <p className="mb-4">
                         Para denunciar un delito sexual acude a la{" "}
                         <span className="font-semibold">
@@ -864,7 +863,7 @@ const SistemaJusticia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading8">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse8"
@@ -882,7 +881,7 @@ const SistemaJusticia = () => {
                     className="accordion-collapse collapse"
                     aria-labelledby="heading8"
                   >
-                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-12">
+                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-16">
                       <p className="mb-4">
                         No, pero es importante que tengas en cuenta que según
                         los testimonios de muchas mujeres víctimas de delitos
@@ -906,7 +905,7 @@ const SistemaJusticia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading9">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse9"
@@ -923,7 +922,7 @@ const SistemaJusticia = () => {
                     className="accordion-collapse collapse"
                     aria-labelledby="heading9"
                   >
-                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-12">
+                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-16">
                       <p className="mb-4">
                         Cuando el agente del Ministerio Público te pida explicar
                         lo que sucedió para redactar tu denuncia, trata de
@@ -1002,7 +1001,7 @@ const SistemaJusticia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading10">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse10"
@@ -1019,7 +1018,7 @@ const SistemaJusticia = () => {
                     className="accordion-collapse collapse"
                     aria-labelledby="heading10"
                   >
-                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-12">
+                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-16">
                       <p className="mb-4 font-semibold">
                         Al momento de denunciar un delito sexual, tienes derecho
                         a:
@@ -1108,7 +1107,7 @@ const SistemaJusticia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading11">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse11"
@@ -1125,7 +1124,7 @@ const SistemaJusticia = () => {
                     className="accordion-collapse collapse"
                     aria-labelledby="heading11"
                   >
-                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-12">
+                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-16">
                       <p className="mb-4">
                         Es normal si tienes dudas o miedo. Recuerda que tu
                         bienestar siempre será lo más importante. Si necesitas
@@ -1196,7 +1195,7 @@ const SistemaJusticia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading12">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse12"
@@ -1213,7 +1212,7 @@ const SistemaJusticia = () => {
                     className="accordion-collapse collapse"
                     aria-labelledby="heading12"
                   >
-                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-12">
+                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-16">
                       <p className="mb-4">
                         Denunciar es el primer paso para que las autoridades
                         comiencen a investigar el delito que viviste.
@@ -1263,7 +1262,7 @@ const SistemaJusticia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading13">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse13"
@@ -1280,7 +1279,7 @@ const SistemaJusticia = () => {
                     className="accordion-collapse collapse"
                     aria-labelledby="heading13"
                   >
-                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-12">
+                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-16">
                       <p className="mb-4">
                         Para que las autoridades sigan investigando el delito y
                         lo hagan correctamente, es muy importante que lleves a
@@ -1370,7 +1369,7 @@ const SistemaJusticia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading14">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse14"
@@ -1388,7 +1387,7 @@ const SistemaJusticia = () => {
                     className="accordion-collapse collapse"
                     aria-labelledby="heading14"
                   >
-                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-12">
+                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-16">
                       <p className="mb-4">
                         Las “diligencias” son las acciones que realiza el fiscal
                         o agente del Ministerio Público –solo o con la ayuda de
@@ -1474,7 +1473,7 @@ const SistemaJusticia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading15">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse15"
@@ -1492,7 +1491,7 @@ const SistemaJusticia = () => {
                     className="accordion-collapse collapse"
                     aria-labelledby="heading15"
                   >
-                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-12">
+                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-16">
                       <p className="mb-4">
                         Si fuiste víctima de un delito que se investiga por
                         querella (estupro, hostigamiento sexual, acoso sexual,
@@ -1640,7 +1639,7 @@ const SistemaJusticia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading16">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse16"
@@ -1657,7 +1656,7 @@ const SistemaJusticia = () => {
                     className="accordion-collapse collapse"
                     aria-labelledby="heading16"
                   >
-                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-12">
+                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-16">
                       <p className="mb-4 text-marron">
                         Es importante que sepas que en México menos del 10% de
                         los delitos denunciados llegan a un juicio.
@@ -1724,7 +1723,7 @@ const SistemaJusticia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading17">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse17"
@@ -1741,7 +1740,7 @@ const SistemaJusticia = () => {
                     className="accordion-collapse collapse"
                     aria-labelledby="heading17"
                   >
-                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-12">
+                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-16">
                       <p className="mb-4">
                         Cuando el fiscal o agente del Ministerio Público haya
                         obtenido suficientes pruebas para demostrar que el la
@@ -1806,7 +1805,7 @@ const SistemaJusticia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading18">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse18"
@@ -1821,7 +1820,7 @@ const SistemaJusticia = () => {
                     className="accordion-collapse collapse"
                     aria-labelledby="heading18"
                   >
-                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-12">
+                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-16">
                       <p className="mb-4">
                         El proceso jurídico contra la persona agresora que
                         comienza cuando le denuncias (“proceso penal”) puede
@@ -2018,7 +2017,6 @@ const SistemaJusticia = () => {
           </div>
         </div>
       </section>
-      <Footer />
     </Layout>
   )
 }

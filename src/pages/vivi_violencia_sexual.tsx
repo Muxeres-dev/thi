@@ -1,7 +1,6 @@
 import React, { useRef, useContext, useEffect } from "react"
 
 import { AppContext } from "../context/AppContext"
-import Footer from "../components/layout/Footer"
 import Layout from "../components/layout/Layout"
 import Section from "../components/shared/Section"
 import TextHeader from "../components/shared/TextHeader"
@@ -53,7 +52,7 @@ const ViviViolencia = () => {
         </TextIlustration>
       </Section>
       <section ref={refSection1}>
-        <div className="bg-beige1 text-white font-light text-lg py-24">
+        <div className="bg-beige1 text-white font-light text-lg py-12">
           <div className="container">
             <div className="sm:w-3/4">
               <TextHeader>Tipos de violencia sexual</TextHeader>
@@ -153,7 +152,7 @@ const ViviViolencia = () => {
         </div>
       </section>
       <section>
-        <div className="font-light text-lg py-24">
+        <div className="font-light text-lg py-12">
           <div className="container">
             <div className="sm:w-3/4">
               <p className="text-2xl sm:text-4xl text-beige1 mb-4 sm:mb-12">
@@ -177,7 +176,7 @@ const ViviViolencia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading1">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse1"
@@ -194,7 +193,7 @@ const ViviViolencia = () => {
                     className="accordion-collapse collapse"
                     aria-labelledby="heading1"
                   >
-                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-12">
+                    <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-16">
                       Muchas mujeres no somos capaces de decir “basta” o “no
                       quiero”, mientras sufrimos violencia sexual. Esto se debe
                       a diversas razones que se relacionan con miedos y
@@ -212,7 +211,7 @@ const ViviViolencia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading2">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse2"
@@ -241,7 +240,7 @@ const ViviViolencia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading3">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse3"
@@ -270,7 +269,7 @@ const ViviViolencia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading4">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse4"
@@ -301,7 +300,7 @@ const ViviViolencia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading5">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse5"
@@ -333,7 +332,7 @@ const ViviViolencia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading6">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse6"
@@ -363,7 +362,7 @@ const ViviViolencia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading7">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse7"
@@ -395,7 +394,7 @@ const ViviViolencia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading8">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-12 sm:pl-8 pr-12 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse8"
@@ -436,7 +435,7 @@ const ViviViolencia = () => {
         </div>
       </section>
       <section ref={refSection2}>
-        <div className="bg-beige1 text-white font-light text-lg py-24">
+        <div className="bg-beige1 text-white font-light text-lg py-12">
           <div className="container">
             <div className="sm:w-3/4">
               <p className="text-2xl sm:text-4xl mb-4">
@@ -712,7 +711,6 @@ const ViviViolencia = () => {
           </div>
         </div>
       </section>
-      <Footer />
     </Layout>
   )
 }
