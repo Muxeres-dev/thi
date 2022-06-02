@@ -2000,12 +2000,18 @@ const SistemaJusticia = () => {
                   </div>
                 </div>
               </div>
+            </div>
+            <div className="container">
               <p className="text-xl mt-16">
                 Si deseas descargar las preguntas y respuestas que se presentan
                 en esta página, hazlo{" "}
-                <Link to="/" className="font-semibold text-marron">
+                <a
+                  href="https://drive.google.com/file/d/1Jh7Sbn5jsleAxVjnCV-OuWLPYzoY7eVW/view?usp=sharing"
+                  className="font-semibold text-marron"
+                  target="_blank"
+                >
                   aquí
-                </Link>
+                </a>
                 .
               </p>
               <p className="text-xl sm:text-3xl py-8">
