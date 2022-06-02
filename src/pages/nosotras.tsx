@@ -9,7 +9,7 @@ const Nosotras = () => {
   return (
     <Layout title="Nosotras">
       <Section>
-        <TextIlustration ilus={Ilus5} title="Nosotras">
+        <TextIlustration ilus={Ilus5} title="Nosotras" small>
           <div className="text-lg">
             <p className="mb-4 mt-4">
               Somos un grupo de mujeres interesadas en dar a conocer información

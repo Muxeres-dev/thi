@@ -13,7 +13,7 @@ const Option = ({
   link?: string
 }) =>
   link ? (
-    <li className="">
+    <li className="mb-4">
       <Link
         to={link}
         onClick={() => onClick(false)}
@@ -36,7 +36,7 @@ const Menu = () => {
         }`}
       >
         <div className="flex justify-center text-center overflow-auto h-full">
-          <ul className="flex flex-col gap-4 mt-20">
+          <ul className="flex flex-col mt-20">
             <Option
               text="Inicio"
               onClick={() => setMenuOpen(false)}

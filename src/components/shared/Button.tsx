@@ -33,7 +33,7 @@ const Button = ({
       )}
       {variant === "option" && (
         <div
-          className={`sm:w-72 border-2 border-beige1 rounded-xl py-2 px-8 sm:px-4 text-base font-medium cursor-pointer text-center ${
+          className={`${className} sm:w-72 border-2 border-beige1 rounded-xl py-2 px-8 sm:px-4 text-base font-medium cursor-pointer text-center ${
             active ? "text-white bg-beige1" : "text-beige1 "
           }  hover:bg-beige1 hover:text-white`}
           onClick={action}

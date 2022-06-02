@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useContext, useRef } from "react"
 import { navigate } from "gatsby"
 import { scroller } from "react-scroll"
+import { motion, useAnimation } from "framer-motion"
+import { useInView } from "react-intersection-observer"
 
 import { AppContext } from "../context/AppContext"
 import Layout from "../components/layout/Layout"
@@ -10,6 +12,7 @@ import Section from "../components/shared/Section"
 import TextIlustration from "../components/shared/TextIlustration"
 import useMenuColor from "../hooks/useMenuColor"
 
+import { fromBottom, fromLeft, opacity } from "../constants/animations"
 import Ilus1 from "../images/ilus1.png"
 
 const InfoDetail = ({ title, children, closeAction }) => (
@@ -27,9 +30,14 @@ const InfoDetail = ({ title, children, closeAction }) => (
 )
 
 const NeedOption = ({ title, resume, action }) => (
-  <div className="sm:w-72 text-white">
-    <Button className="!w-auto" text={title} variant="option-white" action={action} />
-    <div className="mt-8">
+  <div className="sm:w-72 text-white mb-8 sm:mb-0">
+    <Button
+      className="!w-auto"
+      text={title}
+      variant="option-white"
+      action={action}
+    />
+    <div className="mt-4 sm:mt-8">
       <p>{resume}</p>
     </div>
   </div>
@@ -41,9 +49,33 @@ const IndexPage = () => {
   const refSection = useRef(null)
   const menuColor = useMenuColor([refSection])
 
+  const control = useAnimation()
+  const controlInfo = useAnimation()
+  const [ref, inView] = useInView()
+  const [refText, inViewText] = useInView()
+  const [refInfo, inViewInfo] = useInView()
+
   useEffect(() => {
     setMenuColor(menuColor)
   }, [menuColor])
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible")
+    } else if (inViewText) {
+      control.start("visible")
+    } else {
+      control.start("hidden")
+    }
+  }, [control, inView, inViewText])
+
+  useEffect(() => {
+    if (inViewInfo) {
+      controlInfo.start("visible")
+    } else {
+      controlInfo.start("hidden")
+    }
+  }, [controlInfo, inViewInfo])
 
   const selectInfo = opt => {
     setOption(opt)
@@ -58,33 +90,70 @@ const IndexPage = () => {
     <Layout title="Tu historia importa">
       <Section>
         <TextIlustration ilus={Ilus1}>
-          <p className="text-2xl md:text-4xl font-extralight">
-            <span className="font-medium text-beige1">
-              Brindamos información útil y pertinente
-            </span>{" "}
-            para todas aquellas personas que han vivido violencia sexual,
-            tomando en cuenta su proceso de sanación y recuperación.
-          </p>
+          <motion.div
+            ref={refText}
+            variants={fromLeft}
+            initial="hidden"
+            animate={control}
+            transition={{ duration: 1 }}
+          >
+            <p className="text-2xl md:text-4xl font-extralight">
+              <span className="font-medium text-beige1">
+                Brindamos información útil y pertinente
+              </span>{" "}
+              para todas aquellas personas que han vivido violencia sexual,
+              tomando en cuenta su proceso de sanación y recuperación.
+            </p>
+          </motion.div>
         </TextIlustration>
-        <div className="flex flex-col sm:flex-row w-full justify-between gap-4 pt-4">
-          <Button
-            variant="option"
-            text="¿La agresión sexual acaba de ocurrir?"
-            action={() => selectInfo(0)}
-            active={option === 0}
-          />
-          <Button
-            variant="option"
-            text="¿La agresión sexual ocurrió recientemente?"
-            action={() => selectInfo(1)}
-            active={option === 1}
-          />
-          <Button
-            variant="option"
-            text="¿La agresión sexual ocurrió hace tiempo?"
-            action={() => selectInfo(2)}
-            active={option === 2}
-          />
+        <div
+          ref={ref}
+          className="flex flex-col sm:flex-row w-full justify-between pt-4"
+        >
+          <motion.div
+            variants={fromBottom}
+            initial="hidden"
+            animate={control}
+            transition={{ duration: 1 }}
+          >
+            <Button
+              variant="option"
+              text="¿La agresión sexual acaba de ocurrir?"
+              action={() => selectInfo(0)}
+              active={option === 0}
+              className="mb-4 sm:mb-0"
+            />
+          </motion.div>
+          <motion.div
+            variants={fromBottom}
+            initial="hidden"
+            animate={control}
+            className="box"
+            transition={{ duration: 1, delay: 0.5 }}
+          >
+            <Button
+              variant="option"
+              text="¿La agresión sexual ocurrió recientemente?"
+              action={() => selectInfo(1)}
+              active={option === 1}
+              className="mb-4 sm:mb-0 mx-0 sm:mx-4"
+            />
+          </motion.div>
+          <motion.div
+            variants={fromBottom}
+            initial="hidden"
+            animate={control}
+            className="box"
+            transition={{ duration: 1, delay: 1 }}
+          >
+            <Button
+              variant="option"
+              text="¿La agresión sexual ocurrió hace tiempo?"
+              action={() => selectInfo(2)}
+              active={option === 2}
+              className="mb-4 sm:mb-0"
+            />
+          </motion.div>
         </div>
         <div className="ref-info pt-12">
           {option === 0 && (
@@ -213,22 +282,47 @@ const IndexPage = () => {
               <p className="text-2xl sm:text-4xl mt-16 sm:mb-24 md:mb-32">
                 ¿Qué información necesitas?
               </p>
-              <div className="flex flex-col sm:flex-row w-full justify-between gap-4 my-8">
-                <NeedOption
-                  title="Sistema de Salud"
-                  resume="Aquí puedes encontrar información útil sobre los servicios que puede brindarte el sistema de salud en caso de haber vivido una situación de abuso sexual o violación."
-                  action={() => navigate("/sistema_de_salud")}
-                />
-                <NeedOption
-                  title="Sistema de Justicia"
-                  resume="Aquí puedes encontrar información útil sobre qué es una denuncia, cómo hacer una denuncia y qué pasa después de hacer una denuncia."
-                  action={() => navigate("/sistema_de_justicia")}
-                />
-                <NeedOption
-                  title="Autocuidado"
-                  resume="Aquí puedes encontrar información útil sobre cómo cuidar tu cuerpo y cómo cuidarte emocionalmente después de una situación de violencia sexual."
-                  action={() => navigate("/autocuidado")}
-                />
+              <div
+                ref={refInfo}
+                className="flex flex-col sm:flex-row w-full justify-between gap-4 my-8"
+              >
+                <motion.div
+                  variants={opacity}
+                  initial="hidden"
+                  animate={controlInfo}
+                  transition={{ duration: 1 }}
+                >
+                  <NeedOption
+                    title="Sistema de Salud"
+                    resume="Aquí puedes encontrar información útil sobre los servicios que puede brindarte el sistema de salud en caso de haber vivido una situación de abuso sexual o violación."
+                    action={() => navigate("/sistema_de_salud")}
+                  />
+                </motion.div>
+
+                <motion.div
+                  variants={opacity}
+                  initial="hidden"
+                  animate={controlInfo}
+                  transition={{ duration: 1, delay: 0.5 }}
+                >
+                  <NeedOption
+                    title="Sistema de Justicia"
+                    resume="Aquí puedes encontrar información útil sobre qué es una denuncia, cómo hacer una denuncia y qué pasa después de hacer una denuncia."
+                    action={() => navigate("/sistema_de_justicia")}
+                  />
+                </motion.div>
+                <motion.div
+                  variants={opacity}
+                  initial="hidden"
+                  animate={controlInfo}
+                  transition={{ duration: 1, delay: 1 }}
+                >
+                  <NeedOption
+                    title="Autocuidado"
+                    resume="Aquí puedes encontrar información útil sobre cómo cuidar tu cuerpo y cómo cuidarte emocionalmente después de una situación de violencia sexual."
+                    action={() => navigate("/autocuidado")}
+                  />
+                </motion.div>
               </div>
             </div>
           </div>

@@ -46,7 +46,7 @@ const SistemaSalud = () => {
   return (
     <Layout title="Sistema de Salud">
       <Section>
-        <TextIlustration ilus={Ilus3}>
+        <TextIlustration ilus={Ilus3} small>
           <p className="text-xl sm:text-4xl text-beige1 font-medium mb-8">
             Sistema de Salud
           </p>
@@ -54,12 +54,13 @@ const SistemaSalud = () => {
             ¿Viviste una violación o abuso sexual?
           </p>
           <div className="w-full">
-            <div className="flex flex-col sm:flex-row gap-4 md:gap-12 mt-8">
+            <div className="flex flex-col sm:flex-row mt-8">
               <Button
                 variant="option"
                 text="Si"
                 active={sistema.si}
                 action={() => setSistema({ ...sistema, si: true })}
+                className="mb-4 sm:mb-0 sm:mr-12"
               />
               <Button
                 variant="option"
@@ -68,12 +69,13 @@ const SistemaSalud = () => {
               />
             </div>
             {sistema.si && (
-              <div className="flex flex-col sm:flex-row gap-4 md:gap-12 mt-8 mb-8">
+              <div className="flex flex-col sm:flex-row mt-8 mb-8">
                 <Button
                   variant="option"
                   text="Menos de 5 días"
                   active={sistema.menos === true}
                   action={() => handleSistema({ ...sistema, menos: true })}
+                  className="mb-4 sm:mb-0 sm:mr-12"
                 />
                 <Button
                   variant="option"
@@ -94,10 +96,11 @@ const SistemaSalud = () => {
                 <Close
                   action={() => handleClose({ ...sistema, menos: null })}
                   color="white"
-                  className="absolute -right-8 sm:-right-32 -top-12 sm:top-6"
+                  className="absolute right-0 sm:right-0 top-0 sm:top-0"
                 />
                 {sistema.menos && (
                   <>
+                    <TextHeader className="mb-8">Menos de 5 días</TextHeader>
                     <p className="mb-4">
                       Si te han agredido sexualmente puedes acudir a cualquier
                       clínica u hospital del Sistema Nacional de Salud para
@@ -216,6 +219,7 @@ const SistemaSalud = () => {
                 )}
                 {!sistema.menos && (
                   <>
+                    <TextHeader className="mb-8">6 días o más</TextHeader>
                     <TextHeader>
                       ¿Qué debes tener en cuenta en este momento?
                     </TextHeader>
