@@ -8,6 +8,7 @@ import Section from "../components/shared/Section"
 import TextHeader from "../components/shared/TextHeader"
 import TextIlustration from "../components/shared/TextIlustration"
 import Button from "../components/shared/Button"
+import { useAnimateOnInView } from "../hooks/useAnimateOnInView"
 
 import Ilus4 from "../images/ilus4.png"
 
@@ -29,6 +30,8 @@ import useMenuColor from "../hooks/useMenuColor"
 
 import "react-responsive-carousel/lib/styles/carousel.min.css" // requires a loader
 import TitleText from "../components/shared/TitleText"
+import { visible } from "../constants/animations"
+import { motion } from "framer-motion"
 
 const ProgressBar = ({ index }) => (
   <div className="relative">
@@ -109,6 +112,10 @@ const SistemaJusticia = () => {
     console.log(e)
     setcarIndex(e)
   }
+  const { ref: ref0, controls: controls0 } = useAnimateOnInView()
+  const { ref: ref3, controls: controls3 } = useAnimateOnInView()
+  const { ref: ref6, controls: controls6 } = useAnimateOnInView()
+  const { ref: ref9, controls: controls9 } = useAnimateOnInView()
 
   return (
     <Layout title="Sistema de Justicia">

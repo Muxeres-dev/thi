@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useContext, useRef } from "react"
 import { navigate } from "gatsby"
 import { scroller } from "react-scroll"
-import { motion, useAnimation } from "framer-motion"
-import { useInView } from "react-intersection-observer"
+import { motion } from "framer-motion"
 
 import { AppContext } from "../context/AppContext"
 import Layout from "../components/layout/Layout"
@@ -11,8 +10,9 @@ import Close from "../components/shared/Close"
 import Section from "../components/shared/Section"
 import TextIlustration from "../components/shared/TextIlustration"
 import useMenuColor from "../hooks/useMenuColor"
+import { useAnimateOnInView } from "../hooks/useAnimateOnInView"
 
-import { fromBottom, fromLeft, opacity } from "../constants/animations"
+import { fromBottom, opacity } from "../constants/animations"
 import Ilus1 from "../images/ilus1.png"
 
 const InfoDetail = ({ title, children, closeAction }) => (
@@ -30,7 +30,7 @@ const InfoDetail = ({ title, children, closeAction }) => (
 )
 
 const NeedOption = ({ title, resume, action }) => (
-  <div className="sm:w-72 text-white mb-8 sm:mb-0">
+  <div className="lg:w-72 text-white mb-8 sm:mb-0">
     <Button
       className="!w-auto"
       text={title}
@@ -49,33 +49,13 @@ const IndexPage = () => {
   const refSection = useRef(null)
   const menuColor = useMenuColor([refSection])
 
-  const control = useAnimation()
-  const controlInfo = useAnimation()
-  const [ref, inView] = useInView()
-  const [refText, inViewText] = useInView()
-  const [refInfo, inViewInfo] = useInView()
+  const { ref, controls: control } = useAnimateOnInView()
+  const { ref: refText, controls: controlText } = useAnimateOnInView()
+  const { ref: refInfo, controls: controlInfo } = useAnimateOnInView()
 
   useEffect(() => {
     setMenuColor(menuColor)
   }, [menuColor])
-
-  useEffect(() => {
-    if (inView) {
-      control.start("visible")
-    } else if (inViewText) {
-      control.start("visible")
-    } else {
-      control.start("hidden")
-    }
-  }, [control, inView, inViewText])
-
-  useEffect(() => {
-    if (inViewInfo) {
-      controlInfo.start("visible")
-    } else {
-      controlInfo.start("hidden")
-    }
-  }, [controlInfo, inViewInfo])
 
   const selectInfo = opt => {
     setOption(opt)
@@ -90,21 +70,13 @@ const IndexPage = () => {
     <Layout title="Tu historia importa">
       <Section>
         <TextIlustration ilus={Ilus1}>
-          <motion.div
-            ref={refText}
-            variants={fromLeft}
-            initial="hidden"
-            animate={control}
-            transition={{ duration: 1 }}
-          >
-            <p className="text-2xl md:text-4xl font-extralight">
-              <span className="font-medium text-beige1">
-                Brindamos información útil y pertinente
-              </span>{" "}
-              para todas aquellas personas que han vivido violencia sexual,
-              tomando en cuenta su proceso de sanación y recuperación.
-            </p>
-          </motion.div>
+          <p className="text-2xl md:text-4xl font-extralight">
+            <span className="font-medium text-beige1">
+              Brindamos información útil y pertinente
+            </span>{" "}
+            para todas aquellas personas que han vivido violencia sexual,
+            tomando en cuenta su proceso de sanación y recuperación.
+          </p>
         </TextIlustration>
         <div
           ref={ref}

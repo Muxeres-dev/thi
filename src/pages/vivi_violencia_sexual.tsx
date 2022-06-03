@@ -1,4 +1,5 @@
 import React, { useRef, useContext, useEffect } from "react"
+import { motion } from "framer-motion"
 
 import { AppContext } from "../context/AppContext"
 import Layout from "../components/layout/Layout"
@@ -8,6 +9,8 @@ import TextIlustration from "../components/shared/TextIlustration"
 import TitleText from "../components/shared/TitleText"
 
 import useMenuColor from "../hooks/useMenuColor"
+import { useAnimateOnInView } from "../hooks/useAnimateOnInView"
+import { visible } from "../constants/animations"
 
 import Ilus1 from "../images/ilus2.png"
 
@@ -15,6 +18,9 @@ const ViviViolencia = () => {
   const { setMenuColor } = useContext(AppContext)
   const refSection1 = useRef(null)
   const refSection2 = useRef(null)
+
+  const { ref, controls } = useAnimateOnInView()
+  const { ref: refText, controls: controlText } = useAnimateOnInView()
 
   const menuColor = useMenuColor([refSection1, refSection2])
 
