@@ -86,7 +86,7 @@ const IndexPage = () => {
             variants={fromBottom}
             initial="hidden"
             animate={control}
-            transition={{ duration: 1 }}
+            transition={{ duration: 1, delay: 1 }}
           >
             <Button
               variant="option"
@@ -101,7 +101,7 @@ const IndexPage = () => {
             initial="hidden"
             animate={control}
             className="box"
-            transition={{ duration: 1, delay: 0.5 }}
+            transition={{ duration: 1, delay: 1.5 }}
           >
             <Button
               variant="option"
@@ -116,7 +116,7 @@ const IndexPage = () => {
             initial="hidden"
             animate={control}
             className="box"
-            transition={{ duration: 1, delay: 1 }}
+            transition={{ duration: 1, delay: 2 }}
           >
             <Button
               variant="option"

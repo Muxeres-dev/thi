@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import React from "react"
-import { fromTop, fromLeft, visible } from "../../constants/animations"
+import { fromTop, opacity, visible } from "../../constants/animations"
 import { useAnimateOnInView } from "../../hooks/useAnimateOnInView"
 
 const TextIlustration = ({
@@ -16,14 +16,15 @@ const TextIlustration = ({
 }) => {
   const { ref, controls } = useAnimateOnInView()
   const { ref: ref2, controls: controls2 } = useAnimateOnInView()
+  const { ref: ref3, controls: controls3 } = useAnimateOnInView()
   return (
     <div className="flex w-full gap-4 flex-col md:flex-row mb-8">
       <div className="flex items-center justify-center md:w-2/5 md:order-2 mt-12 sm:mt-0">
         <motion.div
-          ref={ref}
+          ref={ref2}
           variants={visible}
           initial="hidden"
-          animate={controls}
+          animate={controls2}
           className="box"
           transition={{ duration: 1.5, delay: 0.5 }}
         >
@@ -51,14 +52,14 @@ const TextIlustration = ({
             </motion.div>
           )}
           <motion.div
-            ref={ref}
-            variants={fromLeft}
+            ref={ref3}
+            variants={opacity}
             initial="hidden"
-            animate={controls}
+            animate={controls3}
             className="box"
-            transition={{ duration: 1.25 }}
+            transition={{ duration: 1.5, delay: 0.5 }}
           >
-            {children}
+            <div>{children}</div>
           </motion.div>
         </div>
       </div>
