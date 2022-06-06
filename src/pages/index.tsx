@@ -50,7 +50,6 @@ const IndexPage = () => {
   const menuColor = useMenuColor([refSection])
 
   const { ref, controls: control } = useAnimateOnInView()
-  const { ref: refText, controls: controlText } = useAnimateOnInView()
   const { ref: refInfo, controls: controlInfo } = useAnimateOnInView()
 
   useEffect(() => {

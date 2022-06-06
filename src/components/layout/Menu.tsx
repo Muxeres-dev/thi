@@ -59,7 +59,7 @@ const Menu = () => {
             />
             <Option
               text="Autocuidado"
-              link="/reflexiones"
+              link="/autocuidado"
               onClick={() => setMenuOpen(false)}
             />
             <Option
