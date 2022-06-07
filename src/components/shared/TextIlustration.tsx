@@ -31,7 +31,7 @@ const TextIlustration = ({
           <img
             src={ilus}
             alt="Tu historia importa - ilustración"
-            className={`w-full max-w-xs ${small ? "max-w-il" : ""}`}
+            className={`max-w-il w-full sm:max-w-xs ${small ? "max-w-il" : ""}`}
           />
         </motion.div>
       </div>

@@ -43,23 +43,29 @@ const Historia = () => {
             encontrar lo que funcione mejor para ti. No tiene por qué ser como
             el nuestro, pero esto te puede servir como una especie de guía.
           </p>
-          <p className="">9:15 p.m.</p>
-          <p className="">QUÉ: Llegué al bar</p>
-          <p className="">DÓNDE: La Chilanga</p>
-          <p className="">QUIÉN: Con Emma y María</p>
-          <p className="">
+          <p className="font-semibold">9:15 p.m.</p>
+          <p className="text-beige1">QUÉ: Llegué al bar</p>
+          <p className="text-beige1">DÓNDE: La Chilanga</p>
+          <p className="text-beige1">QUIÉN: Con Emma y María</p>
+          <p className="text-beige1">
             EVIDENCIA: Recibo de Uber en el que llegué con mis amigas.
           </p>
-          <p className="">9:30 p.m.</p>
-          <p className="">QUÉ: Tomé una copa en el bar y conocí al agresor.</p>
-          <p className="">DÓNDE: La Chilanga</p>
-          <p className="">QUIÉN: Hombre de cabello castaño, en sus 20.</p>
-          <p className="">EVIDENCIA: Pago con tarjeta de débito</p>
-          <p className="">10 p.m. en adelante</p>
-          <p className="">QUÉ: No recuerdo</p>
-          <p className="">DÓNDE: No estoy segura</p>
-          <p className="">QUIÉN: Con el agresor</p>
-          <p className="">EVIDENCIA: Mis amigas no pudieron encontrarme</p>
+          <p className="font-semibold">9:30 p.m.</p>
+          <p className="text-beige1">
+            QUÉ: Tomé una copa en el bar y conocí al agresor.
+          </p>
+          <p className="text-beige1">DÓNDE: La Chilanga</p>
+          <p className="text-beige1">
+            QUIÉN: Hombre de cabello castaño, en sus 20.
+          </p>
+          <p className="text-beige1">EVIDENCIA: Pago con tarjeta de débito</p>
+          <p className="font-semibold">10 p.m. en adelante</p>
+          <p className="text-beige1">QUÉ: No recuerdo</p>
+          <p className="text-beige1">DÓNDE: No estoy segura</p>
+          <p className="text-beige1">QUIÉN: Con el agresor</p>
+          <p className="text-beige1">
+            EVIDENCIA: Mis amigas no pudieron encontrarme
+          </p>
           <p className="">
             Es importante recordar que es tu historia y la puedes contar cuando
             lo desees, de la forma en que te sientas más cómoda. El uso de esta
@@ -76,7 +82,7 @@ const Historia = () => {
             tranquila mientras trabajas. Si te sientes lista para empezar,
             comencemos a crear tu línea del tiempo.
           </p>
-          <p className="">Comenzando tu bitácora:</p>
+          <p className="text-beige1 font-semibold">Comenzando tu bitácora:</p>
           <p className="">
             Antes de empezar a anotar los detalles de lo que sucedió, tómate un
             tiempo para prepararte. Detente cuando lo necesites; esta puede ser
@@ -123,15 +129,17 @@ const Historia = () => {
             regreses después para agregar más información, lo importante es que
             no te sientas incómoda o ansiosa.
           </p>
-          <p className="">Un ejemplo podría ser:</p>
+          <p className="font-semibold">Un ejemplo podría ser:</p>
           <p className="">
             Conocí al agresor hace poco en un bar en el centro de Monterrey. Al
             principio fue muy amable, y después de un par de copas fuimos a un
             restaurante a comer algo. Luego nos reunimos con algunas amigas...
             No estoy segura de lo que pasó después.
           </p>
-          <p className="">¡Bien hecho! - ¡Has completado el primer paso!</p>
-          <p className="">
+          <p className="text-beige1 font-semibold">
+            ¡Bien hecho! - ¡Has completado el primer paso!
+          </p>
+          <p className="text-beige1 font-semibold">
             Ahora convierte estos eventos en eventos separados en tu bitácora.
           </p>
           <p className="">
@@ -149,7 +157,7 @@ const Historia = () => {
             medida que avanzas en esto, y siéntete libre de detenerte y volver a
             ello tantas veces como lo necesites.
           </p>
-          <p className="">1. QUÉ PASÓ</p>
+          <p className="font-semibold">1. QUÉ PASÓ</p>
           <p className="">
             Mira el texto que escribiste en el primer paso e intenta destacar la
             primera parte del incidente. Escribe esto en una tarjeta como tu
@@ -159,7 +167,7 @@ const Historia = () => {
             En el ejemplo anterior, el "qué" o el primer evento sería: "Llegó al
             bar".
           </p>
-          <p className="">2. DÓNDE OCURRIÓ</p>
+          <p className="font-semibold">2. DÓNDE OCURRIÓ</p>
           <p className="">
             Después, intenta especificar la ubicación donde ocurrió este evento
             y lo que creas que sea relevante y puedas recordar fácilmente y
@@ -194,7 +202,7 @@ const Historia = () => {
             <li>En la misma calle que el restaurante Asadero.</li>
             <li>Letreros de neón encima de la puerta.</li>
           </ul>
-          <p className="">3. CUÁNDO SUCEDIÓ</p>
+          <p className="font-semibold">3. CUÁNDO SUCEDIÓ</p>
           <p className="">
             A continuación, ¿recuerdas la fecha y hora de este evento? Agrega
             esto a otra tarjeta de "Cuándo". También está bien tener un tiempo
@@ -206,7 +214,7 @@ const Historia = () => {
           <p className="">
             En algún momento de la primera semana de octubre de 2019
           </p>
-          <p className="">EVIDENCIA</p>
+          <p className="font-semibold">EVIDENCIA</p>
           <p className="">
             Finalmente, agreguemos detalles de cualquier cosa que pueda ser útil
             como evidencia para este evento.
@@ -226,10 +234,10 @@ const Historia = () => {
             <li>Datos de Google Maps</li>
           </ul>
 
-          <p className="">
+          <p className="text-beige1 font-semibold">
             ¡Bien hecho, ya has creado el primer evento completo en tu bitácora!
           </p>
-          <p className="">REPITE</p>
+          <p className="font-semibold">REPITE</p>
           <p className="">
             Ahora puedes completar la línea del tiempo de manera más pausada,
             agregando más eventos a tus tarjetas y repitiendo los pasos hasta
@@ -242,18 +250,20 @@ const Historia = () => {
             puedas. Puedes mover y modificar tus tarjetas siempre que lo
             necesites, cuando las revises o cuando recuerdes algo más.
           </p>
-          <p className="">
-            Estamos muy orgullosas de ti por hacer esta bitácora. Con suerte,
-            esto te ayudará si alguna vez necesitas recordar lo que sucedió al
-            platicar con amistades y familiares, buscar terapia o acudir a un
-            Ministerio Público.
+          <p className="font-semibold">
+            <span className="text-beige1 font-semibold">
+              Estamos muy orgullosas de ti por hacer esta bitácora.{" "}
+            </span>
+            Con suerte, esto te ayudará si alguna vez necesitas recordar lo que
+            sucedió al platicar con amistades y familiares, buscar terapia o
+            acudir a un Ministerio Público.
           </p>
         </Tab>
         <div>
           <p className="text-lg font-semibold text-beige1 mb-4">Autoría</p>
           <p className="mb-4">
             Este material fue elaborado por{" "}
-            <span className="text-marron font-semibold">
+            <span className="text-marron">
               Your Story Matters (YSM)
             </span>
             .

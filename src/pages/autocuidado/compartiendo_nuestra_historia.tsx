@@ -9,7 +9,7 @@ const Historia = () => {
     <AutocuidadoLayout title="Compartiendo nuestra historia">
       <TabList>
         <Tab title="Decidir si contar" read="5 minutos">
-          <p className="text-beige1">Está bien no contarlo.</p>
+          <p className="text-beige1 font-semibold">Está bien no contarlo.</p>
           <p className="">
             <span className="font-semibold">
               No le debemos a nadie nuestra historia
@@ -22,7 +22,7 @@ const Historia = () => {
               priorizar nuestro propio recorrido de sanación.
             </span>
           </p>
-          <p className="text-beige1">Está bien decirlo.</p>
+          <p className="text-beige1 font-semibold">Está bien decirlo.</p>
           <p className="">
             Una amiga o amigo de confianza, una persona de nuestra familia, una
             consejera o una figura de autoridad: depende de nosotras con quién
@@ -54,7 +54,7 @@ const Historia = () => {
             <span className="font-semibold">respirar y procesar.</span>
           </p>
           <p className="">
-            Algunas veces, las personas a las que más queremos pueden
+            Algunas veces, las personas a las que más queremos pueden{" "}
             <span className="font-semibold">reaccionar emocionalmente</span> al
             escuchar nuestro dolor. Estas reacciones, que pueden incluir ira, a
             veces pueden estar motivadas por sentimientos de impotencia o culpa:
@@ -791,7 +791,7 @@ const Historia = () => {
           <p className="text-lg font-semibold text-beige1 mb-4">Autoría</p>
           <p className="mb-4">
             Este material fue elaborado por{" "}
-            <span className="text-marron font-semibold">
+            <span className="text-marron font-medium">
               Your Story Matters (YSM)
             </span>
             .
@@ -811,6 +811,108 @@ const Historia = () => {
             Medium: 5 Common Outcomes After Telling Someone About Sexual
             Harassment or Assault & The 1 Thing That… RAINN: Telling Loved Ones
             About Sexual Assault
+          </p>
+        </div>
+        <div>
+          <p className="text-lg font-semibold text-beige1 mb-4">Autoría</p>
+          <p className="mb-4">
+            Este material fue elaborado por{" "}
+            <span className="text-marron font-medium">
+              Your Story Matters (YSM)
+            </span>
+            .
+          </p>
+          <p className="mb-4">
+            La traducción al español estuvo a cargo de María José Álvarez
+            Espinosa y del equipo de Tu Historia Importa.
+          </p>
+          <p className="text-lg font-semibold text-beige1 mb-4">
+            Agradecimientos
+          </p>
+          <p className="mb-4">
+            Nos gustaría agradecer el uso de los siguientes recursos al crear
+            este documento.
+          </p>
+          <p className="mb-4">
+            <a href="" target="_blank">
+              https://theconversation.com/why-many-people-dont-talk-about-traumatic-events-until-long-after-they-occur-63248
+              https://www.rainn.org/stories
+            </a>
+          </p>
+        </div>
+        <div>
+          <p className="text-lg font-semibold text-beige1 mb-4">Autoría</p>
+          <p className="mb-4">
+            Este material fue elaborado por{" "}
+            <span className="text-marron font-medium">
+              Your Story Matters (YSM)
+            </span>
+            .
+          </p>
+          <p className="mb-4">
+            La traducción al español estuvo a cargo de María José Álvarez
+            Espinosa y del equipo de Tu Historia Importa.
+          </p>
+        </div>
+        <div>
+          <p className="text-lg font-semibold text-beige1 mb-4">Autoría</p>
+          <p className="mb-4">
+            Este material fue elaborado por{" "}
+            <span className="text-marron font-medium">
+              Your Story Matters (YSM)
+            </span>
+            .
+          </p>
+          <p className="mb-4">
+            La traducción al español estuvo a cargo de María José Álvarez
+            Espinosa y del equipo de Tu Historia Importa.
+          </p>
+          <p className="text-lg font-semibold text-beige1 mb-4">
+            Agradecimientos
+          </p>
+          <p className="mb-4">
+            Nos gustaría agradecer el uso de los siguientes recursos al crear
+            este documento.
+          </p>
+          <p className="mb-4">
+            <a
+              href="https://www.rainn.org/articles/telling-loved-ones-about-sexual-assault#"
+              target="_blank"
+            >
+              https://www.rainn.org/articles/telling-loved-ones-about-sexual-assault#
+            </a>
+          </p>
+        </div>
+        <div>
+          <p className="text-lg font-semibold text-beige1 mb-4">Autoría</p>
+          <p className="mb-4">
+            Este material fue elaborado por{" "}
+            <span className="text-marron font-medium">
+              Your Story Matters (YSM)
+            </span>
+            .
+          </p>
+          <p className="mb-4">
+            La traducción al español estuvo a cargo de María José Álvarez
+            Espinosa y del equipo de Tu Historia Importa.
+          </p>
+          <p className="text-lg font-semibold text-beige1 mb-4">
+            Agradecimientos
+          </p>
+          <p className="mb-4">
+            Nos gustaría agradecer el uso de los siguientes recursos al crear
+            este documento.
+          </p>
+          <p className="mb-4">
+            Self-care guide:{" "}
+            <a
+              href="https://www.csbsju.edu/chp/sexual-assault-survivors-guide"
+              target="_blank"
+            >
+              https://www.csbsju.edu/chp/sexual-assault-survivors-guide
+            </a>
+            <br />
+            Chayn: GBMO guide; Trauma Resilience course
           </p>
         </div>
       </TabList>

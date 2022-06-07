@@ -40,7 +40,9 @@ const Historia = () => {
             parecer permanentes y abrumadores, no tienen por qué serlo. Con el
             paso del tiempo, puedes encontrar paz.
           </p>
-          <p className="">Identificando y nombrando tus sentimientos</p>
+          <p className="font-semibold text-beige1">
+            Identificando y nombrando tus sentimientos
+          </p>
           <p className="">
             El primer paso para comprender por qué nos sentimos de la forma en
             que nos sentimos es identificar qué es lo que sentimos. Inhala
@@ -86,14 +88,17 @@ const Historia = () => {
             no lo son.
           </p>
           <p className="">
-            No eres la única que se siente así. Lo que pasó no fue tu culpa. Lo
-            que te pasó fue un crimen. Al leer esto, es posible que estés al
-            comienzo de tu camino para reclamar y recuperar tu poder y esto, en
-            sí mismo, es un acto valiente y amoroso hacia ti. Continúa siendo
-            amable contigo y tómate tu tiempo.
+            <span className="font-semibold">
+              No eres la única que se siente así.
+            </span>{" "}
+            Lo que pasó no fue tu culpa. Lo que te pasó fue un crimen. Al leer
+            esto, es posible que estés al comienzo de tu camino para reclamar y
+            recuperar tu poder y esto, en sí mismo, es un acto valiente y
+            amoroso hacia ti. Continúa siendo amable contigo y tómate tu tiempo.
           </p>
           <p className="">
-            Recuperando tu cuerpo <br />
+            <span className="font-semibold">Recuperando tu cuerpo</span>
+            <br />
             Esta sección puede resultar molesta para algunas, ya que contiene
             descripciones de autolesiones y agresiones.
           </p>
@@ -132,8 +137,11 @@ const Historia = () => {
             normal que experimentemos síntomas de reacción al trauma en las
             semanas, e incluso meses, posteriores a la agresión. Las
             investigaciones han demostrado que la mayoría de las mujeres que han
-            vivido una violación, experimentan síntomas de trastorno de estrés
-            postraumático (TEPT) en las dos semanas posteriores a la agresión.
+            vivido una violación, experimentan{" "}
+            <span className="font-semibold">
+              síntomas de trastorno de estrés postraumático (TEPT)
+            </span>{" "}
+            en las dos semanas posteriores a la agresión.
           </p>
           <p className="">
             Lo que estabas sintiendo, o podrías seguir sintiendo, es una
@@ -189,7 +197,9 @@ const Historia = () => {
             hemos discutido durante un mes, habla con un profesional para una
             evaluación más completa.
           </p>
-          <p className="">Algunos de los síntomas del TEPT son:</p>
+          <p className="text-beige1 font-semibold">
+            Algunos de los síntomas del TEPT son:
+          </p>
           <ul className="list-disc pl-4">
             <li>
               Recuerdos recurrentes de lo que sucedió, incluidos pensamientos
@@ -330,7 +340,7 @@ const Historia = () => {
             puedes hacerlo, ya lo has hecho antes y de que estás construida para
             estar aquí.
           </p>
-          <p className="">Ya has sido resiliente.</p>
+          <p className="text-beige1 font-semibold">Ya has sido resiliente.</p>
           <p className="">
             También existen tratamientos profesionales para el TEPT, que puedes
             considerar si deseas el apoyo de alguien capacitado, para ayudar a
@@ -338,33 +348,38 @@ const Historia = () => {
           </p>
           <ul className="list-disc pl-4">
             <li className="mb-4">
-              Terapia cognitivo-conductual (TCC) centrada en el trauma: la TCC
-              implica hablar sobre tu experiencia con un profesional que te
-              ayuda a establecer vínculos entre tus pensamientos, sentimientos y
-              comportamientos. El objetivo de la terapia es ayudarte a obtener
-              un mayor sentido de control de tus pensamientos y comportamientos,
-              sentir una nueva esperanza para el futuro, así como ayudarte a
-              cambiar o reducir los mecanismos de afrontamiento negativos del
-              pasado y las creencias personales negativas.
+              <span className="font-semibold">
+                Terapia cognitivo-conductual (TCC) centrada en el trauma:
+              </span>{" "}
+              la TCC implica hablar sobre tu experiencia con un profesional que
+              te ayuda a establecer vínculos entre tus pensamientos,
+              sentimientos y comportamientos. El objetivo de la terapia es
+              ayudarte a obtener un mayor sentido de control de tus pensamientos
+              y comportamientos, sentir una nueva esperanza para el futuro, así
+              como ayudarte a cambiar o reducir los mecanismos de afrontamiento
+              negativos del pasado y las creencias personales negativas.
             </li>
             <li className="mb-4">
-              Desensibilización y reprocesamiento por el movimiento ocular
-              (DRMO): DRMO implica prestar atención a un estímulo externo, como
-              una luz o un dedo que se mueve hacia adelante y hacia atrás.
-              Sigues este objeto con los ojos mientras piensas en la agresión.
-              Mover los ojos de un lado a otro fija tu atención y ocupa tu
-              cerebro con patrones repetitivos de actividad. Esto te permite
-              acceder y procesar el recuerdo traumático sin que tu mente se
-              abrume demasiado y, en última instancia, puedas formar nuevas
+              <span className="font-semibold">
+                Desensibilización y reprocesamiento por el movimiento ocular
+                (DRMO):
+              </span>{" "}
+              DRMO implica prestar atención a un estímulo externo, como una luz
+              o un dedo que se mueve hacia adelante y hacia atrás. Sigues este
+              objeto con los ojos mientras piensas en la agresión. Mover los
+              ojos de un lado a otro fija tu atención y ocupa tu cerebro con
+              patrones repetitivos de actividad. Esto te permite acceder y
+              procesar el recuerdo traumático sin que tu mente se abrume
+              demasiado y, en última instancia, puedas formar nuevas
               asociaciones con ese recuerdo.
             </li>
             <li className="mb-4">
-              Medicamentos: aunque no existen medicamentos diseñados
-              específicamente para tratar el TEPT, existe una variedad de
-              medicamentos bien establecidos que se utilizan para tratar otras
-              afecciones, como la depresión y la ansiedad, que pueden ser útiles
-              para controlar los síntomas del TEPT (siempre deberán de ser
-              recetados por un profesional).
+              <span className="font-semibold">Medicamentos:</span> aunque no
+              existen medicamentos diseñados específicamente para tratar el
+              TEPT, existe una variedad de medicamentos bien establecidos que se
+              utilizan para tratar otras afecciones, como la depresión y la
+              ansiedad, que pueden ser útiles para controlar los síntomas del
+              TEPT (siempre deberán de ser recetados por un profesional).
             </li>
           </ul>
           <p className="">
@@ -503,10 +518,12 @@ const Historia = () => {
             menudo continúan fallando a las sobrevivientes y pueden lastimarnos
             aún más.
           </p>
-          <p className="">
-            Solo tú puedes decidir qué funcionará mejor para ti. Date tiempo
-            para reconstruir tu confianza en las personas y, aún más importante,
-            en ti misma.
+          <p className="font-semibold">
+            <span className="text-beige1">
+              Solo tú puedes decidir qué funcionará mejor para ti.
+            </span>{" "}
+            Date tiempo para reconstruir tu confianza en las personas y, aún más
+            importante, en ti misma.
           </p>{" "}
         </Tab>
         <Tab title="Sentimientos de culpa y vergüenza" read="3 minutos">
@@ -540,26 +557,33 @@ const Historia = () => {
           </p>
           <ul className="list-disc pl-4">
             <li>
-              Puede que nos sintamos culpables por no haber evitado que
-              sucediera la agresión. Es importante recordar que cuando estamos
-              en medio de una agresión, nuestro cerebro y nuestro cuerpo están
-              conmocionados. Es posible que nos sintamos “congeladas”, es una
-              reacción natural al trauma o al miedo, por lo que no debemos
-              juzgarnos por hacer lo mejor que pudimos en circunstancias
-              extremas.
+              <span className="font-semibold">
+                Puede que nos sintamos culpables por no haber evitado que
+                sucediera la agresión.
+              </span>{" "}
+              Es importante recordar que cuando estamos en medio de una
+              agresión, nuestro cerebro y nuestro cuerpo están conmocionados. Es
+              posible que nos sintamos “congeladas”, es una reacción natural al
+              trauma o al miedo, por lo que no debemos juzgarnos por hacer lo
+              mejor que pudimos en circunstancias extremas.
             </li>
             <li>
-              Puede que nos culpemos por confiar en alguien en quien "no
-              deberíamos" haber confiado. Esto es especialmente común si fuimos
-              agredidas por alguien que conocemos. Es natural cuestionarnos y
-              preguntarnos si pasamos por alto las señales de advertencia. Pero
-              recuerda que nuestro atacante es el único culpable, el que violó
-              toda confianza, y es el que debería sentirse culpable y
-              avergonzado, no nosotras.
+              <span className="font-semibold">
+                Puede que nos culpemos por confiar en alguien en quien "no
+                deberíamos" haber confiado.
+              </span>{" "}
+              Esto es especialmente común si fuimos agredidas por alguien que
+              conocemos. Es natural cuestionarnos y preguntarnos si pasamos por
+              alto las señales de advertencia. Pero recuerda que nuestro
+              atacante es el único culpable, el que violó toda confianza, y es
+              el que debería sentirse culpable y avergonzado, no nosotras.
             </li>
             <li>
-              Podemos culparnos a nosotras mismas por lo que llevábamos puesto o
-              porque pudimos haber estado bajo la influencia de una sustancia.
+              <span className="font-semibold">
+                Podemos culparnos a nosotras mismas por lo que llevábamos puesto
+                o porque pudimos haber estado bajo la influencia de una
+                sustancia.
+              </span>{" "}
               Nadie pide ser agredida sexualmente. Nos vestimos para sentirnos
               cómodas y bien, y solo los perpetradores son responsables de sus
               propias acciones. Si estábamos bajo la influencia de alguna
@@ -593,11 +617,14 @@ const Historia = () => {
             <li>¿Qué le diría a una amiga si estuviera en mi situación?</li>
           </ul>
 
-          <p className="">
+          <p className="font-semibold">
             Independientemente de la circunstancia, la única persona responsable
-            de una agresión es el perpetrador. No pedimos, ni merecíamos lo que
-            nos pasó. Debemos asignar la responsabilidad a quien corresponde: al
-            agresor y no a nosotras.
+            de una agresión es el perpetrador.{" "}
+            <span className="text-beige1">
+              No pedimos, ni merecíamos lo que nos pasó.
+            </span>{" "}
+            Debemos asignar la responsabilidad a quien corresponde: al agresor y
+            no a nosotras.
           </p>
         </Tab>
         <Tab title="Reacciones al tacto y al sexo." read="3 minutos">
@@ -641,33 +668,43 @@ const Historia = () => {
           </p>
           <ul className="list-disc pl-4">
             <li>
-              Si nos hemos sentido desconectadas de nuestro cuerpo, puede ser
-              abrumador empezar a pensar en sexo o en excitación. En lugar de
-              eso, podríamos intentar simplemente notar algunas de las
-              sensaciones más básicas de nuestro cuerpo. Por ejemplo, prestar
-              atención a las sensaciones de hambre, sensaciones de saciedad. O
-              quizás tratando de sentir profundamente la sensación de
-              satisfacción que puede surgir con una caminata larga y vigorosa o
-              con el cansancio de un día largo.
+              <span className="font-semibold">
+                Si nos hemos sentido desconectadas de nuestro cuerpo, puede ser
+                abrumador empezar a pensar en sexo o en excitación.
+              </span>{" "}
+              En lugar de eso, podríamos intentar simplemente notar algunas de
+              las sensaciones más básicas de nuestro cuerpo. Por ejemplo,
+              prestar atención a las sensaciones de hambre, sensaciones de
+              saciedad. O quizás tratando de sentir profundamente la sensación
+              de satisfacción que puede surgir con una caminata larga y vigorosa
+              o con el cansancio de un día largo.
             </li>
             <li>
-              Después, podemos probar actividades más delicadas e íntimas (solas
-              o en pareja) y establecer si las disfrutamos. ¿Se siente bien
-              recibir un abrazo? ¿Disfruto cuando alguien me toma de la mano?
-              ¿Puedo tocarme?
+              <span className="font-semibold">
+                Después, podemos probar actividades más delicadas e íntimas
+                (solas o en pareja) y establecer si las disfrutamos.
+              </span>{" "}
+              ¿Se siente bien recibir un abrazo? ¿Disfruto cuando alguien me
+              toma de la mano? ¿Puedo tocarme?
             </li>
             <li>
-              Si ya estamos disfrutando del tacto, podría ser una buena idea
-              comenzar a explorar los sentimientos eróticos de una manera segura
-              y con pocas presiones. Si soy alguien a quien le gusta leer
-              ficción erótica, puedo intentar releer mi lectura favorita
-              ¿Todavía me hace sentir bien? ¿Hay nuevas escenas o palabras que
-              me incomodan y que me gustaría evitar?
+              <span className="font-semibold">
+                Si ya estamos disfrutando del tacto, podría ser una buena idea
+                comenzar a explorar los sentimientos eróticos de una manera
+                segura y con pocas presiones.
+              </span>{" "}
+              Si soy alguien a quien le gusta leer ficción erótica, puedo
+              intentar releer mi lectura favorita ¿Todavía me hace sentir bien?
+              ¿Hay nuevas escenas o palabras que me incomodan y que me gustaría
+              evitar?
             </li>
             <li>
-              No todas tenemos pareja, pero para aquellas nosotras que sí
-              tenemos, podría resultarnos útil, incluso esencial, hablar con
-              nuestras parejas sobre nuestra(s) experiencia(s) con la agresión.
+              <span className="font-semibold">
+                No todas tenemos pareja, pero para aquellas nosotras que sí
+                tenemos, podría resultarnos útil, incluso esencial, hablar con
+                nuestras parejas sobre nuestra(s) experiencia(s) con la
+                agresión.
+              </span>{" "}
               Podemos compartir tanto o tan poco como queramos y podría
               resultarnos especialmente útil decirle a nuestra pareja con qué no
               nos sentimos cómodas.
@@ -677,11 +714,15 @@ const Historia = () => {
         <Tab title="Practicando el cuidado personal" read="3 minutos">
           <p className="">
             Cuando superamos nuestro trauma y lo que nos ha sucedido, es muy
-            importante que nos tomemos el tiempo de recordar y practicar
-            activamente el cuidado personal y el amor propio. Procesar y superar
-            un trauma puede ser emocionalmente agotador. También podríamos estar
-            sanando lesiones físicas, por lo que es importante que mantengamos
-            nuestro cuerpo y nuestra mente sanos y fuertes.
+            importante que nos tomemos el tiempo de{" "}
+            <span className="font-semibold">
+              recordar y practicar activamente el cuidado personal y el amor
+              propio.
+            </span>{" "}
+            Procesar y superar un trauma puede ser emocionalmente agotador.
+            También podríamos estar sanando lesiones físicas, por lo que es
+            importante que mantengamos nuestro cuerpo y nuestra mente sanos y
+            fuertes.
           </p>
           <p className="">
             El cuidado personal se trata de que activamente tomemos los pasos
@@ -700,68 +741,81 @@ const Historia = () => {
           </p>
           <ul className="list-disc pl-4">
             <li>
-              Practica algo de Atención Plena o Mindfulness "suave". La
-              meditación y la atención plena pueden ayudarnos a concentrarnos en
-              nuestra respiración y a lidiar con los momentos de pánico.
+              <span className="font-semibold">
+                Practica algo de Atención Plena o Mindfulness "suave".
+              </span>{" "}
+              La meditación y la atención plena pueden ayudarnos a concentrarnos
+              en nuestra respiración y a lidiar con los momentos de pánico.
               Aplicaciones como Headspace brindan ejercicios de respiración para
               ayudar cuando sentimos que estamos entrando en pánico y ofrecen
               cursos de atención plena gratuitos, para ayudarnos cuando estamos
               librando una batalla interna.
             </li>
             <li>
-              Practica Atención Plena o Mindfulness "activa". Colorear, hacer
-              arte o manualidades, reorganizar tu hogar, cocinar algo o aprender
-              una receta nueva puede generar que seamos activamente conscientes
-              y ayudarnos.
+              <span className="font-semibold">
+                Practica Atención Plena o Mindfulness "activa".
+              </span>{" "}
+              Colorear, hacer arte o manualidades, reorganizar tu hogar, cocinar
+              algo o aprender una receta nueva puede generar que seamos
+              activamente conscientes y ayudarnos.
             </li>
             <li>
-              Intenta llevar un diario. Esta puede ser una forma de llevar un
-              registro de tu vida de manera regular, lo que estás haciendo y
-              cómo te sientes. Más importante aún, es una forma de exteriorizar
-              nuestras experiencias.
+              <span className="font-semibold">Intenta llevar un diario.</span>{" "}
+              Esta puede ser una forma de llevar un registro de tu vida de
+              manera regular, lo que estás haciendo y cómo te sientes. Más
+              importante aún, es una forma de exteriorizar nuestras
+              experiencias.
             </li>
             <li>
-              Desafía los pensamientos negativos. Esto puede parecer difícil al
-              principio cuando comenzamos nuestro viaje de cuidado personal,
-              pero desafiar activamente los pensamientos negativos puede ser
-              clave para el cuidado personal y para apoyarnos a nosotras mismas
-              a través de nuestras experiencias. Cuando te enfrentes a
-              pensamientos negativos, pregúntate: "¿Por qué pienso esto?", "¿Hay
-              algo que pueda hacer para racionalizar o trabajar en contra de
-              esto?"
+              <span className="font-semibold">
+                Desafía los pensamientos negativos.
+              </span>{" "}
+              Esto puede parecer difícil al principio cuando comenzamos nuestro
+              viaje de cuidado personal, pero desafiar activamente los
+              pensamientos negativos puede ser clave para el cuidado personal y
+              para apoyarnos a nosotras mismas a través de nuestras
+              experiencias. Cuando te enfrentes a pensamientos negativos,
+              pregúntate: "¿Por qué pienso esto?", "¿Hay algo que pueda hacer
+              para racionalizar o trabajar en contra de esto?"
             </li>
             <li>
-              Escucha tu cuerpo. Cuando estamos cansadas, hambrientas o
-              agotadas, nuestro cuerpo nos dice que debemos dar un paso atrás y
-              tomar un descanso. Esto es lo mismo para nosotras mentalmente.
-              Escucha a tu cuerpo cuando te diga que hagas una pausa y tómate un
-              tiempo para ti.
+              <span className="font-semibold">Escucha tu cuerpo.</span> Cuando
+              estamos cansadas, hambrientas o agotadas, nuestro cuerpo nos dice
+              que debemos dar un paso atrás y tomar un descanso. Esto es lo
+              mismo para nosotras mentalmente. Escucha a tu cuerpo cuando te
+              diga que hagas una pausa y tómate un tiempo para ti.
             </li>
             <li>
-              Deshazte de los depresores. El alcohol y otras drogas pueden
-              generar una buena sensación al principio, pero junto con una mala
-              salud mental, pueden terminar haciéndote sentir peor. Cuando se
-              usan como forma de escapar de tus sentimientos, pueden hacer que
-              tu recuperación sea más difícil. Otras formas adormecedoras de
-              lidiar con la tristeza y el estrés, son ignorar y reprimir los
-              sentimientos, trabajar o estudiar demasiado, lastimarte a ti misma
-              y lastimar a los demás.
+              <span className="font-semibold">Deshazte de los depresores.</span>{" "}
+              El alcohol y otras drogas pueden generar una buena sensación al
+              principio, pero junto con una mala salud mental, pueden terminar
+              haciéndote sentir peor. Cuando se usan como forma de escapar de
+              tus sentimientos, pueden hacer que tu recuperación sea más
+              difícil. Otras formas adormecedoras de lidiar con la tristeza y el
+              estrés, son ignorar y reprimir los sentimientos, trabajar o
+              estudiar demasiado, lastimarte a ti misma y lastimar a los demás.
             </li>
             <li>
-              Practica tus principios. Por principios nos referimos a los
-              básicos que pueden ayudarte y respaldarte. Establece una rutina de
-              sueño que te apoye, come de manera que tu cuerpo se llene de
-              energía y ayude a tu sistema digestivo que es único, tómate
-              tiempos para bañarte y desarrolla planes para ser consistente.
+              <span className="font-semibold">Practica tus principios.</span>{" "}
+              Por principios nos referimos a los básicos que pueden ayudarte y
+              respaldarte. Establece una rutina de sueño que te apoye, come de
+              manera que tu cuerpo se llene de energía y ayude a tu sistema
+              digestivo que es único, tómate tiempos para bañarte y desarrolla
+              planes para ser consistente.
             </li>
             <li>
-              Haz lo que sea que te energetice, rejuvenezca, motive y nutra de
-              manera segura y con apoyo.
+              <span className="font-semibold">
+                Haz lo que sea que te energetice, rejuvenezca, motive y nutra de
+                manera segura y con apoyo.
+              </span>
             </li>
             <li>
-              Recuerda que estás segura y tienes apoyo, incluso si no lo sientes
-              todo el tiempo. Lo que nos pasó, pasó y ya se acabó. Puede que
-              tarde más de lo que pensamos, pero nos sentiremos mejor.
+              <span className="font-semibold">
+                Recuerda que estás segura y tienes apoyo,
+              </span>{" "}
+              incluso si no lo sientes todo el tiempo. Lo que nos pasó, pasó y
+              ya se acabó. Puede que tarde más de lo que pensamos, pero nos
+              sentiremos mejor.
             </li>
           </ul>
 
@@ -771,10 +825,15 @@ const Historia = () => {
             cuidado personal, que ayudan a sobrellevar la situación, pueden
             sentirse un poco fuera de tu alcance en este momento, y eso está
             bien. Si ese es el caso, es posible que desees comenzar a buscar
-            apoyo y volver a este listado cuando sientas que estás lista. La
-            recuperación y el cuidado personal están en progreso. Permítete
-            comenzar poco a poco o donde necesites, mientras trabajas en tu
-            cuidado personal. Empieza de nuevo. Empieza donde quiera que estés.
+            apoyo y volver a este listado cuando sientas que estás lista.{" "}
+            <span className="text-beige1 font-semibold">
+              La recuperación y el cuidado personal están en progreso.
+            </span>{" "}
+            <span className="font-semibold">
+              Permítete comenzar poco a poco o donde necesites, mientras
+              trabajas en tu cuidado personal. Empieza de nuevo. Empieza donde
+              quiera que estés.{" "}
+            </span>
           </p>
         </Tab>
         <div>
@@ -789,6 +848,143 @@ const Historia = () => {
           <p className="mb-4">
             La traducción al español estuvo a cargo de María José Álvarez
             Espinosa y del equipo de Tu Historia Importa.
+          </p>
+        </div>
+        <div>
+          <p className="text-lg font-semibold text-beige1 mb-4">Autoría</p>
+          <p className="mb-4">
+            Este material fue elaborado por{" "}
+            <span className="text-marron font-semibold">
+              Your Story Matters (YSM)
+            </span>
+            .
+          </p>
+          <p className="mb-4">
+            La traducción al español estuvo a cargo de María José Álvarez
+            Espinosa y del equipo de Tu Historia Importa.
+          </p>
+          <p className="text-lg font-semibold text-beige1 mb-4">
+            Agradecimientos
+          </p>
+          <p className="mb-4">
+            Nos gustaría agradecer el uso de los siguientes recursos al crear
+            este documento.
+          </p>
+          <p className="mb-4">
+            Psychology Today: Post-Traumatic Stress Disorder
+          </p>
+        </div>
+        <div>
+          <p className="text-lg font-semibold text-beige1 mb-4">Autoría</p>
+          <p className="mb-4">
+            Este material fue elaborado por{" "}
+            <span className="text-marron font-semibold">
+              Your Story Matters (YSM)
+            </span>
+            .
+          </p>
+          <p className="mb-4">
+            La traducción al español estuvo a cargo de María José Álvarez
+            Espinosa y del equipo de Tu Historia Importa.
+          </p>
+          <p className="text-lg font-semibold text-beige1 mb-4">
+            Agradecimientos
+          </p>
+          <p className="mb-4">
+            Nos gustaría agradecer el uso de los siguientes recursos al crear
+            este documento.
+          </p>
+          <p className="mb-4">
+            Good Therapy: Therapy for Attachment, Therapist for Attachment; The
+            Mental Health Effects of Sexual Assault and Abuse
+          </p>
+        </div>
+        <div>
+          <p className="text-lg font-semibold text-beige1 mb-4">Autoría</p>
+          <p className="mb-4">
+            Este material fue elaborado por{" "}
+            <span className="text-marron font-semibold">
+              Your Story Matters (YSM)
+            </span>
+            .
+          </p>
+          <p className="mb-4">
+            La traducción al español estuvo a cargo de María José Álvarez
+            Espinosa y del equipo de Tu Historia Importa.
+          </p>
+          <p className="text-lg font-semibold text-beige1 mb-4">
+            Agradecimientos
+          </p>
+          <p className="mb-4">
+            Nos gustaría agradecer el uso de los siguientes recursos al crear
+            este documento.
+          </p>
+          <p className="mb-4">
+            HelpGuide: Recovering from Rape and Sexual Trauma
+          </p>
+        </div>
+        <div>
+          <p className="text-lg font-semibold text-beige1 mb-4">Autoría</p>
+          <p className="mb-4">
+            Este material fue elaborado por{" "}
+            <span className="text-marron font-semibold">
+              Your Story Matters (YSM)
+            </span>
+            .
+          </p>
+          <p className="mb-4">
+            La traducción al español estuvo a cargo de María José Álvarez
+            Espinosa y del equipo de Tu Historia Importa.
+          </p>
+          <p className="text-lg font-semibold text-beige1 mb-4">
+            Agradecimientos
+          </p>
+          <p className="mb-4">
+            Nos gustaría agradecer el uso de los siguientes recursos al crear
+            este documento.
+          </p>
+          <p className="mb-4">
+            Health: How to Enjoy Sex Again After Sexual Assault | Health.com
+            <br />
+            Talk Space: Having Healthy Sex after Sexual Assault
+          </p>
+        </div>
+        <div>
+          <p className="text-lg font-semibold text-beige1 mb-4">Autoría</p>
+          <p className="mb-4">
+            Este material fue elaborado por{" "}
+            <span className="text-marron font-semibold">
+              Your Story Matters (YSM)
+            </span>
+            .
+          </p>
+          <p className="mb-4">
+            La traducción al español estuvo a cargo de María José Álvarez
+            Espinosa y del equipo de Tu Historia Importa.
+          </p>
+          <p className="text-lg font-semibold text-beige1 mb-4">
+            Agradecimientos
+          </p>
+          <p className="mb-4">
+            Nos gustaría agradecer el uso de los siguientes recursos al crear
+            este documento.
+          </p>
+          <p className="mb-4">
+            Self-care guide:{" "}
+            <a
+              href="https://www.csbsju.edu/chp/sexual-assault-survivors-guide"
+              target="_blank"
+            >
+              https://www.csbsju.edu/chp/sexual-assault-survivors-guide
+            </a>
+            <br />
+            CHAYN Getting better guide:{" "}
+            <a
+              href="https://www.gettingbetter.chayn.co/self-care"
+              target="_blank"
+            >
+              https://www.gettingbetter.chayn.co/self-care
+            </a>
           </p>
         </div>
       </TabList>

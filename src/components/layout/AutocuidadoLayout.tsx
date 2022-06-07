@@ -33,7 +33,7 @@ export const Tab = ({ title, read, children }: { title?; read?; children }) => {
       {title && <TextHeader className="text-beige1">{title}</TextHeader>}
       {read && (
         <p className="text-base my-8">
-          Tiempo de lectura: <span className="font-semibold">{read}</span>
+          Tiempo de lectura: {read}
         </p>
       )}
       {children}
@@ -41,8 +41,7 @@ export const Tab = ({ title, read, children }: { title?; read?; children }) => {
   )
 }
 export const TabList = ({ children }) => {
-  const total = children.length - 1
-  const footer = children[children.length - 1]
+  const total = children.length / 2
   const [index, setIndex] = useState(0)
 
   return (
@@ -57,7 +56,7 @@ export const TabList = ({ children }) => {
             <div className="relative w-full flex border-b border-beige1 py-4">
               {children.map(
                 (tab: any, i: number) =>
-                  i !== children.length - 1 && (
+                  i < total && (
                     <a
                       key={`tab${i}`}
                       className={`text-center flex-1 cursor-pointer ${
@@ -99,7 +98,7 @@ export const TabList = ({ children }) => {
           <Link className="text-beige1 text-xl sm:text-3xl" to="/autocuidado">
             Ver todos los artículos
           </Link>
-          <div className="my-12 text-base">{footer}</div>
+          <div className="my-12 text-base">{children[index + total]}</div>
         </div>
       </div>
     </>

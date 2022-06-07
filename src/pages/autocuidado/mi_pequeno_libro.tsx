@@ -20,7 +20,7 @@ const Historia = () => {
             Tómate un tiempo para descifrar cuáles son tus detonantes y, si te
             sientes cómoda haciéndolo, escríbelos a continuación:
           </p>
-          <p className="">Recuerdos Recurrentes</p>
+          <p className="font-semibold">Recuerdos Recurrentes</p>
           <p className="">
             Estos pueden ser muy poderosos e intensos; a veces se puede sentir
             como si estuvieras casi "reviviendo" la experiencia. Podemos
@@ -29,26 +29,36 @@ const Historia = () => {
           <p className="">
             Pero los recuerdos recurrentes pueden ser complicados: pueden ser
             recuerdos felices, tristes, mezclados o angustiantes. Si nos afectan
-            negativamente, podemos ayudarnos a nosotras mismas. Aquí se
-            encuentran algunos métodos de afrontamiento que podrían ayudarte:
+            negativamente, podemos ayudarnos a nosotras mismas.{" "}
+            <span className="font-semibold text-beige1">
+              Aquí se encuentran algunos métodos de afrontamiento que podrían
+              ayudarte:
+            </span>
           </p>
           <p className="">
-            *Respira un aroma reconfortante (por ejemplo, pelar un limón) y
-            concéntrate en el olor.
+            <span className="font-semibold">
+              *Respira un aroma reconfortante
+            </span>{" "}
+            (por ejemplo, pelar un limón) y concéntrate en el olor.
           </p>
           <p className="">
-            *Mira a tu alrededor. Haz una lista de los elementos de la
-            habitación; cuenta los colores o muebles a tu alrededor.
+            <span className="font-semibold">*Mira a tu alrededor.</span> Haz una
+            lista de los elementos de la habitación; cuenta los colores o
+            muebles a tu alrededor.
           </p>
           <p className="">
-            *Sostén algo frío, como un hielo, o algo caliente, como una taza de
-            té. Por favor ten cuidado de no lastimarte.
+            <span className="font-semibold">
+              *Sostén algo frío, como un hielo, o algo caliente, como una taza
+              de té.
+            </span>{" "}
+            Por favor ten cuidado de no lastimarte.
           </p>
           <p className="">
-            *Inventa tu propio mantra, cierra los ojos y dilo para ti. Incluso
-            una pequeña afirmación como "me encuentro a salvo" puede ayudar.
+            <span className="font-semibold">*Inventa tu propio mantra,</span>{" "}
+            cierra los ojos y dilo para ti. Incluso una pequeña afirmación como
+            "me encuentro a salvo" puede ayudar.
           </p>
-          <p className="">Pesadillas y Problemas del Sueño</p>
+          <p className="font-semibold">Pesadillas y Problemas del Sueño</p>
           <p className="">
             El impacto de nuestras experiencias puede afectarnos cuando estamos
             dormidas. Esto puede deberse a pesadillas o problemas del sueño. Es
@@ -57,25 +67,30 @@ const Historia = () => {
             duermes. Si tienes pesadillas con regularidad, es probable que te
             sientas ansiosa sobre la idea de ir a dormir.
           </p>
-          <p className="">
+          <p className="font-semibold text-beige1">
             A continuación, algunas técnicas que pueden ayudar:
           </p>
           <p className="">
-            *Desestrésate antes de acostarte. Toma un baño caliente. Lee un
-            libro. Intenta relajarte.
+            <span className="font-semibold">
+              *Desestrésate antes de acostarte.
+            </span>{" "}
+            Toma un baño caliente. Lee un libro. Intenta relajarte.
           </p>
           <p className="">
-            *Intenta deshacerte de los recuerdos difíciles escribiéndolos y
-            después guardándolos. Imagina una casa pequeña, pon todos tus malos
-            pensamientos en esa casa y cierra la puerta de golpe.
+            <span className="font-semibold">
+              *Intenta deshacerte de los recuerdos difíciles escribiéndolos y
+              después guardándolos.
+            </span>{" "}
+            Imagina una casa pequeña, pon todos tus malos pensamientos en esa
+            casa y cierra la puerta de golpe.
           </p>
           <p className="">
-            *Si sufres de pesadillas, escribe una nota cariñosa y ponla junto a
-            tu cama. Si te despiertas por la noche, recuerda leer la nota para
-            ti misma. Incluso escribir: "No estoy ahí, estoy a salvo, todo está
-            bien" puede ayudar.
+            <span className="font-semibold">*Si sufres de pesadillas,</span>{" "}
+            escribe una nota cariñosa y ponla junto a tu cama. Si te despiertas
+            por la noche, recuerda leer la nota para ti misma. Incluso escribir:
+            "No estoy ahí, estoy a salvo, todo está bien" puede ayudar.
           </p>
-          <p className="">Autolesiones</p>
+          <p className="font-semibold">Autolesiones</p>
           <p className="">
             Autolesionarse es cuando una persona se lastima a sí misma
             intencionalmente como una forma de afrontar o expresar una angustia
@@ -90,26 +105,33 @@ const Historia = () => {
             negativa. Es dañina, puede conllevar el riesgo de infección y, a
             veces, puede provocar problemas médicos potencialmente mortales.
           </p>
-          <p className="">
+          <p className="font-semibold text-beige1">
             Si estás pensando en autolesionarte o te autolesionas actualmente,
             estas técnicas pueden ayudar:
           </p>
           <p className="">
-            *Sal de la habitación donde está el objeto que pretendías usar para
-            autolesionarte, o retíralo de tu vista para detener el impulso.
+            <span className="font-semibold">
+              *Sal de la habitación donde está el objeto que pretendías usar
+              para autolesionarte,
+            </span>{" "}
+            o retíralo de tu vista para detener el impulso.
           </p>
           <p className="">
-            *Envía un mensaje de texto a alguien, puede ser sobre cualquier
-            tema. Puede tratarse de cómo te sientes o de algo que no parezca
+            <span className="font-semibold">
+              *Envía un mensaje de texto a alguien, puede ser sobre cualquier
+              tema.
+            </span>{" "}
+            Puede tratarse de cómo te sientes o de algo que no parezca
             relevante. Mantener las manos ocupadas es importante, y enviar
             mensajes de texto a una amiga o ser querido puede ayudarte a superar
             este momento.
           </p>
           <p className="">
-            *Dibuja sobre ti misma: usa tatuajes de henna o frota hielo en la
-            parte del cuerpo donde querías autolesionarte.
+            <span className="font-semibold">*Dibuja sobre ti misma:</span> usa
+            tatuajes de henna o frota hielo en la parte del cuerpo donde querías
+            autolesionarte.
           </p>
-          <p className="">Pensamientos y Sentimientos Suicidas</p>
+          <p className="font-semibold">Pensamientos y Sentimientos Suicidas</p>
           <p className="">
             Los pensamientos y sentimientos suicidas pueden ser respuestas
             naturales al trauma generado por la agresión. Sentimientos como
@@ -118,22 +140,27 @@ const Historia = () => {
             que sientas que ya no puedes enfrentar lo que sucedió o cómo te
             sientes ahora.
           </p>
-          <p className="">
+          <p className="font-semibold text-beige1">
             No estás sola. Pero, por favor, recuerda que los pensamientos
             suicidas no son permanentes. Tienes un futuro. Si estás pensando en
             el suicidio, existen recursos para brindarte apoyo y superar este
             momento difícil.
           </p>
-          <p className="">Recuerda: eres fuerte y la ayuda está ahí fuera.</p>
-          <p className="">
+          <p className="font-semibold">
+            Recuerda:{" "}
+            <span className="text-beige1">
+              eres fuerte y la ayuda está ahí fuera.
+            </span>
+          </p>
+          <p className="font-semibold">
             *Intenta hablar con alguien en quien confíes como un familiar, una
             amiga, tu médico de cabecera o incluso un colega de trabajo.
           </p>
-          <p className="">
+          <p className="font-semibold">
             *Trata de evitar el alcohol o las drogas. Estos pueden intensificar
             nuestros sentimientos y hacernos sentir peor.
           </p>
-          <p className="">
+          <p className="font-semibold">
             *Mantente "conectada a la tierra". Sigue una rutina diaria con
             horarios regulares para levantarte, comer y relajarte e irte a la
             cama.
@@ -152,24 +179,30 @@ const Historia = () => {
             trauma. Es como una experiencia "extracorpórea" cuando sientes como
             si estuvieras flotando lejos de la realidad.
           </p>
-          <p className="">
+          <p className="font-semibold text-beige1">
             Aquí hay algunas técnicas para regresarnos a la realidad si sentimos
             que sufrimos de disociación:
           </p>
           <p className="">
-            *Trata de regresar a tu entorno y a tu Yo físico. Mira a tu
-            alrededor; di tu nombre, edad y lo primero que veas.
+            <span className="font-semibold">
+              *Trata de regresar a tu entorno y a tu Yo físico.
+            </span>{" "}
+            Mira a tu alrededor; di tu nombre, edad y lo primero que veas.
           </p>
           <p className="">
-            *Deja que las personas que más te apoyan en tu vida sepan qué hacer
-            en tiempos de crisis. Es posible que no comprendan tu disociación,
-            pero querrán ayudarte.
+            <span className="font-semibold">
+              *Deja que las personas que más te apoyan en tu vida sepan qué
+              hacer en tiempos de crisis.
+            </span>{" "}
+            Es posible que no comprendan tu disociación, pero querrán ayudarte.
           </p>
           <p className="">
-            *Escribe 5 cosas que amas de la vida. Esto puede “aterrizarnos” y
-            ayudarnos a apreciar nuestras vidas.
+            <span className="font-semibold">
+              *Escribe 5 cosas que amas de la vida.
+            </span>{" "}
+            Esto puede “aterrizarnos” y ayudarnos a apreciar nuestras vidas.
           </p>
-          <p className="">Trastornos Alimenticios</p>
+          <p className="font-semibold">Trastornos Alimenticios</p>
           <p className="">
             La violencia sexual y doméstica puede afectar a las sobrevivientes
             de muchas maneras, incluida la percepción que se tiene del cuerpo y
@@ -180,26 +213,31 @@ const Historia = () => {
             estas acciones brindan un alivio a corto plazo, pueden causar daño a
             largo plazo a tu salud.
           </p>
-          <p className="">
+          <p className="font-semibold text-beige1">
             Si crees tener algún trastorno alimenticio, estas cosas pueden
             ayudar:
           </p>
           <p className="">
-            *Haz una lista de afirmaciones positivas. Elige una. Vete en el
-            espejo, dila todas las mañanas y todas las noches. La afirmación
-            positiva se convertirá en parte de ti. ¡Pega estas afirmaciones
-            alrededor de tu espejo para recordarte lo increíble que eres!
+            <span className="font-semibold">
+              *Haz una lista de afirmaciones positivas.
+            </span>{" "}
+            Elige una. Vete en el espejo, dila todas las mañanas y todas las
+            noches. La afirmación positiva se convertirá en parte de ti. ¡Pega
+            estas afirmaciones alrededor de tu espejo para recordarte lo
+            increíble que eres!
           </p>
           <p className="">
-            *Háblalo. Habla sobre tus sentimientos, pensamientos y métodos para
-            mantener el control con un amigo o familiar de confianza.
+            <span className="font-semibold">*Háblalo.</span> Habla sobre tus
+            sentimientos, pensamientos y métodos para mantener el control con un
+            amigo o familiar de confianza.
           </p>
           <p className="">
-            *Distraete. Haz algo que te guste. Reúnete con personas que te
-            apoyen. Los trastornos alimenticios afectan nuestra salud mental y
-            es importante que no dejemos que consuman nuestras vidas.
+            <span className="font-semibold">*Distraete.</span> Haz algo que te
+            guste. Reúnete con personas que te apoyen. Los trastornos
+            alimenticios afectan nuestra salud mental y es importante que no
+            dejemos que consuman nuestras vidas.
           </p>
-          <p className="">Abuso de Sustancias</p>
+          <p className="font-semibold">Abuso de Sustancias</p>
           <p className="">
             Las sobrevivientes de violencia doméstica o sexual pueden volverse
             dependientes del alcohol o de las drogas para afrontar su pasado
@@ -209,26 +247,35 @@ const Historia = () => {
             parecen adormecer el dolor. Esto puede tener un impacto masivo en
             nuestra salud y vida en el futuro.
           </p>
-          <p className="">
+          <p className="font-semibold text-beige1">
             Si estás consumiendo alcohol o drogas, prueba estas estrategias de
             afrontamiento:
           </p>
           <p className="">
-            *Evita lugares donde se consuma alcohol o drogas o personas que lo
-            hagan. En lugar de esto, explora lugares nuevos y conoce gente
-            nueva; esto puede tener un impacto positivo en tu vida.
+            <span className="font-semibold">
+              *Evita lugares donde se consuma alcohol o drogas o personas que lo
+              hagan.
+            </span>{" "}
+            En lugar de esto, explora lugares nuevos y conoce gente nueva; esto
+            puede tener un impacto positivo en tu vida.
           </p>
           <p className="">
-            *Escribe una lista de lo que puedes hacer cuando no estás bebiendo
-            ni consumiendo drogas. Escribe una lista de deseos de lo que podrías
-            hacer con tu vida sin eso.
+            <span className="font-semibold">
+              *Escribe una lista de lo que puedes hacer cuando no estás bebiendo
+              ni consumiendo drogas.
+            </span>{" "}
+            Escribe una lista de deseos de lo que podrías hacer con tu vida sin
+            eso.
           </p>
           <p className="">
-            *Crea tu propio plan de apoyo de emergencia. Construye una buen red
-            de apoyo. Escribe notas para ti misma que puedas encontrar en
-            momentos de necesidad.
+            <span className="font-semibold">
+              {" "}
+              *Crea tu propio plan de apoyo de emergencia.
+            </span>{" "}
+            Construye una buen red de apoyo. Escribe notas para ti misma que
+            puedas encontrar en momentos de necesidad.
           </p>
-          <p className="">Culpa / Echarte la Culpa</p>
+          <p className="font-semibold">Culpa / Echarte la Culpa</p>
           <p className="">
             Muchas víctimas de violencia sexual y doméstica se sienten
             responsables de lo que les sucedió. De hecho, frecuentemente el
@@ -238,26 +285,34 @@ const Historia = () => {
             No tienes porqué sentirte culpable. Esto no fue tu culpa. No eres
             responsable de lo que sucedió. Tu abusador lo es.
           </p>
-          <p className="">Piensa en lo siguiente:</p>
+          <p className="font-semibold text-beige1">Piensa en lo siguiente:</p>
           <p className="">
-            *¿Qué le dirías a una amiga en la misma situación? ¿Le dirías que
-            fue su culpa y no del abusador? No, no lo harías, entonces, ¿por qué
-            te harías eso a ti misma? Sé amable contigo. Sé tu propia amiga.
+            <span className="font-semibold">
+              *¿Qué le dirías a una amiga en la misma situación? ¿Le dirías que
+              fue su culpa y no del abusador?
+            </span>{" "}
+            No, no lo harías, entonces, ¿por qué te harías eso a ti misma? Sé
+            amable contigo. Sé tu propia amiga.
           </p>
           <p className="">
-            *Puede que te sientas sucia y avergonzada. Trata de separar lo que
-            te sucedió de lo que eres tú como persona. Eres más que esa
-            experiencia. Lo que el abusador te hizo, podría haberte hecho sentir
-            sucia, avergonzada o inútil. Pero eso NO te hace ser alguien sucia,
-            ni mala, ni alguien carente de valor.
+            <span className="font-semibold">
+              *Puede que te sientas sucia y avergonzada.
+            </span>{" "}
+            Trata de separar lo que te sucedió de lo que eres tú como persona.
+            Eres más que esa experiencia. Lo que el abusador te hizo, podría
+            haberte hecho sentir sucia, avergonzada o inútil. Pero eso NO te
+            hace ser alguien sucia, ni mala, ni alguien carente de valor.
           </p>
           <p className="">
-            *Algunas de nosotras luchamos internamente una y otra vez,
-            preguntándonos, ¿qué hice mal? ¿Qué pude haber hecho para detener
-            esto? ¿Por qué estaba esta persona en mi vida? No hiciste nada mal.
-            No te castigues. El abusador es el responsable, no tú.
+            <span className="font-semibold">
+              *Algunas de nosotras luchamos internamente una y otra vez,
+              preguntándonos, ¿qué hice mal?
+            </span>{" "}
+            ¿Qué pude haber hecho para detener esto? ¿Por qué estaba esta
+            persona en mi vida? No hiciste nada mal. No te castigues. El
+            abusador es el responsable, no tú.
           </p>
-          <p className="">Vergüenza</p>
+          <p className="font-semibold">Vergüenza</p>
           <p className="">
             Las sobrevivientes de abuso sexual o doméstico pueden sentir
             vergüenza por su pasado en ocasiones. Puede que no quieras hablar
@@ -268,21 +323,25 @@ const Historia = () => {
             Lo más importante es que no tienes que decirle a nadie si no te
             sientes cómoda. Puedes decidir a quién contarle o qué contar.
           </p>
-          <p className="">
+          <p className="font-semibold text-beige1">
             Si sientes vergüenza pero no quieres buscar ayuda externa, aquí hay
             algunas ideas:
           </p>
           <p className="">
-            *No te aísles debido a la vergüenza que sientes. Encuentra una razón
-            para salir de casa todos los días, incluso si es para ir por el
-            desayuno o para salir a correr.
+            <span className="font-semibold">
+              *No te aísles debido a la vergüenza que sientes.
+            </span>{" "}
+            Encuentra una razón para salir de casa todos los días, incluso si es
+            para ir por el desayuno o para salir a correr.
           </p>
           <p className="">
-            *Escribe una lista de pros y contras acerca de compartir con otras
-            personas lo que te sucedió . Te dará una imagen más clara de lo que
-            quieres hacer.
+            <span className="font-semibold">
+              *Escribe una lista de pros y contras acerca de compartir con otras
+              personas lo que te sucedió.
+            </span>{" "}
+            Te dará una imagen más clara de lo que quieres hacer.
           </p>
-          <p className="">Confianza en una misma</p>
+          <p className="font-semibold">Confianza en una misma</p>
           <p className="">
             Una pareja o persona abusiva puede afectar nuestra confianza en
             nosotras mismas. Es posible que hayan dicho cosas negativas sobre
@@ -294,31 +353,45 @@ const Historia = () => {
             Piensa de nuevo. No dejes que destruyan tus sueños, tus metas, tus
             creencias, tus ambiciones y tus relaciones.
           </p>
-          <p className="">
+          <p className="font-semibold text-beige1">
             Aquí hay algunas ideas para promover la confianza en una misma que
             pueden ayudar:
           </p>
           <p className="">
-            *Escribe una carta para ti antes de que esto te suceda. ¿Qué te
-            gustaba de ti misma? ¿Qué quieres hacer con tu vida? ¿En qué crees?
-            Sigues siendo esa persona; puedes volver a eso.
+            <span className="font-semibold">
+              *Escribe una carta para ti antes de que esto te suceda.
+            </span>{" "}
+            ¿Qué te gustaba de ti misma? ¿Qué quieres hacer con tu vida? ¿En qué
+            crees? Sigues siendo esa persona; puedes volver a eso.
           </p>
           <p className="">
-            *Si tu abusador solía decirte ciertas cosas crueles, ¡normaliza esas
-            palabras! GRITA las palabras desde la azotea, escríbelas y luego
-            rómpelas. Esas palabras no te definen, no son parte de ti en lo
-            absoluto.
+            <span className="font-semibold">
+              *Si tu abusador solía decirte ciertas cosas crueles, ¡normaliza
+              esas palabras!
+            </span>{" "}
+            GRITA las palabras desde la azotea, escríbelas y luego rómpelas.
+            Esas palabras no te definen, no son parte de ti en lo absoluto.
           </p>
-          <p className="">NO ESTÁS SOLA. NOSOTRAS TE CREEMOS.</p>
+          <p className="font-semibold text-marron">
+            NO ESTÁS SOLA. NOSOTRAS TE CREEMOS.
+          </p>
         </Tab>
         <div>
           <p className="text-lg font-semibold text-beige1 mb-4">Autoría</p>
           <p className="mb-4">
             Este material fue elaborado por{" "}
-            <span className="text-marron font-semibold">
-              Your Story Matters (YSM)
-            </span>
-            .
+            <span className="text-marron">Your Story Matters (YSM)</span>.
+          </p>
+          <p className="mb-4">
+            La traducción al español estuvo a cargo de María José Álvarez
+            Espinosa y del equipo de Tu Historia Importa.
+          </p>
+        </div>
+        <div>
+          <p className="text-lg font-semibold text-beige1 mb-4">Autoría</p>
+          <p className="mb-4">
+            Este material fue elaborado por{" "}
+            <span className="text-marron">Your Story Matters (YSM)</span>.
           </p>
           <p className="mb-4">
             La traducción al español estuvo a cargo de María José Álvarez
