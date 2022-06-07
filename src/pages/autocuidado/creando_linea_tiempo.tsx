@@ -8,7 +8,7 @@ const Historia = () => {
   return (
     <AutocuidadoLayout title="Creando la línea del tiempo en tu bitácora">
       <TabList>
-        <Tab>
+        <Tab read="5 minutos">
           <p className="">
             Al igual que alguien que escribe va hilando sus pensamientos y
             puntos, escribir tu bitácora en tarjetas de memoria o notas
@@ -263,10 +263,7 @@ const Historia = () => {
           <p className="text-lg font-semibold text-beige1 mb-4">Autoría</p>
           <p className="mb-4">
             Este material fue elaborado por{" "}
-            <span className="text-marron">
-              Your Story Matters (YSM)
-            </span>
-            .
+            <span className="text-marron">Your Story Matters (YSM)</span>.
           </p>
           <p className="mb-4">
             La traducción al español estuvo a cargo de María José Álvarez
