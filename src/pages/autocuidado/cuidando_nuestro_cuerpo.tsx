@@ -200,7 +200,7 @@ const Historia = () => {
           <p className="text-beige1 font-semibold">
             Algunos de los síntomas del TEPT son:
           </p>
-          <ul className="list-disc pl-4">
+          <ul className="list-disc pl-4 font-semibold">
             <li>
               Recuerdos recurrentes de lo que sucedió, incluidos pensamientos
               intrusivos, sueños y pesadillas.
@@ -225,7 +225,7 @@ const Historia = () => {
             </li>
           </ul>
           <p className="">Otros son:</p>
-          <ul className="list-disc pl-4">
+          <ul className="list-disc pl-4 font-semibold">
             <li>Sentimientos extremos de impotencia u horror.</li>
             <li>
               Incapacidad de distinguir entre el pasado y el aquí y ahora.

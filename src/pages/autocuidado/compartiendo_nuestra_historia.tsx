@@ -40,8 +40,8 @@ const Historia = () => {
             Elegir a quién contarle puede ser una decisión difícil y no existe
             una "decisión universal" de a quién informar sobre una agresión.
             Todas las personas queremos sentirnos{" "}
-            <span className="font-semibold">seguras y comprendidas</span>
-            cuando compartimos algo tan personal. Debemos considerar{" "}
+            <span className="font-semibold">seguras y comprendidas</span> cuando
+            compartimos algo tan personal. Debemos considerar{" "}
             <span className="font-semibold">lo que queremos</span> al compartir
             nuestra historia y tratar de encontrar a alguien que creemos que{" "}
             <span className="font-semibold">
@@ -455,7 +455,7 @@ const Historia = () => {
             tipo de respuesta, de falta de apoyo, es posible que deseemos
             terminar la conversación, como veremos a continuación.
           </p>
-          <p className="text-beige1">
+          <p className="text-beige1 font-semibold">
             Cambiar de opinión durante la conversación
           </p>
           <p className="">

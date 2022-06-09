@@ -228,7 +228,7 @@ const Historia = () => {
           <p className="">
             Con el ejemplo que dimos, algunas posibles pruebas podrían ser:
           </p>
-          <ul className="">
+          <ul className="list-disc pl-4">
             <li>Recibo de Uber</li>
             <li>Mensaje de texto a Clara diciendo que ya casi llegábamos</li>
             <li>Datos de Google Maps</li>

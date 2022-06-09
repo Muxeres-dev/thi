@@ -64,7 +64,7 @@ const Menu = () => {
             />
             <Option
               text="Acompañamiento"
-              link="/reflexiones"
+              link="/acompanamiento"
               onClick={() => setMenuOpen(false)}
             />
             <Option

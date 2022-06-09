@@ -31,11 +31,7 @@ export const Tab = ({ title, read, children }: { title?; read?; children }) => {
   return (
     <div className="mt-8 child-style:mb-4">
       {title && <TextHeader className="text-beige1">{title}</TextHeader>}
-      {read && (
-        <p className="text-base my-8">
-          Tiempo de lectura: {read}
-        </p>
-      )}
+      {read && <p className="text-base my-8">Tiempo de lectura: {read}</p>}
       {children}
     </div>
   )
@@ -82,7 +78,7 @@ export const TabList = ({ children }) => {
       <div className="container">
         <div className="sm:w-3/4">
           <div className="mb-12">{children[index]}</div>
-          {total !== 1 && (
+          {total !== 1 && index !== total - 1 && (
             <a
               className="block text-beige1 text-xl sm:text-3xl cursor-pointer mb-8"
               onClick={e => {
@@ -120,7 +116,7 @@ const AutocuidadoLayout = ({ title, children }) => {
             <div className="mt-40 sm:mt-48 mb-4 pl-4 sm:pl-0 flex items-center">
               <BakcIcon />
               <div
-                className={`text-lg sm:text-4xl text-beige1 font-semibold sm:font-light ml-4 sm:ml-0`}
+                className={`text-lg sm:text-4xl text-beige1 font-medium sm:font-light ml-4 sm:ml-0`}
               >
                 {title}
               </div>

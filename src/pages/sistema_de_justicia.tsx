@@ -34,7 +34,7 @@ import { visible } from "../constants/animations"
 import { motion } from "framer-motion"
 
 const ProgressBar = ({ index }) => (
-  <div className="relative">
+  <div className="relative mt-32">
     <div className="w-full h-1 opacity-25 bg-white"></div>
     <div
       className={`absolute top-0 left-0 h-1 bg-white z-10`}
@@ -134,7 +134,7 @@ const SistemaJusticia = () => {
         </TextIlustration>
       </Section>
       <section ref={refSection1}>
-        <div className="bg-beige1 text-white pt-24 pb-48 sm:py-12 min-h-screen flex">
+        <div className="bg-beige1 text-white pt-24 pb-24 sm:pb-48 sm:py-12 sm:min-h-screen flex">
           <div className="container">
             <TextHeader className="mb-12 !text-4xl">
               Tips para tomar en cuenta si decides denunciar:
@@ -150,7 +150,7 @@ const SistemaJusticia = () => {
                 </div>
               ))}
             </div>
-            <div className="sm:hidden mt-12 flex flex-col h-full">
+            <div className="sm:hidden mt-12 flex flex-col">
               <Carousel
                 infiniteLoop={true}
                 showIndicators={false}
@@ -160,7 +160,7 @@ const SistemaJusticia = () => {
               >
                 {tips.map((tip, i) => (
                   <div className={`px-12`} key={`tipMob${i}`}>
-                    <div className="bg-white flex justify-center items-center rounded-full h-full w-40 m-auto">
+                    <div className="bg-white flex justify-center items-center rounded-full w-40 m-auto">
                       <img src={tip.img} alt="Tip" className="" />
                     </div>
                   </div>

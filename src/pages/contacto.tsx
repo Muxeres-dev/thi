@@ -86,7 +86,7 @@ const Contacto = ({ id }) => {
   return (
     <Layout title="Contacto">
       <Section>
-        <p className="text-beige1 text-3xl sm:text-4xl mb-4 mt-12">
+        <p className="text-beige1 text-3xl sm:text-4xl mb-4 mt-20 sm:mt-12">
           Contacto
         </p>
         <p className="text-lg text-gray1 sm:text-2xl ">
