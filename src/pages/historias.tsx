@@ -4,7 +4,7 @@ import Layout from "../components/layout/Layout"
 import Button from "../components/shared/Button"
 import Section from "../components/shared/Section"
 import TextIlustration from "../components/shared/TextIlustration"
-import { visible, fromLeft } from "../constants/animations"
+import { visible, fromLeft, fromBottom } from "../constants/animations"
 import { useAnimateOnInView } from "../hooks/useAnimateOnInView"
 
 import Ilus4 from "../images/ilus7.png"
@@ -215,7 +215,7 @@ const Historias = () => {
         <div className="mt-8 sm:mt-16">
           <motion.div
             ref={ref}
-            variants={fromLeft}
+            variants={fromBottom}
             initial="hidden"
             animate={controls}
             className="box"
