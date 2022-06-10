@@ -69,7 +69,7 @@ const Menu = () => {
             />
             <Option
               text="Historias"
-              link="/reflexiones"
+              link="/historias"
               onClick={() => setMenuOpen(false)}
             />
             <Option
