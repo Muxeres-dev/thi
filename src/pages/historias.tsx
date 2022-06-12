@@ -285,7 +285,7 @@ const Historias = () => {
             ))}
           </div>
         ) : (
-          <div className="w-full flex items-center justify-center flex-col pb-16 sm:py-16 text-xl sm:text-4xl">
+          <div className="w-full flex items-center justify-center flex-col pt-8 pb-16 sm:py-16 text-xl sm:text-4xl">
             <Button
               text="Otra búsqueda"
               variant="option"
