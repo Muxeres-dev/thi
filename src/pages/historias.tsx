@@ -1,10 +1,10 @@
 import { motion } from "framer-motion"
-import React, { useState, useEffect } from "react"
+import { navigate } from "gatsby"
+import React, { useState, useEffect, useMemo } from "react"
 import Layout from "../components/layout/Layout"
 import Button from "../components/shared/Button"
-import Section from "../components/shared/Section"
 import TextIlustration from "../components/shared/TextIlustration"
-import { visible, fromLeft, fromBottom } from "../constants/animations"
+import { visible, fromBottom } from "../constants/animations"
 import { useAnimateOnInView } from "../hooks/useAnimateOnInView"
 
 import Ilus4 from "../images/ilus7.png"
@@ -130,58 +130,78 @@ const Historias = () => {
     },
   ]
 
-  const stories = [
+  const historias = [
     {
+      order: 1,
       title: "Acoso en la secundaria",
       summary:
         "Tengo una niña de 16 años que hace 2 años fue acosada sexualmente por su maestro de matemáticas en la secundaria.",
       tags: ["violación", ""],
+      slug: "acoso-secundaria",
     },
     {
+      order: 1,
       title: "Trauma generacional",
       summary:
         "Hace un rato, mientras la familia desayunaba, comenzamos a platicar sobre la forma en que sus relaciones surgieron.",
       tags: ["violación", "familiar"],
+      slug: "trauma",
     },
     {
+      order: 1,
       title: "Los agresores también pueden ser tus familiares",
       summary:
         "Cuando tenía como 5 o 6 años, mi tío político abusó de mí. Me hacía sexo oral cada que tenía oportunidad, me tocaba mis pechos y me ponía pornografía.",
       tags: ["bar", "departamento"],
+      slug: "agresores",
     },
     {
+      order: 1,
       title: "Acoso en la secundaria",
       summary:
         "Tengo una niña de 16 años que hace 2 años fue acosada sexualmente por su maestro de matemáticas en la secundaria.",
+      slug: "acoso-secundaria",
     },
     {
+      order: 1,
       title: "Trauma generacional",
       summary:
         "Hace un rato, mientras la familia desayunaba, comenzamos a platicar sobre la forma en que sus relaciones surgieron.",
+      slug: "trauma",
     },
     {
+      order: 1,
       title: "Los agresores también pueden ser tus familiares",
       summary:
         "Cuando tenía como 5 o 6 años, mi tío político abusó de mí. Me hacía sexo oral cada que tenía oportunidad, me tocaba mis pechos y me ponía pornografía.",
+      slug: "agresores",
     },
     {
+      order: 1,
       title: "Acoso en la secundaria",
       summary:
         "Tengo una niña de 16 años que hace 2 años fue acosada sexualmente por su maestro de matemáticas en la secundaria.",
+      slug: "acoso-secundaria",
     },
     {
+      order: 1,
       title: "Trauma generacional",
       summary:
         "Hace un rato, mientras la familia desayunaba, comenzamos a platicar sobre la forma en que sus relaciones surgieron.",
+      slug: "trauma",
     },
     {
+      order: 1,
       title: "Los agresores también pueden ser tus familiares",
       summary:
         "Cuando tenía como 5 o 6 años, mi tío político abusó de mí. Me hacía sexo oral cada que tenía oportunidad, me tocaba mis pechos y me ponía pornografía.",
+      slug: "agresores",
     },
   ]
-
-  //let activeTags = []
+  const stories = useMemo(
+    () => historias.sort((a, b) => a.order - b.order),
+    [historias]
+  )
 
   const [activeTags, setActiveTags] = useState([])
   const [storiesFiltered, setStoriesFiltered] = useState(stories)
@@ -200,55 +220,57 @@ const Historias = () => {
 
   return (
     <Layout title="Historias">
-      <Section>
-        <TextIlustration ilus={Ilus4}>
-          <p className="text-xl sm:text-4xl text-beige1 font-medium mb-8">
-            Historias
-          </p>
-          <p className="text-lg sm:text-3xl text-gray1 font-light">
-            Las historias que se presentan han sido compartidas por mujeres
-            víctimas y sobrevivientes de violencia sexual. Son historias que
-            narran hechos reales de violencia sexual y tienen contenido
-            sensible.
-          </p>
-        </TextIlustration>
-        <div className="mt-8 sm:mt-16">
-          <motion.div
-            ref={ref}
-            variants={fromBottom}
-            initial="hidden"
-            animate={controls}
-            className="box"
-            transition={{ duration: 1.5, delay: 0.5 }}
-          >
-            <p className="text-base sm:text-lg">
-              Selecciona una de las siguientes categorías para filtrar tu
-              búsqueda:
+      <section>
+        <div className="container mt-32 sm:mt-44">
+          <TextIlustration ilus={Ilus4}>
+            <p className="text-xl sm:text-4xl text-beige1 font-medium mb-8">
+              Historias
             </p>
-            <div className="mt-4">
-              {tags.map((parent, i) => (
-                <React.Fragment key={`${i}tagph`}>
-                  <p className="capitalize font-semibold mt-4">
-                    {parent.parent}:
-                  </p>
-                  {parent.children.map((tag, j) => (
-                    <React.Fragment key={`${i}${j}tagph`}>
-                      <Tag
-                        value={tag}
-                        setActiveTags={setActiveTags}
-                        activeTags={activeTags}
-                      />
-                      {j !== parent.children.length - 1 && (
-                        <span className="text-beige1 mx-2">/</span>
-                      )}
-                    </React.Fragment>
-                  ))}
-                </React.Fragment>
-              ))}
-            </div>
-          </motion.div>
+            <p className="text-lg sm:text-3xl text-gray1 font-light">
+              Las historias que se presentan han sido compartidas por mujeres
+              víctimas y sobrevivientes de violencia sexual. Son historias que
+              narran hechos reales de violencia sexual y tienen contenido
+              sensible.
+            </p>
+          </TextIlustration>
+          <div className="mt-8 sm:mt-16">
+            <motion.div
+              ref={ref}
+              variants={fromBottom}
+              initial="hidden"
+              animate={controls}
+              className="box"
+              transition={{ duration: 1.5, delay: 0.5 }}
+            >
+              <p className="text-base sm:text-lg">
+                Selecciona una de las siguientes categorías para filtrar tu
+                búsqueda:
+              </p>
+              <div className="mt-4">
+                {tags.map((parent, i) => (
+                  <React.Fragment key={`${i}tagph`}>
+                    <p className="capitalize font-semibold mt-4">
+                      {parent.parent}:
+                    </p>
+                    {parent.children.map((tag, j) => (
+                      <React.Fragment key={`${i}${j}tagph`}>
+                        <Tag
+                          value={tag}
+                          setActiveTags={setActiveTags}
+                          activeTags={activeTags}
+                        />
+                        {j !== parent.children.length - 1 && (
+                          <span className="text-beige1 mx-2">/</span>
+                        )}
+                      </React.Fragment>
+                    ))}
+                  </React.Fragment>
+                ))}
+              </div>
+            </motion.div>
+          </div>
         </div>
-      </Section>
+      </section>
       <div className="container">
         {storiesFiltered.length > 0 ? (
           <div className="w-full sm:grid sm:grid-cols-3 mb-16 mt-8 sm:my-20">
@@ -257,7 +279,7 @@ const Historias = () => {
                 key={`${i}story`}
                 title={story.title}
                 summary={story.summary}
-                action={() => {}}
+                action={() => navigate(`/historias/${story.slug}`)}
                 index={i}
               />
             ))}

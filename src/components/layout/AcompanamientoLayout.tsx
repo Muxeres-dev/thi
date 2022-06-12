@@ -13,7 +13,6 @@ const BakcIcon = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className="sm:hidden cursor-pointer"
-      onClick={() => navigate("/acompanamiento")}
     >
       <path
         d="M9 2L3 8L9 14"
@@ -36,7 +35,10 @@ const AcLayout = ({ title, textLink, url, children }) => {
 
   return (
     <Layout title={title}>
-      <div className="mt-40 sm:hidden mb-4 pl-4 sm:pl-0 flex items-center">
+      <div
+        className="mt-40 sm:hidden mb-4 pl-4 sm:pl-0 flex items-center cursor:pointer"
+        onClick={() => navigate("/acompanamiento")}
+      >
         <BakcIcon />
         <div
           className={`text-lg sm:text-4xl text-beige1 font-medium sm:font-light ml-4 sm:ml-0`}
