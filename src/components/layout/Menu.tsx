@@ -79,7 +79,7 @@ const Menu = () => {
             />
             <Option
               text="Directorio"
-              link="/reflexiones"
+              link="/directorio"
               onClick={() => setMenuOpen(false)}
             />
             <Option
