@@ -5,6 +5,8 @@ import TextIlustration from "../components/shared/TextIlustration"
 
 import Ilus8 from "../images/ilus8.png"
 
+import { directorio } from "../assets/directorio"
+
 const Lupa = () => (
   <svg
     width="36"
@@ -149,6 +151,71 @@ const Directorio = () => {
               ))}
             </select>
           </div>
+        </div>
+
+        <div className="sm:container mt-16">
+          {directorio.map((dir, i) => (
+            <React.Fragment key={`estado${i}`}>
+              <h3 className="text-beige1 font-semibold text-xl sm:text-3xl px-16 sm:px-0">
+                {dir.estado}
+              </h3>
+              <div className="accordion" id={`accordion${i}`}>
+                {dir.orgs.map((org, j) => (
+                  <div key={`org${i}${j}`} className="accordion-item">
+                    <h2
+                      className="accordion-header mb-0 block"
+                      id={`heading${i}${j}`}
+                    >
+                      <button
+                        className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-4 pr-16 sm:pr-4 !rounded-none text-lg !text-gray1 text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target={`#collapse${i}${j}`}
+                        aria-expanded="true"
+                        aria-controls={`collapse${i}${j}`}
+                      >
+                        <div className="pr-4 flex flex-col">
+                          <p className="font-light text-lg sm:text-xl">
+                            {org.name}
+                          </p>
+                          <p className="text-beige1 text-base font-semibold">
+                            {org.tipo}
+                          </p>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id={`collapse${i}${j}`}
+                      className="accordion-collapse collapse"
+                      aria-labelledby={`heading${i}${j}`}
+                    >
+                      <div className="accordion-body bg-beige1 text-lg text-white pt-4 sm:pt-4 pb-4 sm:pb-4 px-16 sm:px-4">
+                        <div className="w-full text-base font-semibold flex flex-col sm:flex-row">
+                          <div className="sm:w-1/6">
+                            {org.phones.map((phone, k) => (
+                              <p key={`phone${i}${j}${k}`}>{phone}</p>
+                            ))}
+                          </div>
+                          <div className="sm:w-3/6 sm:px-3">{org.addres}</div>
+                          <div className="sm:w-1/6 sm:text-center">
+                            {org.web && (
+                              <a
+                                className="text-purple1 underline"
+                                href={org.web}
+                                target="_blank"
+                              >
+                                {org.web}
+                              </a>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </React.Fragment>
+          ))}
         </div>
       </section>
     </Layout>
