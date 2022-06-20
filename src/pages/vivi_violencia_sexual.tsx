@@ -13,6 +13,7 @@ import { useAnimateOnInView } from "../hooks/useAnimateOnInView"
 import { visible } from "../constants/animations"
 
 import Ilus1 from "../images/ilus2.png"
+import { Link } from "gatsby"
 
 const ViviViolencia = () => {
   const { setMenuColor } = useContext(AppContext)
@@ -143,9 +144,12 @@ const ViviViolencia = () => {
                 Para saber más acerca de los delitos sexuales, como ejemplos
                 específicos y datos legales del Código Penal puedes acceder
                 dando{" "}
-                <a href="#" className="text-marron underline font-semibold">
+                <Link
+                  to="/sistema_de_justicia#accordionJusticia"
+                  className="text-marron underline font-semibold"
+                >
                   click aquí
-                </a>
+                </Link>
                 .
               </p>
               <p className="mb-4 font-semibold">
@@ -425,12 +429,12 @@ const ViviViolencia = () => {
                       <p className="font-semibold">
                         Si deseas tener más información sobre esto, puedes
                         consultar la guía{" "}
-                        <a
-                          href="#"
+                        <Link
+                          to="/autocuidado/cuidando_nuestro_cuerpo"
                           className="text-marron underline font-semibold"
                         >
                           Contarle a alguien por lo que estás pasando”.
-                        </a>
+                        </Link>
                       </p>
                     </div>
                   </div>
@@ -704,9 +708,12 @@ const ViviViolencia = () => {
               <p className="mb-4">
                 Para saber más sobre cómo obtener un apoyo psicológico y
                 emocional, te recomendamos que revises el{" "}
-                <a href="#" className="underline text-marron font-semibold">
+                <Link
+                  to="/directoriox"
+                  className="underline text-marron font-semibold"
+                >
                   directorio
-                </a>
+                </Link>
                 ,{" "}
                 <span className="font-semibold">
                   donde puedes encontrar una lista de centros que brindan

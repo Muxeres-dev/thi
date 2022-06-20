@@ -583,12 +583,12 @@ const SistemaJusticia = () => {
                         hay organizaciones de la sociedad civil con abogados y
                         abogadas que asesoran, acompañan y representan de forma
                         gratuita o por un precio bajo (para conocerlas haz{" "}
-                        <a
-                          href="#"
+                        <Link
+                          to="/directorio"
                           className="font-semibold text-marron underline"
                         >
                           click aquí
-                        </a>
+                        </Link>
                         ).
                       </p>
                     </div>
@@ -898,12 +898,12 @@ const SistemaJusticia = () => {
                         clara, negarse a recibir la denuncia o tratar de
                         convencer a las víctimas para que no denuncien. Si esto
                         sucede, es recomendable que te acerques a alguna{" "}
-                        <a
-                          href="#"
+                        <Link
+                          to="/directorio"
                           className="font-semibold text-marron underline"
                         >
                           organización de la sociedad civil
-                        </a>{" "}
+                        </Link>{" "}
                         que pueda brindarte acompañamiento y asesoría.
                       </p>
                     </div>
@@ -1470,7 +1470,6 @@ const SistemaJusticia = () => {
                           target="_blank"
                           className="text-marron font-semibold underline"
                         >
-                          {" "}
                           revisa este documento.
                         </a>
                       </p>
