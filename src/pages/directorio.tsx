@@ -68,6 +68,7 @@ const Directorio = () => {
   const [directorioFiltered, setDirectorioFiltered] = useState(directorio)
   const [activeTags, setActiveTags] = useState([])
   const [activeEstado, setActiveEstado] = useState("")
+  const [loading, setLoading] = useState(false)
 
   const estados = useMemo(
     () => [...new Set(directorio.map(dir => dir.estado))],
@@ -91,7 +92,7 @@ const Directorio = () => {
       setDirectorioFiltered(directorio)
     else {
       const orgsFiltered = []
-      const tagarr = []
+      let tagarr = []
       if (activeEstado !== "") {
         orgsFiltered.push(
           ...directorio.filter(org => org.estado === activeEstado)
@@ -104,6 +105,8 @@ const Directorio = () => {
             .filter(org => org.tags.toLowerCase().includes(tag.toLowerCase()))
         )
       })
+
+      tagarr = [...new Set(tagarr)]
       orgsFiltered.push(...tagarr.filter(org => org.estado === "Nacional"))
       orgsFiltered.push(
         ...tagarr
@@ -168,12 +171,11 @@ const Directorio = () => {
                   <div className="accordion-body bg-beige1 text-lg text-white pt-4 sm:pt-4 pb-4 sm:pb-4 px-16 sm:px-4">
                     <div className="w-full text-base font-semibold flex flex-col sm:flex-row">
                       <div className="sm:w-1/6">
-                        {org.phones &&
-                          org.phones.map((phone, k) => (
-                            <p className="break-word" key={`phone${j}${j}${k}`}>
-                              {phone}
-                            </p>
-                          ))}
+                        {org.phones && (
+                          <p className="break-words" key={`phone${j}${j}`}>
+                            {org.phones}
+                          </p>
+                        )}
                       </div>
                       <div className="sm:w-3/6 sm:px-3 break-words">
                         {org.addres}
@@ -210,7 +212,6 @@ const Directorio = () => {
     useEffect(() => {
       // Fetch items from another resources.
       const endOffset = itemOffset + itemsPerPage
-      console.log(`Loading items from ${itemOffset} to ${endOffset}`)
       setCurrentItems(directorioFiltered.slice(itemOffset, endOffset))
       setPageCount(Math.ceil(directorioFiltered.length / itemsPerPage))
     }, [itemOffset, itemsPerPage])
@@ -219,9 +220,6 @@ const Directorio = () => {
     const handlePageClick = event => {
       const newOffset =
         (event.selected * itemsPerPage) % directorioFiltered.length
-      console.log(
-        `User requested page number ${event.selected}, which is offset ${newOffset}`
-      )
       setItemOffset(newOffset)
     }
 
@@ -292,7 +290,7 @@ const Directorio = () => {
               ))}
             </div>
             <select
-              className="w-full flex-0 sm:w-80 border-b border-beige1 p-4 text-center accent-beige1 sm:mt-0 mt-4 bg-white outline-none"
+              className="w-full flex-0 sm:w-80 border-b border-beige1 p-4 text-center accent-beige1 sm:mt-0 mt-8 bg-white outline-none"
               onChange={handleEstado}
               value={activeEstado}
             >
