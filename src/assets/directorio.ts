@@ -1098,7 +1098,7 @@ export const directorio: Organizacion[] = [
     name: "Comisión Estatal de Derechos Humanos de Veracruz",
     estado: "Veracruz",
     tipo: "Organismo gubernamental",
-    tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Asesoría legal y atención a quejas",
+    tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias",
     phones: "22 8141 4300, Lada sin costo 800 260 2200",
     web: "http://www.cedhveracruz.org.mx/cedhv/",
     addres:
