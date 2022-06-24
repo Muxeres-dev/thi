@@ -1,6 +1,8 @@
 import { motion } from "framer-motion"
 import { navigate } from "gatsby"
-import React, { useState, useEffect, useMemo } from "react"
+import axios from "axios"
+import React, { useState, useEffect } from "react"
+import SyncLoader from "react-spinners/SyncLoader"
 import Layout from "../components/layout/Layout"
 import Button from "../components/shared/Button"
 import CloseIcon from "../components/shared/CloseIcon"
@@ -68,6 +70,8 @@ const Tag = ({ value, setActiveTags, activeTags }) => {
 }
 
 const Historias = () => {
+  const baseUrl = "https://wp.tuhistoriaimporta.com/wp-json/wp/v2/"
+  /*
   const tags = [
     {
       parent: "lugar",
@@ -86,8 +90,7 @@ const Historias = () => {
       children: [
         "hostigamiento sexual",
         "violación",
-        "abuso sexual",
-        "infantil",
+        "abuso sexual infantil",
         "violencia familiar",
         "ciberacoso",
       ],
@@ -103,15 +106,16 @@ const Historias = () => {
         "ex pareja",
       ],
     },
-  ]
+  ]*/
 
+  /*
   const historias = [
     {
       order: 1,
       title: "Acoso en la secundaria",
       summary:
         "Tengo una niña de 16 años que hace 2 años fue acosada sexualmente por su maestro de matemáticas en la secundaria.",
-      tags: ["violación", ""],
+      tags: ["escuela", "hostigamiento sexual", "maestro"],
       slug: "acoso-secundaria",
     },
     {
@@ -176,20 +180,60 @@ const Historias = () => {
   const stories = useMemo(
     () => historias.sort((a, b) => a.order - b.order),
     [historias]
-  )
+  )*/
 
   const [activeTags, setActiveTags] = useState([])
+  const [stories, setStories] = useState(null)
+  const [tags, setTags] = useState(null)
   const [storiesFiltered, setStoriesFiltered] = useState(stories)
 
   useEffect(() => {
     if (activeTags.length === 0) setStoriesFiltered(stories)
-    else
+    else {
       setStoriesFiltered(
         stories.filter(story =>
           story.tags?.some(r => activeTags.indexOf(r) >= 0)
         )
       )
+    }
   }, [activeTags])
+
+  useEffect(() => {
+    axios.get(`${baseUrl}categories`).then(res => {
+      const idCat = res.data.find(cat => cat.name === "historia").id
+      const idCatTag = res.data.find(cat => cat.name === "tags").id
+
+      axios.get(`${baseUrl}posts?categories=${idCat}`).then(response => {
+        const storiesWp = []
+        const posts = response.data
+          .sort((a, b) => a.acf.order - b.acf.order)
+          .map(post => ({ id: post.id, ...post.acf }))
+        posts.forEach((post, i) =>
+          storiesWp.push({
+            id: post.id,
+            title: post.title,
+            summary: post.summary,
+            tags: post.tags.split(",").map(tag => tag.trim()),
+            slug: post.slug,
+          })
+        )
+        setStories(storiesWp)
+      })
+      axios.get(`${baseUrl}posts?categories=${idCatTag}`).then(response => {
+        const posts = response.data.reverse().map(post => ({ ...post.acf }))
+        setTags(
+          posts.map(post => ({
+            parent: post.parent,
+            children: post.tags.split("/").map(tag => tag.trim()),
+          }))
+        )
+      })
+    })
+  }, [])
+
+  useEffect(() => {
+    setStoriesFiltered(stories)
+  }, [stories])
 
   const { ref, controls } = useAnimateOnInView()
 
@@ -222,53 +266,65 @@ const Historias = () => {
                 búsqueda:
               </p>
               <div className="mt-4">
-                {tags.map((parent, i) => (
-                  <React.Fragment key={`${i}tagph`}>
-                    <p className="capitalize font-semibold mt-4">
-                      {parent.parent}:
-                    </p>
-                    {parent.children.map((tag, j) => (
-                      <React.Fragment key={`${i}${j}tagph`}>
-                        <Tag
-                          value={tag}
-                          setActiveTags={setActiveTags}
-                          activeTags={activeTags}
-                        />
-                        {j !== parent.children.length - 1 && (
-                          <span className="text-beige1 mx-2">/</span>
-                        )}
-                      </React.Fragment>
-                    ))}
-                  </React.Fragment>
-                ))}
+                {tags ? (
+                  tags.map((parent, i) => (
+                    <React.Fragment key={`${i}tagph`}>
+                      <p className="capitalize font-semibold mt-4">
+                        {parent.parent}:
+                      </p>
+                      {parent.children.map((tag, j) => (
+                        <React.Fragment key={`${i}${j}tagph`}>
+                          <Tag
+                            value={tag}
+                            setActiveTags={setActiveTags}
+                            activeTags={activeTags}
+                          />
+                          {j !== parent.children.length - 1 && (
+                            <span className="text-beige1 mx-2">/</span>
+                          )}
+                        </React.Fragment>
+                      ))}
+                    </React.Fragment>
+                  ))
+                ) : (
+                  <div className="flex justify-center items-center my-32">
+                    <SyncLoader color="#CF9783" />
+                  </div>
+                )}
               </div>
             </motion.div>
           </div>
         </div>
       </section>
       <div className="container">
-        {storiesFiltered.length > 0 ? (
-          <div className="w-full sm:grid sm:grid-cols-3 mb-16 mt-8 sm:my-20">
-            {storiesFiltered.map((story, i) => (
-              <Story
-                key={`${i}story`}
-                title={story.title}
-                summary={story.summary}
-                action={() => navigate(`/historias/${story.slug}`)}
-                index={i}
+        {storiesFiltered ? (
+          storiesFiltered.length > 0 ? (
+            <div className="w-full sm:grid sm:grid-cols-3 mb-16 mt-8 sm:my-20">
+              {storiesFiltered.map((story, i) => (
+                <Story
+                  key={`${i}story`}
+                  title={story.title}
+                  summary={story.summary}
+                  action={() => navigate(`/historia?id=${story.id}`)}
+                  index={i}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="w-full flex items-center justify-center flex-col pt-8 pb-16 sm:py-16 text-xl sm:text-4xl">
+              <Button
+                text="Otra búsqueda"
+                variant="option"
+                className="mb-12 sm:mb-20"
+                action={() => setActiveTags([])}
               />
-            ))}
-          </div>
+              <p className="text-beige1 font-semibold">Lo sentimos.</p>
+              <p className="">Tu búsqueda no generó resultados.</p>
+            </div>
+          )
         ) : (
-          <div className="w-full flex items-center justify-center flex-col pt-8 pb-16 sm:py-16 text-xl sm:text-4xl">
-            <Button
-              text="Otra búsqueda"
-              variant="option"
-              className="mb-12 sm:mb-20"
-              action={() => setActiveTags([])}
-            />
-            <p className="text-beige1 font-semibold">Lo sentimos.</p>
-            <p className="">Tu búsqueda no generó resultados.</p>
+          <div className="flex justify-center items-center my-32">
+            <SyncLoader color="#CF9783" />
           </div>
         )}
       </div>

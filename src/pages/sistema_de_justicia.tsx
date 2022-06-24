@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from "react"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 import { Carousel } from "react-responsive-carousel"
 
 import { AppContext } from "../context/AppContext"
@@ -109,13 +109,8 @@ const SistemaJusticia = () => {
   }, [menuColor])
 
   const carouselChange = e => {
-    console.log(e)
     setcarIndex(e)
   }
-  const { ref: ref0, controls: controls0 } = useAnimateOnInView()
-  const { ref: ref3, controls: controls3 } = useAnimateOnInView()
-  const { ref: ref6, controls: controls6 } = useAnimateOnInView()
-  const { ref: ref9, controls: controls9 } = useAnimateOnInView()
 
   return (
     <Layout title="Sistema de Justicia">
@@ -275,7 +270,7 @@ const SistemaJusticia = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header mb-0" id="heading1">
                     <button
-                      className="accordion-button collapsed relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
+                      className="accordion-button relative flex items-center w-full py-6 sm:py-4 pl-16 sm:pl-8 pr-16 sm:pr-16 !rounded-none text-lg !text-gray1 font-medium text-left bg-white border-b-2 border-beige1 transition focus:outline-none"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse1"
@@ -289,7 +284,7 @@ const SistemaJusticia = () => {
                   </h2>
                   <div
                     id="collapse1"
-                    className="accordion-collapse collapse"
+                    className="accordion-collapse collapse show"
                     aria-labelledby="heading1"
                   >
                     <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-16">
@@ -2024,7 +2019,11 @@ const SistemaJusticia = () => {
                 Si requieres acompañamiento legal conoce las organizaciones que
                 pueden apoyarte.
               </p>
-              <Button text={"Directorio"} variant={"beige"} />
+              <Button
+                text={"Directorio"}
+                variant={"beige"}
+                action={() => navigate("/directorio")}
+              />
             </div>
           </div>
         </div>

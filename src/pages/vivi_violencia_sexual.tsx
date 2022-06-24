@@ -679,7 +679,7 @@ const ViviViolencia = () => {
                 En México, la salud mental es comúnmente malinterpretada.
                 Tenemos la falsa creencia de que solo aquellas personas con
                 temas graves de salud mental son quienes deben acudir a estos
-                especialistas. Mientras que, en realidad, estos nos brindan un
+                especialistas. Mientras que, en realidad, estos nos brindan un{" "}
                 <span className="font-semibold">
                   espacio de confianza y libre de prejuicios para que podamos
                   abordar cualquier tema.
@@ -709,7 +709,7 @@ const ViviViolencia = () => {
                 Para saber más sobre cómo obtener un apoyo psicológico y
                 emocional, te recomendamos que revises el{" "}
                 <Link
-                  to="/directoriox"
+                  to="/directorio"
                   className="underline text-marron font-semibold"
                 >
                   directorio

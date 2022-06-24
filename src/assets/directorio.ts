@@ -255,7 +255,7 @@ export const directorio: Organizacion[] = [
     name: "Centro de Apoyo Opciones Dignas A.C.",
     estado: "Coahuila",
     tipo: "Sociedad Civil",
-    tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Refugio, asesoría legal, atención medica, atención psicológica",
+    tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Refugio, asesoría legal, atención médica, atención psicológica",
     phones: "87 7888 0789",
     web: "http://www.opcionesdignas.org/index.html",
     addres:

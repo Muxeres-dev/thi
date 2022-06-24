@@ -17,19 +17,19 @@ const HamburgerMenu = () => {
         <span
           aria-hidden="true"
           className={`block absolute h-1 w-10 transform transition-all duration-500 ease-in-out bg-${menuColor} ${
-            menuOpen ? "rotate-45 bg-white" : "-translate-y-4"
+            menuOpen ? "rotate-45 !bg-white" : "-translate-y-4"
           }`}
         ></span>
         <span
           aria-hidden="true"
           className={`block absolute h-1 w-10 transform transition-all duration-500 ease-in-out bg-${menuColor} ${
-            menuOpen && "opacity-0 bg-white"
+            menuOpen && "opacity-0 !bg-white"
           }`}
         ></span>
         <span
           aria-hidden="true"
           className={`block absolute h-1 w-10 transform transition-all duration-500 ease-in-out bg-${menuColor} ${
-            menuOpen ? "-rotate-45 bg-white" : "translate-y-4"
+            menuOpen ? "-rotate-45 !bg-white" : "translate-y-4"
           }`}
         ></span>
       </div>
