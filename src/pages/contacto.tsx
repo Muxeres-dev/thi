@@ -1,8 +1,7 @@
 import axios from "axios"
 import React, { useRef, useState } from "react"
-import { BeatLoader } from "react-spinners"
+import SyncLoader from "react-spinners/SyncLoader"
 import Layout from "../components/layout/Layout"
-import Footer from "../components/layout/Footer"
 import Button from "../components/shared/Button"
 import Section from "../components/shared/Section"
 
@@ -25,8 +24,7 @@ const Contacto = ({ id }) => {
   const [formMessage, setFormMessage] = useState("")
   const comment = useRef(null)
   const TOKEN =
-    typeof window !== "undefined" &&
-    window.btoa(`daniela.castro:P4ct0V3rd32022`)
+    typeof window !== "undefined" && window.btoa(`Alepad90:9VrM%kBC2YCO#`)
 
   const handleChanges = e => {
     e.preventDefault()
@@ -60,10 +58,10 @@ const Contacto = ({ id }) => {
       setLoading(true)
       try {
         await axios({
-          url: ``,
+          url: `https://tuhistoriaimporta.com/wp/wp-json/contact-form-7/v1/contact-forms/5/feedback`,
           headers: {
             Authorization: `Basic ${TOKEN}`,
-            "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
+            "Content-Type": "application/x-www-form-urlencoded",
           },
           method: "POST",
           data: convertJsontoUrlencoded({
@@ -157,7 +155,7 @@ const Contacto = ({ id }) => {
             </div>
             <div className="text-center sm:text-left mt-8 sm:mt-4">
               {loading ? (
-                <BeatLoader color="#FF8500" />
+                <SyncLoader color="#CF9783" />
               ) : formMessage === "" ? (
                 <Button type="submit" text="Enviar" variant="beige" />
               ) : (

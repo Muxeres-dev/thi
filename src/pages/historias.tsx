@@ -70,7 +70,7 @@ const Tag = ({ value, setActiveTags, activeTags }) => {
 }
 
 const Historias = () => {
-  const baseUrl = "https://wp.tuhistoriaimporta.com/wp-json/wp/v2/"
+  const baseUrl = "https://tuhistoriaimporta.com/wp/wp-json/wp/v2/"
   /*
   const tags = [
     {
