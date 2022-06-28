@@ -16,19 +16,19 @@ const Story = ({ title, summary, action, index }) => {
   const { ref, controls } = useAnimateOnInView()
   return (
     <div
-      className={`relative mb-4 sm:mb-20 ${index % 3 === 0 ? "sm:mr-2" : ""} ${
-        index % 3 === 1 ? "sm:mx-2" : ""
-      } ${index % 3 === 2 ? "sm:ml-2" : ""}`}
+      className={`relative mb-16 sm:mb-8 ${index % 3 === 0 ? "" : ""} ${
+        index % 3 === 1 ? "" : ""
+      } ${index % 3 === 2 ? "" : ""}`}
     >
       <motion.div
         ref={ref}
         variants={visible}
         initial="hidden"
         animate={controls}
-        className="box"
+        className={`box`}
         transition={{ duration: 1 }}
       >
-        <p className="sm:absolute text-beige1 text-lg sm:text-2xl sm:top-0">
+        <p className="font-medium sm:absolute text-beige1 text-xl sm:text-2xl sm:top-0">
           {title}
         </p>
         <p className="text-base sm:text-lg py-4 sm:pt-24 sm:pb-20">{summary}</p>
@@ -71,127 +71,25 @@ const Tag = ({ value, setActiveTags, activeTags }) => {
 
 const Historias = () => {
   const baseUrl = "https://tuhistoriaimporta.com/wp/wp-json/wp/v2/"
-  /*
-  const tags = [
-    {
-      parent: "lugar",
-      children: [
-        "escuela",
-        "espacio público",
-        "casa",
-        "departamento",
-        "discoteca",
-        "bar",
-        "redes sociales",
-      ],
-    },
-    {
-      parent: "tipo de violencia",
-      children: [
-        "hostigamiento sexual",
-        "violación",
-        "abuso sexual infantil",
-        "violencia familiar",
-        "ciberacoso",
-      ],
-    },
-    {
-      parent: "relación con agresor",
-      children: [
-        "maestro",
-        "pareja",
-        "familiar",
-        "amigo",
-        "vecino",
-        "ex pareja",
-      ],
-    },
-  ]*/
 
-  /*
-  const historias = [
-    {
-      order: 1,
-      title: "Acoso en la secundaria",
-      summary:
-        "Tengo una niña de 16 años que hace 2 años fue acosada sexualmente por su maestro de matemáticas en la secundaria.",
-      tags: ["escuela", "hostigamiento sexual", "maestro"],
-      slug: "acoso-secundaria",
-    },
-    {
-      order: 1,
-      title: "Trauma generacional",
-      summary:
-        "Hace un rato, mientras la familia desayunaba, comenzamos a platicar sobre la forma en que sus relaciones surgieron.",
-      tags: ["violación", "familiar"],
-      slug: "trauma",
-    },
-    {
-      order: 1,
-      title: "Los agresores también pueden ser tus familiares",
-      summary:
-        "Cuando tenía como 5 o 6 años, mi tío político abusó de mí. Me hacía sexo oral cada que tenía oportunidad, me tocaba mis pechos y me ponía pornografía.",
-      tags: ["bar", "departamento"],
-      slug: "agresores",
-    },
-    {
-      order: 1,
-      title: "Acoso en la secundaria",
-      summary:
-        "Tengo una niña de 16 años que hace 2 años fue acosada sexualmente por su maestro de matemáticas en la secundaria.",
-      slug: "acoso-secundaria",
-    },
-    {
-      order: 1,
-      title: "Trauma generacional",
-      summary:
-        "Hace un rato, mientras la familia desayunaba, comenzamos a platicar sobre la forma en que sus relaciones surgieron.",
-      slug: "trauma",
-    },
-    {
-      order: 1,
-      title: "Los agresores también pueden ser tus familiares",
-      summary:
-        "Cuando tenía como 5 o 6 años, mi tío político abusó de mí. Me hacía sexo oral cada que tenía oportunidad, me tocaba mis pechos y me ponía pornografía.",
-      slug: "agresores",
-    },
-    {
-      order: 1,
-      title: "Acoso en la secundaria",
-      summary:
-        "Tengo una niña de 16 años que hace 2 años fue acosada sexualmente por su maestro de matemáticas en la secundaria.",
-      slug: "acoso-secundaria",
-    },
-    {
-      order: 1,
-      title: "Trauma generacional",
-      summary:
-        "Hace un rato, mientras la familia desayunaba, comenzamos a platicar sobre la forma en que sus relaciones surgieron.",
-      slug: "trauma",
-    },
-    {
-      order: 1,
-      title: "Los agresores también pueden ser tus familiares",
-      summary:
-        "Cuando tenía como 5 o 6 años, mi tío político abusó de mí. Me hacía sexo oral cada que tenía oportunidad, me tocaba mis pechos y me ponía pornografía.",
-      slug: "agresores",
-    },
-  ]
-  const stories = useMemo(
-    () => historias.sort((a, b) => a.order - b.order),
-    [historias]
-  )*/
-
-  const [activeTags, setActiveTags] = useState([])
-  const [stories, setStories] = useState(null)
-  const [tags, setTags] = useState(null)
+  const [activeTags, setActiveTags] = useState<string[]>([])
+  const [stories, setStories] = useState<
+    null | { id: number; title: string; summary: string; tags: string[] }[]
+  >(null)
+  const [tags, setTags] = useState<
+    | null
+    | {
+        parent: string
+        children: string[]
+      }[]
+  >(null)
   const [storiesFiltered, setStoriesFiltered] = useState(stories)
 
   useEffect(() => {
     if (activeTags.length === 0) setStoriesFiltered(stories)
     else {
       setStoriesFiltered(
-        stories.filter(story =>
+        stories!.filter(story =>
           story.tags?.some(r => activeTags.indexOf(r) >= 0)
         )
       )
@@ -199,36 +97,50 @@ const Historias = () => {
   }, [activeTags])
 
   useEffect(() => {
-    axios.get(`${baseUrl}categories`).then(res => {
-      const idCat = res.data.find(cat => cat.name === "historia").id
-      const idCatTag = res.data.find(cat => cat.name === "tags").id
+    axios
+      .get(`${baseUrl}categories?timestamp=${new Date().getTime()}`)
+      .then(res => {
+        const idCat = res.data.find(cat => cat.name === "historia").id
+        const idCatTag = res.data.find(cat => cat.name === "tags").id
 
-      axios.get(`${baseUrl}posts?categories=${idCat}`).then(response => {
-        const storiesWp = []
-        const posts = response.data
-          .sort((a, b) => a.acf.order - b.acf.order)
-          .map(post => ({ id: post.id, ...post.acf }))
-        posts.forEach((post, i) =>
-          storiesWp.push({
-            id: post.id,
-            title: post.title,
-            summary: post.summary,
-            tags: post.tags.split(",").map(tag => tag.trim()),
-            slug: post.slug,
+        axios
+          .get(
+            `${baseUrl}posts?categories=${idCat}&timestamp=${new Date().getTime()}`
+          )
+          .then(response => {
+            const storiesWp: {
+              id: number
+              title: string
+              summary: string
+              tags: string[]
+            }[] = []
+            const posts = response.data
+              .sort((a, b) => a.acf.order - b.acf.order)
+              .map(post => ({ id: post.id, ...post.acf }))
+            posts.forEach((post, i) =>
+              storiesWp.push({
+                id: post.id,
+                title: post.title,
+                summary: post.summary,
+                tags: post.tags.split(",").map((tag: string) => tag.trim()),
+              })
+            )
+            setStories(storiesWp)
           })
-        )
-        setStories(storiesWp)
+        axios
+          .get(
+            `${baseUrl}posts?categories=${idCatTag}&timestamp=${new Date().getTime()}`
+          )
+          .then(response => {
+            const posts = response.data.reverse().map(post => ({ ...post.acf }))
+            setTags(
+              posts.map(post => ({
+                parent: post.parent,
+                children: post.tags.split(",").map(tag => tag.trim()),
+              }))
+            )
+          })
       })
-      axios.get(`${baseUrl}posts?categories=${idCatTag}`).then(response => {
-        const posts = response.data.reverse().map(post => ({ ...post.acf }))
-        setTags(
-          posts.map(post => ({
-            parent: post.parent,
-            children: post.tags.split("/").map(tag => tag.trim()),
-          }))
-        )
-      })
-    })
   }, [])
 
   useEffect(() => {
@@ -299,7 +211,7 @@ const Historias = () => {
       <div className="container">
         {storiesFiltered ? (
           storiesFiltered.length > 0 ? (
-            <div className="w-full sm:grid sm:grid-cols-3 mb-16 mt-8 sm:my-20">
+            <div className="w-full sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-8 md:gap-16 mb-16 mt-8 sm:my-20">
               {storiesFiltered.map((story, i) => (
                 <Story
                   key={`${i}story`}

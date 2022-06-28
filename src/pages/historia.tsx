@@ -35,7 +35,7 @@ const Historia = props => {
     }
   }
 
-  const [story, setStory] = useState<{
+  const [story, setStory] = useState<null | {
     title
     name
     yearOccured?
@@ -43,36 +43,47 @@ const Historia = props => {
     content
     nextId
   }>()
-  const [id, setId] = useState(0)
-
-  useEffect(() => {
-    axios.get(`${baseUrl}categories`).then(res => {
-      const idCat = res.data.find(cat => cat.name === "historia").id
-
-      axios.get(`${baseUrl}posts?categories=${idCat}`).then(response => {
-        const storiesWp = []
-        const posts = response.data
-          .sort((a, b) => a.acf.order - b.acf.order)
-          .map(post => ({ id: post.id, ...post.acf }))
-        posts.forEach((post, i) =>
-          storiesWp.push({
-            id: post.id,
-            title: post.title,
-            content: post.content,
-            year: post.year,
-            name: post.name,
-            yearOccured: post.yearOccured,
-            nextId: i < posts.length - 1 ? posts[i + 1].id : 0,
-          })
-        )
-        setStory(storiesWp.find(story => story.id === id))
-      })
-    })
-  }, [id])
+  //const [id, setId] = useState(0)
 
   useEffect(() => {
     setStory(null)
-    setId(Number(search.split("=")[1]))
+    const id = Number(search.split("=")[1])
+    axios
+      .get(`${baseUrl}categories?timestamp=${new Date().getTime()}`)
+      .then(res => {
+        const idCat = res.data.find(cat => cat.name === "historia").id
+
+        axios
+          .get(
+            `${baseUrl}posts?categories=${idCat}&timestamp=${new Date().getTime()}`
+          )
+          .then(response => {
+            const storiesWp: {
+              id
+              title
+              content
+              year
+              name
+              yearOccured
+              nextId
+            }[] = []
+            const posts = response.data
+              .sort((a, b) => a.acf.order - b.acf.order)
+              .map(post => ({ id: post.id, ...post.acf }))
+            posts.forEach((post, i) =>
+              storiesWp.push({
+                id: post.id,
+                title: post.title,
+                content: post.content,
+                year: post.year,
+                name: post.name,
+                yearOccured: post.yearOccured,
+                nextId: i < posts.length - 1 ? posts[i + 1].id : 0,
+              })
+            )
+            setStory(storiesWp.find(story => story.id === id))
+          })
+      })
   }, [search])
 
   return (
