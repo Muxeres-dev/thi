@@ -172,7 +172,7 @@ const Directorio = () => {
                     <div className="w-full text-base flex flex-col sm:flex-row">
                       <div className="sm:w-1/6">
                         {org.phones && (
-                          <div className="">
+                          <div className="mb-4 sm:mb-0">
                             <p className="font-semibold">Contacto</p>
                             <p className="break-words">{org.phones}</p>
                           </div>
@@ -180,7 +180,7 @@ const Directorio = () => {
                       </div>
                       <div className="sm:w-3/6 sm:px-3 break-words">
                         {org.addres && (
-                          <div className="">
+                          <div className="mb-4 sm:mb-0">
                             <p className="font-semibold">Dirección</p>
                             <p className="break-words">{org.addres}</p>
                           </div>
