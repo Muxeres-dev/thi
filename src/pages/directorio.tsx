@@ -169,26 +169,35 @@ const Directorio = () => {
                   aria-labelledby={`heading${j}${j}`}
                 >
                   <div className="accordion-body bg-beige1 text-lg text-white pt-4 sm:pt-4 pb-4 sm:pb-4 px-16 sm:px-4">
-                    <div className="w-full text-base font-semibold flex flex-col sm:flex-row">
+                    <div className="w-full text-base flex flex-col sm:flex-row">
                       <div className="sm:w-1/6">
                         {org.phones && (
-                          <p className="break-words" key={`phone${j}${j}`}>
-                            {org.phones}
-                          </p>
+                          <div className="">
+                            <p className="font-semibold">Contacto</p>
+                            <p className="break-words">{org.phones}</p>
+                          </div>
                         )}
                       </div>
                       <div className="sm:w-3/6 sm:px-3 break-words">
-                        {org.addres}
+                        {org.addres && (
+                          <div className="">
+                            <p className="font-semibold">Dirección</p>
+                            <p className="break-words">{org.addres}</p>
+                          </div>
+                        )}
                       </div>
-                      <div className="sm:w-2/6 sm:text-center break-all">
+                      <div className="sm:w-2/6 break-all">
                         {org.web && (
-                          <a
-                            className="text-purple1 underline"
-                            href={org.web}
-                            target="_blank"
-                          >
-                            {org.web}
-                          </a>
+                          <div className="">
+                            <p className="font-semibold">Sitio Web</p>
+                            <a
+                              className="text-purple1 underline"
+                              href={org.web}
+                              target="_blank"
+                            >
+                              {org.web}
+                            </a>
+                          </div>
                         )}
                       </div>
                     </div>
