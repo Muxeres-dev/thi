@@ -88,13 +88,12 @@ const Autocuidado = () => {
               }
             >
               <p>
-                <span className="font-semibold"> Descripción:</span> Decidir
-                contarle a alguien lo que sucedió después de haber vivido una
-                agresión es una decisión profundamente personal y en la que
-                debemos tomarnos un tiempo para pensar. Elegir cómo, a quién y
-                si revelar una agresión, es un paso importante en el proceso de
-                sanación. Esta nota expondrá algunos de los factores a
-                considerar para ayudarnos a tomar esta decisión.
+                Decidir contarle a alguien lo que sucedió después de haber
+                vivido una agresión es una decisión profundamente personal y en
+                la que debemos tomarnos un tiempo para pensar. Elegir cómo, a
+                quién y si revelar una agresión, es un paso importante en el
+                proceso de sanación. Esta nota expondrá algunos de los factores
+                a considerar para ayudarnos a tomar esta decisión.
               </p>
             </InfoBox>
             <InfoBox
