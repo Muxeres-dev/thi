@@ -178,7 +178,7 @@ const Directorio = () => {
                           </div>
                         )}
                       </div>
-                      <div className="sm:w-3/6 sm:px-3 break-words">
+                      <div className="sm:w-3/6 sm:px-8 break-words">
                         {org.addres && (
                           <div className="mb-4 sm:mb-0">
                             <p className="font-semibold">Dirección</p>

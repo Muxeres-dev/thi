@@ -1,9 +1,9 @@
 export interface Organizacion {
   estado: string
   name: string
-  tipo: string
+  tipo?: string
   tags: string
-  phones: string
+  phones?: string
   web?: string
   addres?: string
 }
@@ -13,19 +13,15 @@ export const directorio: Organizacion[] = [
     estado: "Nacional",
     tipo: "Organismo gubernamental",
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Interrupción legal del embarazo",
-
     phones: "800 800 8821",
     web: "https://andar.org.mx/puedes-elegir/#violencia",
-    addres: null,
   },
   {
     estado: "Nacional",
     name: "Comisión 1, 2, 3 por nosotras",
     tipo: "Sociedad Civil",
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Asesoría legal",
-    phones: "N/D",
     web: "https://docs.google.com/forms/d/e/1FAIpQLSdBfuGxJ99_1E-ZtiLwFOiUp3JaEzZWTUDZTxCGvNQleed08g/viewform",
-    addres: "N/D",
   },
   {
     estado: "Nacional",
@@ -34,7 +30,6 @@ export const directorio: Organizacion[] = [
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Interrupción legal del embarazo",
     phones: "55 5658 6684",
     web: "https://gire.org.mx/gire-quienes-somos/",
-    addres: null,
   },
   {
     estado: "Nacional",
@@ -44,7 +39,6 @@ export const directorio: Organizacion[] = [
 
     phones: "teacompanamos@ddeser.org",
     web: "https://www.ddeser.org/",
-    addres: null,
   },
   {
     estado: "Nacional",
@@ -53,7 +47,6 @@ export const directorio: Organizacion[] = [
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Interrupción legal del embarazo",
     phones: "https://ipasmexico.org/contactanos/",
     web: "https://ipasmexico.org/category/recursos/",
-    addres: null,
   },
   {
     estado: "Nacional",
@@ -63,7 +56,6 @@ export const directorio: Organizacion[] = [
 
     phones: "55 5519 5845",
     web: "https://www.facebook.com/pages/category/Organization/Centro-De-Apoyo-a-La-Mujer-CAM-Margarita-Mag%C3%B3n-AC-1470777906532540/",
-    addres: null,
   },
   {
     estado: "Nacional",
@@ -72,7 +64,6 @@ export const directorio: Organizacion[] = [
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Atención psicológica, asesoría legal",
     phones: "55 5341 6570, 55 5396 5586, 55 5342 2767",
     web: "http://www.veredathemis.org.mx/",
-    addres: null,
   },
   {
     estado: "Nacional",
@@ -81,7 +72,6 @@ export const directorio: Organizacion[] = [
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Atención psicológica, asesoría legal, atención médica",
     phones: "800 015 1617, 55 5520 4427 y 55 5552 01555",
     web: "https://www.origenac.org/",
-    addres: null,
   },
   {
     estado: "Nacional",
@@ -90,69 +80,50 @@ export const directorio: Organizacion[] = [
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Refugio",
     phones: "Tel: 55 5243 6432 Tel. 800 822 4460",
     web: "https://www.rednacionalderefugios.org.mx/",
-    addres: null,
   },
   {
     estado: "Nacional",
     name: "VICTIMATEL",
-    tipo: null,
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Atención psicológica, asesoría legal",
     phones: "55 5575 5461",
-    addres: null,
   },
   {
     estado: "Nacional",
     name: "Línea SAPTEL.",
-    tipo: null,
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Atención psicológica",
     phones: "55 5259 8121.",
     web: "http://www.saptel.org.mx/que_es.html",
-    addres: null,
   },
   {
     estado: "Nacional",
     name: "Línea Mujeres de la Secretaría de las Mujeres",
-    tipo: null,
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Atención psicológica",
     phones: "Teléfono: 55 5658 1111 (opción 3)",
     web: "http: //locatel.cdmx.gob.mx/mujeres/",
-    addres: null,
   },
   {
     estado: "Nacional",
     name: "Centros de Justicia para las Mujeres",
-    tipo: null,
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Atención psicológica, asesoría legal",
-    phones: null,
     web: "https://www.gob.mx/cms/uploads/attachment/file/469801/Directorio_Centros_de_Justicia_para_las_Mujeres_2019.pdf",
-    addres: null,
   },
   {
     estado: "Nacional",
     name: "Comisiones Estatales de Derechos Humanos",
-    tipo: null,
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Atención a quejas, asesoría legal",
-    phones: null,
     web: "https://www.gob.mx/cms/uploads/attachment/file/394589/Directorio_Comisiones_Derechos_Humanos_2018.pdf",
-    addres: null,
   },
   {
     name: "Líneas Telefónicas e Institutos Estatales de Atención a la Violencia contra las Mujeres",
     estado: "Nacional",
-    tipo: null,
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Atención psicológica, asesoría legal",
-    phones: null,
     web: "https://www.gob.mx/cms/uploads/attachment/file/394591/Directorio_Institutos_Estatales_y_Lineas_2018.pdf",
-    addres: null,
   },
   {
     name: "Fiscalías Generales de Justicia",
     estado: "Nacional",
-    tipo: null,
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Atención a quejas",
-    phones: null,
     web: "https://www.gob.mx/cms/uploads/attachment/file/395910/Directorio_Procuraduri_as-Fiscali_as_2018.pdf",
-    addres: null,
   },
   {
     estado: "Aguascalientes",
@@ -249,7 +220,6 @@ export const directorio: Organizacion[] = [
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Interrupción legal del embarazo",
     phones: "87 1408 4396 / 87 1188 8694 / 87 1164 4539 / 87 1188 8694",
     web: "https://www.facebook.com/acompananteslaguna",
-    addres: null,
   },
   {
     name: "Centro de Apoyo Opciones Dignas A.C.",
@@ -286,16 +256,13 @@ export const directorio: Organizacion[] = [
     estado: "Coahuila",
     tipo: "Sociedad Civil",
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Interrupción legal del embarazo",
-    phones: null,
     web: "https://www.facebook.com/RedMujeresLaguna.LagunalibredeViolencia/",
-    addres: null,
   },
   {
     name: "Aborto Seguro",
     estado: "Coahuila",
     tipo: "Organismo gubernamental",
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Interrupción legal del embarazo",
-    phones: null,
     web: "https://www.facebook.com/abortosegurocoahuila",
     addres: "Centro de Salud Abastos. Torreón, Coahuila",
   },
@@ -381,7 +348,6 @@ export const directorio: Organizacion[] = [
 
     phones: "55 5658 1111",
     web: "https://www.semujeres.cdmx.gob.mx/abogadas-de-las-mujeres",
-    addres: "N/D",
   },
   {
     name: "ADIVAC, Asociación para el Desarrollo Integral de Personas Violadas, A. C",
@@ -400,7 +366,6 @@ export const directorio: Organizacion[] = [
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Asesoría legal, atención psicológica",
     phones: "55 5539 3917 y 55 5539 0826 y 55 5704 5048",
     web: "https://www.facebook.com/pages/category/Non-Governmental-Organization--NGO-/APIS-Fundaci%C3%B3n-Para-La-Equidad-AC-180887362093303/",
-    addres: "N/D",
   },
   {
     name: "Asociación de Mujeres Sobrevivientes de Abuso Sexual, MUSAS, A.C.",
@@ -431,7 +396,6 @@ export const directorio: Organizacion[] = [
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Atención psicológica, asesoría legal",
     phones: "55 3096 5189",
     web: "https://www.casagaviota.org/",
-    addres: "N/D",
   },
   {
     name: "Comisión de Derechos Humanos de la Ciudad de México",
@@ -470,7 +434,6 @@ export const directorio: Organizacion[] = [
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Atención psicológica, asesoría legal",
     phones: "55 5512 2836 ext. 502.",
     web: "https://www.semujeres.cdmx.gob.mx/servicios/servicio/lunas",
-    addres: null,
   },
   {
     name: "Red de abogadas Violeta",
@@ -479,16 +442,13 @@ export const directorio: Organizacion[] = [
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Asesoría legal",
     phones: "33 3302 8714 y  33 1011 5368",
     web: "https://abogadasvioleta.com/servicios/",
-    addres: null,
   },
   {
     name: "Resilio Consultores S.C.",
     estado: "Ciudad de México",
     tipo: "Sociedad Civil",
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Asesoría legal, atención psicológica",
-    phones: null,
     web: "https://resilioconsultores.com.mx/",
-    addres: null,
   },
   {
     name: "Secretaría de las Mujeres CDMX",
@@ -504,11 +464,9 @@ export const directorio: Organizacion[] = [
   {
     name: "Línea mujeres",
     estado: "Ciudad de México",
-    tipo: null,
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Atención psicológica",
 
     phones: "55 5658 1111",
-    addres: null,
   },
   {
     estado: "Durango",
@@ -517,7 +475,6 @@ export const directorio: Organizacion[] = [
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Atención psicológica, interrupción legal del embarazo",
     phones: "87 1408 4396 / 87 1188 8694",
     web: "https://www.facebook.com/acompananteslaguna",
-    addres: null,
   },
   {
     name: "Comisión de Derechos Humanos del Estado de Durango",
@@ -680,7 +637,6 @@ export const directorio: Organizacion[] = [
     tipo: "Sociedad Civil",
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Asesoría legal",
     phones: "33 1709 3064",
-    addres: null,
   },
   {
     name: "Colectivo Mujeres Puerto Vallarta",
@@ -688,7 +644,6 @@ export const directorio: Organizacion[] = [
     tipo: "Sociedad Civil",
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Asesoría legal, atención psicológica",
     phones: "33 2159 8110",
-    addres: null,
   },
   {
     name: "Comisión Estatal de Derechos Humanos de Jalisco",
@@ -716,7 +671,6 @@ export const directorio: Organizacion[] = [
     tipo: "Sociedad Civil",
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Asesoría Legal",
     phones: "33 2133 1981",
-    addres: null,
   },
   {
     estado: "Michoacán",
@@ -792,7 +746,6 @@ export const directorio: Organizacion[] = [
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Asesoría legal, atención psicológica",
     phones: "800 003 784 323",
     web: "https://www.nl.gob.mx/mujeres",
-    addres: null,
   },
   {
     name: "Voces de Mujeres en Acción, A.C.",
@@ -887,7 +840,6 @@ export const directorio: Organizacion[] = [
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Asesoría legal",
     phones: "22 2579 9672",
     web: "https://www.facebook.com/AbogadasFeministasPueblaTlaxcala/",
-    addres: null,
   },
   {
     estado: "Querétaro",
@@ -896,7 +848,6 @@ export const directorio: Organizacion[] = [
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Asesoría legal",
     phones: "44 2453 8270 y 44 2831 9212",
     web: "https://www.facebook.com/colectivoleidh/",
-    addres: "N/D",
   },
   {
     name: "Defensoría de Derechos Humanos de Querétaro",
@@ -1089,7 +1040,6 @@ export const directorio: Organizacion[] = [
     name: "Centro de Derechos Humanos de los Pueblos del Sur de Veracruz “BETY CARIÑO” A.C.",
     tipo: "Sociedad Civil",
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Asesoría legal, atención psicológica",
-    phones: "N/D",
     web: "http://cdhbetycarino.blogspot.com/",
     addres:
       "Zaragoza s/n, Barrio Tercero, C.P. 95940, Tatahuicalpan de Juárez, Veracruz",
@@ -1152,7 +1102,6 @@ export const directorio: Organizacion[] = [
     tags: "refugio, asesoría legal, atención a quejas, atención psicológica, interrupción legal del embarazo, atención médica, atienden infancias,Asesoría legal, atención psicológica, refugio",
     phones: "99 9988 4048",
     web: "https://apisfundacion.com/serviciosdeatencion/",
-    addres: null,
   },
   {
     estado: "Zacatecas",
