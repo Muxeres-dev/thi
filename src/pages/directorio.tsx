@@ -84,7 +84,7 @@ const Directorio = () => {
         })
       })
 
-    return [...new Set(tagarr)]
+    return [...new Set(tagarr)].sort()
   }, [directorio])
 
   useEffect(() => {
@@ -268,8 +268,7 @@ const Directorio = () => {
           <TextIlustration ilus={Ilus8} title="Directorio">
             <p className="text-lg sm:text-3xl text-gray1 font-light mt-8">
               <span className="text-beige1 font-semibold">Conoce</span> las
-              organizaciones que pueden ayudarte si has sufrido violencia
-              sexual.
+              organizaciones que pueden ayudarte si has vivido violencia sexual.
             </p>
           </TextIlustration>
         </div>

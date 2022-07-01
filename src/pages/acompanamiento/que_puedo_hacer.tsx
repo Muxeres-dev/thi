@@ -32,7 +32,7 @@ const Page = () => {
       </p>
       <p className="">
         Por ejemplo: si hay otras personas alrededor, sugiere que alguien apoye
-        a la persona que ha sufrido un daño, mientras que tú tratas de
+        a la persona que ha vivido un daño, mientras que tú tratas de
         tranquilizar a la persona agresora.
       </p>
       <p className="font-semibold">Demora</p>

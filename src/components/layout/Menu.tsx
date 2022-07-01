@@ -31,7 +31,7 @@ const Menu = () => {
   return (
     <>
       <nav
-        className={`w-screen h-screen fixed top-0 left-0 z-30 transition duration-500 ease-in-out bg-blue1 ${
+        className={`w-screen h-screen fixed top-0 left-0 z-30 transition duration-500 ease-in-out bg-purple1 ${
           menuOpen ? "visible opacity-1" : "invisible opacity-0"
         }`}
       >
@@ -73,13 +73,13 @@ const Menu = () => {
               onClick={() => setMenuOpen(false)}
             />
             <Option
-              text="Nosotras"
-              link="/nosotras"
+              text="Directorio"
+              link="/directorio"
               onClick={() => setMenuOpen(false)}
             />
             <Option
-              text="Directorio"
-              link="/directorio"
+              text="Nosotras"
+              link="/nosotras"
               onClick={() => setMenuOpen(false)}
             />
             <Option

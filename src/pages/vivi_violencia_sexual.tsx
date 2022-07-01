@@ -350,8 +350,8 @@ const ViviViolencia = () => {
                       aria-controls="collapse6"
                     >
                       <span className="pr-4">
-                        6. “Haber sufrido de violencia sexual nos hace propensa
-                        a ser gay o bisexual.”
+                        6. “Haber vivido violencia sexual nos hace propensa a
+                        ser gay o bisexual.”
                       </span>
                     </button>
                   </h2>
@@ -361,11 +361,11 @@ const ViviViolencia = () => {
                     aria-labelledby="heading6"
                   >
                     <div className="accordion-body bg-beige1 text-lg text-white pt-6 sm:pt-12 pb-8 sm:pb-16 sm:px-20 px-12">
-                      No hay evidencia que sugiera que el haber sufrido de
-                      violencia sexual cambie la orientación sexual de una
-                      persona. Cada quien tiene derecho a elegir sus propias
-                      parejas sexuales y la preferencia sexual de una persona no
-                      se debe a los posibles traumas que haya vivido.
+                      No hay evidencia que sugiera que el haber vivido violencia
+                      sexual cambie la orientación sexual de una persona. Cada
+                      quien tiene derecho a elegir sus propias parejas sexuales
+                      y la preferencia sexual de una persona no se debe a los
+                      posibles traumas que haya vivido.
                     </div>
                   </div>
                 </div>
@@ -552,7 +552,7 @@ const ViviViolencia = () => {
               <p className="mb-4">
                 Cada vivencia y cada persona somos únicas y por lo mismo, no
                 debemos de compararnos con nadie más. Al hablar de consecuencias
-                por haber sufrido violencia sexual, nos encontramos con un
+                por haber vivido violencia sexual, nos encontramos con un
                 abanico muy amplio de posibilidades. Estas pueden ser diversas
                 en cuanto al nivel de gravedad. No todos los casos presentan los
                 mismos efectos, habrá quienes podamos seguir con nuestra vida y
@@ -600,7 +600,7 @@ const ViviViolencia = () => {
                 Estas pueden variar dependiendo de factores como el lugar en
                 donde ocurrió la violencia sexual y el tipo de agresor. Es
                 diferente que este sea un miembro dentro de nuestro círculo
-                social a que sea un completo desconocido. Tras haber sufrido o
+                social a que sea un completo desconocido. Tras haber vivido o
                 estar en una situación de violencia sexual, es común que
                 tratemos de evitar todo lo que nos recuerde a ello y que la
                 relación con nuestro propio cuerpo quede afectada. Algunos
