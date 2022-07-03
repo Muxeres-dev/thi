@@ -429,7 +429,7 @@ export const directorio: Organizacion[] = [
   },
   {
     name: "Red de abogadas Violeta",
-    estado: "Nacional",
+    estado: "Ciudad de México",
     tipo: "Sociedad Civil",
     tags: "Asesoría legal",
     phones: "33 3302 8714 y  33 1011 5368",
