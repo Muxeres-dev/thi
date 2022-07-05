@@ -88,6 +88,7 @@ const Directorio = () => {
   }, [directorio])
 
   useEffect(() => {
+    /*
     if (activeTags.length === 0 && activeEstado === "")
       setDirectorioFiltered(directorio)
     else {
@@ -105,6 +106,46 @@ const Directorio = () => {
             .filter(org => org.tags.toLowerCase().includes(tag.toLowerCase()))
         )
       })
+
+      tagarr = [...new Set(tagarr)]
+      orgsFiltered.push(...tagarr.filter(org => org.estado === "Nacional"))
+      orgsFiltered.push(
+        ...tagarr
+          .filter(org => org.estado !== "Nacional")
+          .sort((a, b) => a.estado.localeCompare(b.estado))
+      )
+
+      setDirectorioFiltered(orgsFiltered)
+      
+    }*/
+    if (activeTags.length === 0 && activeEstado === "")
+      setDirectorioFiltered(directorio)
+    else if (activeTags.length === 0) {
+      const orgsFiltered = []
+      orgsFiltered.push(
+        ...directorio.filter(org => org.estado === activeEstado)
+      )
+      setDirectorioFiltered(orgsFiltered)
+    } else {
+      const orgsFiltered = []
+      let tagarr = []
+      if (activeEstado !== "") {
+        activeTags.forEach(tag => {
+          tagarr.push(
+            ...directorio
+              .filter(org => org.estado === activeEstado)
+              .filter(org => org.tags.toLowerCase().includes(tag.toLowerCase()))
+          )
+        })
+      } else {
+        activeTags.forEach(tag => {
+          tagarr.push(
+            ...directorio.filter(org =>
+              org.tags.toLowerCase().includes(tag.toLowerCase())
+            )
+          )
+        })
+      }
 
       tagarr = [...new Set(tagarr)]
       orgsFiltered.push(...tagarr.filter(org => org.estado === "Nacional"))
@@ -323,7 +364,14 @@ const Directorio = () => {
         )}
 
         <div className="sm:container mt-16">
-          <PaginatedItems itemsPerPage={11} />
+          {directorioFiltered.length === 0 ? (
+            <div className="mt-12 mb-16 text-center text-xl sm:text-3xl">
+              <p className="text-beige1 font-semibold">Lo sentimos.</p>
+              <p className="">Tu búsqueda no generó resultados.</p>
+            </div>
+          ) : (
+            <PaginatedItems itemsPerPage={11} />
+          )}
         </div>
       </section>
     </Layout>
