@@ -131,9 +131,17 @@ const Directorio = () => {
               {(j === 0 ||
                 (j !== 0 &&
                   currentItems[j].estado !== currentItems[j - 1].estado)) && (
-                <h3 className="text-beige1 font-semibold text-2xl sm:text-3xl px-16 sm:px-0 mt-6">
-                  {org.estado}
-                </h3>
+                <>
+                  <h3 className="text-beige1 font-semibold text-2xl sm:text-3xl px-16 sm:px-0 mt-6">
+                    {org.estado}
+                  </h3>
+                  {org.estado === "Cobertura Nacional" && (
+                    <p className="font-semibold mt-2">
+                      Estos resultados son organizaciones que trabajan en toda
+                      la República Mexicana.
+                    </p>
+                  )}
+                </>
               )}
               <div className="accordion-item">
                 <h2
