@@ -10,7 +10,7 @@ export interface Organizacion {
 export const directorio: Organizacion[] = [
   {
     name: "Alianza Nacional por el Derecho a decidir",
-    estado: "Nacional",
+    estado: "Cobertura Nacional",
     tipo: "Organismo gubernamental",
     tags: "Interrupción legal del embarazo",
     phones: "800 800 8821",
@@ -18,14 +18,14 @@ export const directorio: Organizacion[] = [
   },
   {
     name: "Comisión 1, 2, 3 por nosotras",
-    estado: "Nacional",
+    estado: "Cobertura Nacional",
     tipo: "Sociedad Civil",
     tags: "Asesoría legal",
     web: "https://docs.google.com/forms/d/e/1FAIpQLSdBfuGxJ99_1E-ZtiLwFOiUp3JaEzZWTUDZTxCGvNQleed08g/viewform",
   },
   {
     name: "GIRE - Red Nacional por la Justicia Reproductiva",
-    estado: "Nacional",
+    estado: "Cobertura Nacional",
     tipo: "Sociedad Civil",
     tags: "Interrupción legal del embarazo",
     phones: "55 5658 6684",
@@ -33,7 +33,7 @@ export const directorio: Organizacion[] = [
   },
   {
     name: "Red por los derechos sexuales y reproductivos en México (ddeser)",
-    estado: "Nacional",
+    estado: "Cobertura Nacional",
     tipo: "Sociedad Civil",
     tags: "Interrupción legal del embarazo",
     phones: "teacompanamos@ddeser.org",
@@ -41,7 +41,7 @@ export const directorio: Organizacion[] = [
   },
   {
     name: "IPAS - México",
-    estado: "Nacional",
+    estado: "Cobertura Nacional",
     tipo: "Sociedad Civil",
     tags: "Interrupción legal del embarazo",
     phones: "https://ipasmexico.org/contactanos/",
@@ -49,7 +49,7 @@ export const directorio: Organizacion[] = [
   },
   {
     name: 'Centro de Apoyo a la Mujer"Margarita Magón"',
-    estado: "Nacional",
+    estado: "Cobertura Nacional",
     tipo: "Sociedad Civil",
     tags: "Atención psicológica, asesoría legal",
     phones: "55 5519 5845",
@@ -57,7 +57,7 @@ export const directorio: Organizacion[] = [
   },
   {
     name: "Vereda Themis",
-    estado: "Nacional",
+    estado: "Cobertura Nacional",
     tipo: "Sociedad Civil",
     tags: "Atención psicológica, asesoría legal",
     phones: "55 5341 6570,  55  5396 5586, 55 5342 2767",
@@ -65,7 +65,7 @@ export const directorio: Organizacion[] = [
   },
   {
     name: "Pro Ayuda a la Mujer Fundación Origen",
-    estado: "Nacional",
+    estado: "Cobertura Nacional",
     tipo: "Sociedad Civil",
     tags: "Atención psicológica, asesoría legal, atención médica",
     phones: "800 015 1617, 55 5520 4427 y 55 5552 01555",
@@ -73,7 +73,7 @@ export const directorio: Organizacion[] = [
   },
   {
     name: "Red Nacional de Refugios",
-    estado: "Nacional",
+    estado: "Cobertura Nacional",
     tipo: "Sociedad Civil",
     tags: "Refugio",
     phones: "Tel: 55 5243 6432Tel. 800 822 4460",
@@ -81,45 +81,45 @@ export const directorio: Organizacion[] = [
   },
   {
     name: "VICTIMATEL",
-    estado: "Nacional",
+    estado: "Cobertura Nacional",
     tags: "Atención psicológica, asesoría legal",
     phones: "55 5575 5461",
   },
   {
     name: "Línea SAPTEL.",
-    estado: "Nacional",
+    estado: "Cobertura Nacional",
     tags: "Atención psicológica",
     phones: "55 5259 8121.",
     web: "http://www.saptel.org.mx/que_es.html",
   },
   {
     name: "Línea Mujeres de la Secretaría de las Mujeres",
-    estado: "Nacional",
+    estado: "Cobertura Nacional",
     tags: "Atención psicológica",
     phones: "Teléfono: 55 5658 1111 (opción 3)",
     web: "http: //locatel.cdmx.gob.mx/mujeres/",
   },
   {
     name: "Centros de Justicia para las Mujeres",
-    estado: "Nacional",
+    estado: "Cobertura Nacional",
     tags: "Atención psicológica, asesoría legal",
     web: "https://www.gob.mx/cms/uploads/attachment/file/469801/Directorio_Centros_de_Justicia_para_las_Mujeres_2019.pdf",
   },
   {
     name: "Comisiones Estatales de Derechos Humanos",
-    estado: "Nacional",
+    estado: "Cobertura Nacional",
     tags: "Atención a quejas, asesoría legal",
     web: "https://www.gob.mx/cms/uploads/attachment/file/394589/Directorio_Comisiones_Derechos_Humanos_2018.pdf",
   },
   {
     name: "Líneas Telefónicas e Institutos Estatales de Atención a la Violencia contra las Mujeres",
-    estado: "Nacional",
+    estado: "Cobertura Nacional",
     tags: "Atención psicológica, asesoría legal",
     web: "https://www.gob.mx/cms/uploads/attachment/file/394591/Directorio_Institutos_Estatales_y_Lineas_2018.pdf",
   },
   {
     name: "Fiscalías Generales de Justicia",
-    estado: "Nacional",
+    estado: "Cobertura Nacional",
     tags: "Atención a quejas",
     web: "https://www.gob.mx/cms/uploads/attachment/file/395910/Directorio_Procuraduri_as-Fiscali_as_2018.pdf",
   },

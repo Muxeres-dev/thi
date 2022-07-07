@@ -66,9 +66,8 @@ const Tag = ({ value, setActiveTags, activeTags }) => {
 
 const Directorio = () => {
   const [directorioFiltered, setDirectorioFiltered] = useState(directorio)
-  const [activeTags, setActiveTags] = useState([])
   const [activeEstado, setActiveEstado] = useState("")
-  const [loading, setLoading] = useState(false)
+  const [activeTag, setActiveTag] = useState("")
 
   const estados = useMemo(
     () => [...new Set(directorio.map(dir => dir.estado))],
@@ -88,84 +87,37 @@ const Directorio = () => {
   }, [directorio])
 
   useEffect(() => {
-    /*
-    if (activeTags.length === 0 && activeEstado === "")
-      setDirectorioFiltered(directorio)
-    else {
-      const orgsFiltered = []
-      let tagarr = []
-      if (activeEstado !== "") {
-        orgsFiltered.push(
-          ...directorio.filter(org => org.estado === activeEstado)
-        )
-      }
-      activeTags.forEach(tag => {
-        tagarr.push(
-          ...directorio
-            .filter(org => org.estado !== activeEstado)
-            .filter(org => org.tags.toLowerCase().includes(tag.toLowerCase()))
-        )
-      })
+    let orgsFiltered: Organizacion[] = []
+    if (activeTag === "" && activeEstado === "") orgsFiltered = directorio
+    else if (activeEstado !== "")
+      orgsFiltered = [
+        ...directorio
+          .filter(org => org.estado === activeEstado)
+          .filter(org =>
+            org.tags.toLowerCase().includes(activeTag.toLowerCase())
+          ),
+      ]
+    else
+      orgsFiltered = [
+        ...directorio.filter(org =>
+          org.tags.toLowerCase().includes(activeTag.toLowerCase())
+        ),
+      ]
 
-      tagarr = [...new Set(tagarr)]
-      orgsFiltered.push(...tagarr.filter(org => org.estado === "Nacional"))
-      orgsFiltered.push(
-        ...tagarr
-          .filter(org => org.estado !== "Nacional")
-          .sort((a, b) => a.estado.localeCompare(b.estado))
-      )
-
-      setDirectorioFiltered(orgsFiltered)
-      
-    }*/
-    if (activeTags.length === 0 && activeEstado === "")
-      setDirectorioFiltered(directorio)
-    else if (activeTags.length === 0) {
-      const orgsFiltered = []
-      orgsFiltered.push(
-        ...directorio.filter(org => org.estado === activeEstado)
-      )
-      setDirectorioFiltered(orgsFiltered)
-    } else {
-      const orgsFiltered = []
-      let tagarr = []
-      if (activeEstado !== "") {
-        activeTags.forEach(tag => {
-          tagarr.push(
-            ...directorio
-              .filter(org => org.estado === activeEstado)
-              .filter(org => org.tags.toLowerCase().includes(tag.toLowerCase()))
-          )
-        })
-      } else {
-        activeTags.forEach(tag => {
-          tagarr.push(
-            ...directorio.filter(org =>
-              org.tags.toLowerCase().includes(tag.toLowerCase())
-            )
-          )
-        })
-      }
-
-      tagarr = [...new Set(tagarr)]
-      orgsFiltered.push(...tagarr.filter(org => org.estado === "Nacional"))
-      orgsFiltered.push(
-        ...tagarr
-          .filter(org => org.estado !== "Nacional")
-          .sort((a, b) => a.estado.localeCompare(b.estado))
-      )
-
-      setDirectorioFiltered(orgsFiltered)
-    }
-  }, [activeTags, activeEstado])
+    setDirectorioFiltered(orgsFiltered)
+  }, [activeTag, activeEstado])
 
   const handleEstado = e => {
     setActiveEstado(e.target.value)
   }
 
+  const handleTag = e => {
+    setActiveTag(e.target.value)
+  }
+
   const clearfilters = () => {
     setActiveEstado("")
-    setActiveTags([])
+    setActiveTag("")
   }
 
   const Items = ({ currentItems }: { currentItems: Organizacion[] }) => {
@@ -319,31 +271,28 @@ const Directorio = () => {
           <div className="flex items-center text-base sm:text-lg font-semibold">
             <Lupa />
             <p className="ml-4">
-              Puedes filtrar tu búsqueda por tema o Estado.
+              Puedes filtrar tu búsqueda por tema y/o ubicación.
             </p>
           </div>
-          <p className="font-semibold my-6 text-lg sm:text-xl">Temática:</p>
-          <div className="flex flex-col sm:flex-row justify-between">
-            <div className="sm:pr-12">
-              {tags.map((tag, i) => (
-                <React.Fragment key={`${i}tagph`}>
-                  <Tag
-                    value={tag}
-                    setActiveTags={setActiveTags}
-                    activeTags={activeTags}
-                  />
-                  {i !== tags.length - 1 && (
-                    <span className="text-beige1 mx-2">/</span>
-                  )}
-                </React.Fragment>
-              ))}
-            </div>
+          <div className="sm:my-12">
             <select
-              className="w-full flex-0 sm:w-80 border-b border-beige1 p-4 text-center accent-beige1 sm:mt-0 mt-8 bg-white outline-none"
+              className="w-full capitalize flex-0 sm:w-80 border-b border-beige1 p-4 text-center accent-beige1 sm:mt-0 mt-8 bg-white outline-none"
+              onChange={handleTag}
+              value={activeTag}
+            >
+              <option value="">Filtrar por tema</option>
+              {tags.map((tag, i) => (
+                <option key={`${i}tag`} value={tag}>
+                  {tag}
+                </option>
+              ))}
+            </select>
+            <select
+              className="sm:ml-16 w-full flex-0 sm:w-80 border-b border-beige1 p-4 text-center accent-beige1 sm:mt-0 mt-8 bg-white outline-none"
               onChange={handleEstado}
               value={activeEstado}
             >
-              <option value="">Filtrar por estado</option>
+              <option value="">Filtrar por ubicación</option>
               {estados.map((estado, i) => (
                 <option key={`${i}estado`} value={estado}>
                   {estado}
@@ -352,7 +301,7 @@ const Directorio = () => {
             </select>
           </div>
         </div>
-        {(activeTags.length > 0 || activeEstado !== "") && (
+        {/*(activeTags.length > 0 || activeEstado !== "") && (
           <div className="container mt-12 mb-4">
             <Button
               text="Otra búsqueda"
@@ -361,15 +310,16 @@ const Directorio = () => {
               action={() => clearfilters()}
             />
           </div>
-        )}
+        )*/}
 
         <div className="sm:container mt-16">
-          {directorioFiltered.length === 0 ? (
+          {directorioFiltered.length === 0 && (
             <div className="mt-12 mb-16 text-center text-xl sm:text-3xl">
               <p className="text-beige1 font-semibold">Lo sentimos.</p>
               <p className="">Tu búsqueda no generó resultados.</p>
             </div>
-          ) : (
+          )}
+          {(activeTag !== "" || activeEstado !== "") && (
             <PaginatedItems itemsPerPage={11} />
           )}
         </div>
