@@ -83,7 +83,9 @@ const Directorio = () => {
         })
       })
 
-    return [...new Set(tagarr)].sort()
+    return [...new Set(tagarr)]
+      .map(tag => tag.charAt(0).toUpperCase() + tag.slice(1))
+      .sort()
   }, [directorio])
 
   useEffect(() => {
@@ -276,7 +278,7 @@ const Directorio = () => {
           </div>
           <div className="sm:my-12">
             <select
-              className="w-full capitalize flex-0 sm:w-80 border-b border-beige1 p-4 text-center accent-beige1 sm:mt-0 mt-8 bg-white outline-none"
+              className="w-full flex-0 sm:w-80 border-b border-beige1 p-4 text-center accent-beige1 sm:mt-0 mt-8 bg-white outline-none"
               onChange={handleTag}
               value={activeTag}
             >
