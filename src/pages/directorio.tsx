@@ -136,7 +136,7 @@ const Directorio = () => {
                     {org.estado}
                   </h3>
                   {org.estado === "Cobertura Nacional" && (
-                    <p className="font-semibold mt-2">
+                    <p className="font-semibold mt-2 px-16 sm:px-0">
                       Estos resultados son organizaciones que trabajan en toda
                       la República Mexicana.
                     </p>
