@@ -61,7 +61,7 @@ const Contacto = ({ id }) => {
           url: `https://tuhistoriaimporta.com/wp/wp-json/contact-form-7/v1/contact-forms/5/feedback`,
           headers: {
             Authorization: `Basic ${TOKEN}`,
-            "Content-Type": "application/x-www-form-urlencoded",
+            "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
           },
           method: "POST",
           data: convertJsontoUrlencoded({

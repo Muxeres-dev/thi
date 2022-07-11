@@ -310,16 +310,6 @@ const Directorio = () => {
             </select>
           </div>
         </div>
-        {/*(activeTags.length > 0 || activeEstado !== "") && (
-          <div className="container mt-12 mb-4">
-            <Button
-              text="Otra búsqueda"
-              variant="option"
-              className="mx-auto"
-              action={() => clearfilters()}
-            />
-          </div>
-        )*/}
 
         <div className="sm:container mt-16">
           {directorioFiltered.length === 0 && (

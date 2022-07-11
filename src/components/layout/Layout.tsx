@@ -20,7 +20,8 @@ const Layout = (props: IProps) => {
   const defaultDescr =
     "Brindamos información útil y pertinente para todas aquellas personas que han vivido violencia sexual, tomando en cuenta su proceso de sanación y recuperación."
   const defaultTitle = "Tu historia importa"
-  const defaultImg = ""
+  const defaultImg =
+    "http://tuhistoriaimporta.com/wp/wp-content/uploads/2022/07/ThumB_THI-1-1.png"
   const refFooter = useRef(null)
   const [fixFooter, setFixFooter] = useState(false)
 
@@ -51,8 +52,8 @@ const Layout = (props: IProps) => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>THI - {title}</title>
-        <link rel="canonical" href="https://www.pactoverde.mx/" />
-        <meta property="og:site_name" content="Pacto Verde" />
+        <link rel="canonical" href="https://tuhistoriaimporta.com/" />
+        <meta property="og:site_name" content="Tu historia importa" />
         <meta
           name="description"
           content={
@@ -62,7 +63,7 @@ const Layout = (props: IProps) => {
         <meta name="image" content={image ? image : defaultImg} />
         <meta
           property="og:url"
-          content={`https://www.pactoverde.mx${url ? url : ""}`}
+          content={`https://tuhistoriaimporta.com${url ? url : ""}`}
         />
         <meta property="og:type" content="website" />
         <meta
