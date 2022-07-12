@@ -21,7 +21,7 @@ const Layout = (props: IProps) => {
     "Brindamos información útil y pertinente para todas aquellas personas que han vivido violencia sexual, tomando en cuenta su proceso de sanación y recuperación."
   const defaultTitle = "Tu historia importa"
   const defaultImg =
-    "https://tuhistoriaimporta.com/wp/wp-content/uploads/2022/07/ThumB_THI-1-1.png"
+    "http://tuhistoriaimporta.com/wp/wp-content/uploads/2022/07/thumb.png"
   const refFooter = useRef(null)
   const [fixFooter, setFixFooter] = useState(false)
 
